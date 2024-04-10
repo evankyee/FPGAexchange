@@ -1,0 +1,596 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Apr 10 00:49:51 2024
+# Process ID: 10744
+# Current directory: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1
+# Command line: vivado.exe -log Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl
+# Log file: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1/Wrapper.vds
+# Journal file: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Wrapper.tcl -notrace
+Command: synth_design -top Wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5664
+WARNING: [Synth 8-2292] literal value truncated to fit in 6 bits [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:163]
+WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:103]
+WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:104]
+WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:104]
+WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:105]
+WARNING: [Synth 8-6901] identifier 'x1' is used before its declaration [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:105]
+WARNING: [Synth 8-6901] identifier 'y1' is used before its declaration [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:105]
+WARNING: [Synth 8-992] y0 is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/alu.v:38]
+WARNING: [Synth 8-992] c32 is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/alu.v:58]
+WARNING: [Synth 8-992] aNE is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:42]
+WARNING: [Synth 8-992] aLT is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:42]
+WARNING: [Synth 8-992] aOVF is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:42]
+WARNING: [Synth 8-992] addctrl is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:53]
+WARNING: [Synth 8-992] subctrl is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:53]
+WARNING: [Synth 8-992] trialsub is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:60]
+WARNING: [Synth 8-992] fin is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:72]
+WARNING: [Synth 8-6901] identifier 'aluAxm' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAxm2' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAxm3' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAmw' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAmw2' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAmw3' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluBxm' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBxm2' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBxm3' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBmw' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBmw2' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBmw3' is used before its declaration [C:/Users/eal63/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-992] postopbooth is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mult.v:72]
+WARNING: [Synth 8-992] fin is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mult.v:76]
+WARNING: [Synth 8-6901] identifier 'boothselect' is used before its declaration [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mult.v:57]
+WARNING: [Synth 8-6901] identifier 'boothselect' is used before its declaration [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mult.v:57]
+WARNING: [Synth 8-992] xmEX is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:274]
+WARNING: [Synth 8-992] mwEX is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:274]
+WARNING: [Synth 8-992] EXzero is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:274]
+WARNING: [Synth 8-992] exceping is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:299]
+WARNING: [Synth 8-992] inmultA is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:333]
+WARNING: [Synth 8-992] inmultB is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:333]
+WARNING: [Synth 8-992] multdivresult is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:342]
+WARNING: [Synth 8-992] twodiv is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:376]
+WARNING: [Synth 8-992] twomult is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:376]
+WARNING: [Synth 8-992] stallping is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/processor.v:472]
+WARNING: [Synth 8-6901] identifier 'pcreg_en' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'multdivexception' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'exping2' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'alu_ctrl' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'alu_ctrl' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'stage3opcode' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:96]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:97]
+WARNING: [Synth 8-6901] identifier 'D_bex' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:135]
+WARNING: [Synth 8-6901] identifier 'rtype5' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'iand05' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'iand25' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'jiand15' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'setx' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:147]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:195]
+WARNING: [Synth 8-6901] identifier 'bypassA' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:202]
+WARNING: [Synth 8-6901] identifier 'bypassB' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:203]
+WARNING: [Synth 8-6901] identifier 'bypassA' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:204]
+WARNING: [Synth 8-6901] identifier 'bypassB' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:205]
+WARNING: [Synth 8-6901] identifier 'XM_irout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'XM_o_out' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'MW_irout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'datawriteReg1' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:214]
+WARNING: [Synth 8-6901] identifier 'bexB' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:214]
+WARNING: [Synth 8-6901] identifier 'bexExtend' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:214]
+WARNING: [Synth 8-6901] identifier 'XM_irout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'XM_o_out' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'MW_irout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'datawriteReg2' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'bexB' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'XM_irout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'bexB' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'MW_irout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:230]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'branchAextend' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'setx' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MWtargextend' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'exceptiondat' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'jiand15' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MW_pcout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'regDatSel' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MW_d_out' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MW_o_out' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'setx' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MWtargextend' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'exceptiondat' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'jiand15' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MW_pcout' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'regDatSel' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MW_d_out' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MW_o_out' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'BneA' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:251]
+WARNING: [Synth 8-6901] identifier 'BltA' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:251]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:251]
+WARNING: [Synth 8-6901] identifier 'exping2' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'multdivresult' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'divexp' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:279]
+WARNING: [Synth 8-6901] identifier 'multexp' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:279]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'multdivexception' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:289]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:293]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:293]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:294]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:294]
+WARNING: [Synth 8-6901] identifier 'dmembypass' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:390]
+WARNING: [Synth 8-6901] identifier 'rtype5' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:390]
+WARNING: [Synth 8-6901] identifier 'itype5' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:390]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:436]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Downloads/processor/processor.v:436]
+INFO: [Common 17-14] Message 'Synth 8-6901' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-992] one is already implicitly declared earlier [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/regfile.v:131]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.383 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/eal63/Downloads/processor/Wrapper.v:27]
+INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:2]
+INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGATimingGenerator.v:2]
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGATimingGenerator.v:2]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (2#1) [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/Ps2Interface.vhd:180]
+WARNING: [Synth 8-567] referenced signal 'ascii' should be on the sensitivity list [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:70]
+INFO: [Synth 8-6157] synthesizing module 'RAMvga' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 584'b01000011001110100010111101010101011100110110010101110010011100110010111101100101011000010110110000110110001100110010111101000100011011110111011101101110011011000110111101100001011001000111001100101111011011000110000101100010001101100101111101101011011010010111010000101101001100100011000000110010001101000011000000110100001100000011000101010100001100010011100100110011001100000011000000110000010110100010110100110000001100000011000100101111011011000110000101100010001101100101111101101011011010010111010000101111011000010111001101100011011010010110100100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/ascii.mem' is read successfully [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAMvga' (3#1) [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAMvga' is unconnected for instance 'ASCII' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:83]
+WARNING: [Synth 8-7023] instance 'ASCII' of module 'RAMvga' has 5 connections declared, but only 4 given [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:83]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:92]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/eal63/Downloads/processor/RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (4#1) [C:/Users/eal63/Downloads/processor/RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataOut' of module 'RAM' is unconnected for instance 'data' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:92]
+WARNING: [Synth 8-7023] instance 'data' of module 'RAM' has 5 connections declared, but only 4 given [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:92]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:103]
+WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:103]
+INFO: [Synth 8-6157] synthesizing module 'RAMvga__parameterized0' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 235000 - type: integer 
+	Parameter MEMFILE bound to: 600'b010000110011101000101111010101010111001101100101011100100111001100101111011001010110000101101100001101100011001100101111010001000110111101110111011011100110110001101111011000010110010001110011001011110110110001100001011000100011011001011111011010110110100101110100001011010011001000110000001100100011010000110000001101000011000000110001010101000011000100111001001100110011000000110000001100000101101000101101001100000011000000110001001011110110110001100001011000100011011001011111011010110110100101110100001011110111001101110000011100100110100101110100011001010111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/sprites.mem' is read successfully [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAMvga__parameterized0' (4#1) [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAMvga' is unconnected for instance 'Sprites' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:114]
+WARNING: [Synth 8-7023] instance 'Sprites' of module 'RAMvga' has 5 connections declared, but only 4 given [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:114]
+INFO: [Synth 8-6157] synthesizing module 'RAMvga__parameterized1' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 584'b01000011001110100010111101010101011100110110010101110010011100110010111101100101011000010110110000110110001100110010111101000100011011110111011101101110011011000110111101100001011001000111001100101111011011000110000101100010001101100101111101101011011010010111010000101101001100100011000000110010001101000011000000110100001100000011000101010100001100010011100100110011001100000011000000110000010110100010110100110000001100000011000100101111011011000110000101100010001101100101111101101011011010010111010000101111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/image.mem' is read successfully [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAMvga__parameterized1' (4#1) [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAMvga' is unconnected for instance 'ImageData' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:143]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAMvga' has 5 connections declared, but only 4 given [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'VGAController' (5#1) [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:2]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/eal63/Downloads/processor/processor.v:21]
+INFO: [Synth 8-6157] synthesizing module 'reg32' [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/reg32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (6#1) [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg32' (7#1) [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/reg32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'and_32' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/and_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'and_32' (8#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/and_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'or_32' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/or_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'or_32' (9#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/or_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2' (10#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/mux_2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll16' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll16' (11#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll8' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll8' (12#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll4' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll4' (13#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll2' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll2' (14#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll1' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll1' (15#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll' (16#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra16' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra16' (17#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra8' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra8' (18#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra4' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra4' (19#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra2' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra2' (20#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra1' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra1' (21#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra' (22#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/sra.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla32' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/cla32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/cla.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla' (23#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/cla.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla32' (24#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/cla32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'no' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/no.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'no' (25#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/no.v:1]
+INFO: [Synth 8-6157] synthesizing module 'overflowcalc' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/overflowcalc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'overflowcalc' (26#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/overflowcalc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/mux_8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4' (27#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8' (28#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/mux_8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ovfsub' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/ovfsub.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ovfsub' (29#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/ovfsub.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ovfadd' [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/ovfadd.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ovfadd' (30#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/ovfadd.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (31#1) [C:/Users/eal63/Downloads/processor/integratedparts/alu-main/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'doublereg32' [C:/Users/eal63/Downloads/processor/doublereg32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'doublereg32' (32#1) [C:/Users/eal63/Downloads/processor/doublereg32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mult' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clockcount' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/clockcount.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tffe' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/tffe.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tffe' (33#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/tffe.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clockcount' (34#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/clockcount.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux65_2' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mux65_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux65_2' (35#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mux65_2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg65' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/reg65.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg65' (36#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/reg65.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rightshift2' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/rightshift2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rightshift2' (37#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/rightshift2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (38#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'leftshift' [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/leftshift.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'leftshift' (39#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/leftshift.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'div' (40#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/div.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multdiv' (41#1) [C:/Users/eal63/Downloads/processor/integratedparts/multdiv/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard' [C:/Users/eal63/Downloads/processor/hazard.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard' (42#1) [C:/Users/eal63/Downloads/processor/hazard.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (43#1) [C:/Users/eal63/Downloads/processor/processor.v:21]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/eal63/Downloads/processor/ROM.v:2]
+	Parameter MEMFILE bound to: 40'b0000000000101110011011010110010101101101 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/eal63/Downloads/processor/ROM.v:11]
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (44#1) [C:/Users/eal63/Downloads/processor/ROM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tristate' [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/tristate.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tristate' (45#1) [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/tristate.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (46#1) [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (47#1) [C:/Users/eal63/Downloads/processor/integratedparts/cp2-regfile/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (48#1) [C:/Users/eal63/Downloads/processor/Wrapper.v:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1456.590 ; gain = 127.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1456.590 ; gain = 127.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1456.590 ; gain = 127.207
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.437 . Memory (MB): peak = 1456.590 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/eal63/Downloads/lab-3-starter/lab-3-master/master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff27/q_i_11__30_n_0'. [C:/Users/eal63/Downloads/lab-3-starter/lab-3-master/master.xdc:215]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Downloads/lab-3-starter/lab-3-master/master.xdc:215]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff27/q_reg_24'. [C:/Users/eal63/Downloads/lab-3-starter/lab-3-master/master.xdc:216]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Downloads/lab-3-starter/lab-3-master/master.xdc:216]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/eal63/Downloads/lab-3-starter/lab-3-master/master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/eal63/Downloads/lab-3-starter/lab-3-master/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1654.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1654.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                00000000000000001 |                            00000
+            rx_down_edge |                00000000000000010 |                            00011
+                rx_clk_l |                00000000000000100 |                            00010
+                rx_clk_h |                00000000000001000 |                            00001
+         rx_error_parity |                00000000000010000 |                            00100
+           rx_data_ready |                00000000000100000 |                            00101
+          tx_force_clk_l |                00000000001000000 |                            00110
+      tx_bring_data_down |                00000000010000000 |                            00111
+          tx_release_clk |                00000000100000000 |                            01000
+ tx_first_wait_down_edge |                00000001000000000 |                            01001
+                tx_clk_l |                00000010000000000 |                            01010
+         tx_wait_up_edge |                00000100000000000 |                            01011
+tx_wait_up_edge_before_ack |                00001000000000000 |                            01101
+             tx_wait_ack |                00010000000000000 |                            01110
+         tx_received_ack |                00100000000000000 |                            01111
+         tx_error_no_ack |                01000000000000000 |                            10000
+                tx_clk_h |                10000000000000000 |                            01100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Ps2Interface'
+WARNING: [Synth 8-327] inferring latch for variable 'address_reg' [C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGAController.v:105]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'CPU/EXpt1' (dffe_ref) to 'CPU/except'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   4 Input   32 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   3 Input      1 Bit         XORs := 331   
+	   2 Input      1 Bit         XORs := 1158  
++---Registers : 
+	               32 Bit    Registers := 3     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1793  
++---Multipliers : 
+	               6x32  Multipliers := 1     
+	              12x32  Multipliers := 1     
++---RAMs : 
+	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
+	             229K Bit	(235000 X 1 bit)          RAMs := 1     
+	             128K Bit	(4096 X 32 bit)          RAMs := 2     
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   65 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 240   
+	   2 Input   27 Bit        Muxes := 2     
+	  17 Input   17 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 18    
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 7     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 56    
+	  17 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7161] Found RAM (i_0/vgai_3) with all bits of address stuck at constant. Please re-evaluate the design if this is intended.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name             | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAMvga__parameterized0: | MemoryArray_reg | 229 K x 1(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 8      | 
+|RAMvga__parameterized1: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
++------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:05 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:05 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name             | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAMvga__parameterized0: | MemoryArray_reg | 229 K x 1(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 8      | 
+|RAMvga__parameterized1: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
++------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance vga/Sprites/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/Sprites/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/Sprites/MemoryArray_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/Sprites/MemoryArray_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga/ImageData/MemoryArray_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    31|
+|3     |LUT1     |     7|
+|4     |LUT2     |    29|
+|5     |LUT3     |    32|
+|6     |LUT4     |    61|
+|7     |LUT5     |    70|
+|8     |LUT6     |    95|
+|9     |RAMB36E1 |    26|
+|27    |FDCE     |    25|
+|28    |FDPE     |     1|
+|29    |FDRE     |    35|
+|30    |LD       |    18|
+|31    |IBUF     |     2|
+|32    |IOBUF    |     2|
+|33    |OBUF     |    14|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1654.035 ; gain = 127.207
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1654.035 ; gain = 324.652
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1654.035 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1654.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 20 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  LD => LDCE: 18 instances
+
+Synth Design complete, checksum: abe3162d
+INFO: [Common 17-83] Releasing license: Synthesis
+135 Infos, 139 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1654.035 ; gain = 324.652
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1/Wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 10 00:51:08 2024...
