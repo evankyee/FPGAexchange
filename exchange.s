@@ -12,21 +12,69 @@
 #r29[23:12] tells us price 12
 #r29[11:0] tells us volume 12
 
+
+#r0 is IO REG!
+
 #PUT SECURITY POINTERS IN MEMORY
 
 #everytime we hit 0 on vol for our HEADS, move to next as HEAD!!
 
 #we have pointers to our lists in dmem
 
+##
+#TAIL_A_BUY
+#TAIL_A_SELL
+#HEAD_A_BUY
+#HEAD_A_SELL
+
+#TAIL_B_BUY
+#TAIL_B_SELL
+#HEAD_B_BUY
+#HEAD_B_SELL
+
+#TAIL_C_BUY
+#TAIL_C_SELL
+#HEAD_C_BUY
+#HEAD_C_SELL
+
+#TAIL_D_BUY
+#TAIL_D_SELL
+#HEAD_D_BUY
+#HEAD_D_SELL
+
+#TAIL_E_BUY
+#TAIL_E_SELL
+#HEAD_E_BUY
+#HEAD_E_SELL
+
+#TAIL_F_BUY
+#TAIL_F_SELL
+#HEAD_F_BUY
+#HEAD_F_SELL
+
+#TAIL_G_BUY
+#TAIL_G_SELL
+#HEAD_G_BUY
+#HEAD_G_SELL
+
+#TAIL_H_BUY
+#TAIL_H_SELL
+#HEAD_H_BUY
+#HEAD_H_SELL
+
 main:
-    addi $r28, $r0, 8 #first spot for A buy
-    addi $r27, $r28, 108 #first spot for A sell (100 orders)
+    addi $r28, $r0, 32 #first spot for A buy
+    addi $r27, $r28, 132 #first spot for A sell (100 orders)
     loop1:
-        bne $r29, $r0, newdata #check if new data in 29
+        bne $r20, $r0, newdata #check if new data in 29
         j loop1
 
 newdata: #we have (32bits:DATA 32bits:PointertoNext)
     #first check if can execute trade
+    addi $r29, $r20, 0 #putting IO reg into 29
+    and $r20, $r20, $r0 #clearing IO reg
+
+
     sra $r3, $r29, 31 #need to integrate rll isn
     bne $r3, $r0, newBUY
 
