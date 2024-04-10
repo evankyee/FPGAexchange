@@ -9,6 +9,7 @@ module VGAController(
 	output[3:0] VGA_B,  // Blue Signal Bits
 	inout ps2_clk,
 	inout ps2_data,
+	output [15:0] LED, 
 	input [3:0] SW);           //Switches
 	
 	// Lab Memory Files Location
@@ -53,14 +54,87 @@ module VGAController(
     always@(posedge read_data)begin
         data_out = rx_data;
     end
-    reg [7:0] ascii = 95;
+    
+    reg[3:0]entercount = 0;
+    reg[6:0]cursor = 33;
+    reg orderready = 0;
+    
+    
+    reg [7:0] id = 32;
+    reg [7:0] sec = 32;
+    reg [7:0] price1 = 32;
+    reg [7:0] price2 = 32;
+    reg [7:0] price3 = 32;
+    reg [7:0] volume1 = 32;
+    reg [7:0] volume2 = 32;
+    reg [7:0] volume3 = 32;
+    reg [7:0] type = 32;
+    
+    reg [7:0] ascii;
     reg [7:0] last_ascii;
     wire [7:0] asc;
      
-    always @(asc)begin
+    
+    
+    always @(posedge read_data)begin
         last_ascii<=ascii;
         ascii <= asc;
+        if (ascii==10)begin
+            entercount <= entercount+1;
+            
+            if(entercount==1)begin
+                id=last_ascii;
+                cursor <= 45;
+            end
+            if(entercount==2)begin
+                sec=last_ascii;
+                cursor <= 57;
+            end
+            if(entercount==3)begin
+                price1 = last_ascii;
+                cursor <= 58;
+            end
+            if(entercount==4)begin
+                price2 = last_ascii;
+                cursor <= 59;
+            end
+            if(entercount==5)begin
+                price3 = last_ascii;
+                cursor <= 69;
+            end
+            if(entercount==6)begin
+                volume1 = last_ascii;
+                cursor <= 70;
+            end
+            if(entercount==7)begin
+                volume2 = last_ascii;
+                cursor <= 71;
+            end
+            if(entercount==8)begin
+                volume3 = last_ascii;
+                cursor <= 81;
+            end
+            if (entercount==9)begin
+                type = last_ascii;
+            end
+            
+            if(entercount==10)begin
+                cursor=33;
+                orderready=1;
+                id=32;
+                sec=32;
+                price1=32;
+                price2=32;
+                price3=32;
+                volume1=32;
+                volume2=32;
+                volume3=32;
+                type=32;
+            end
+        
+        end   
     end
+    
     
     
     
@@ -87,17 +161,25 @@ module VGAController(
 
     //Ram for sprites
     wire cpixel;
-    reg [31:0] address;
+//    reg [31:0] address;
     
     //Write everything on the screen
     always@(*)begin
-        if (colorAddr!=0 && colorAddr!=1) begin
-            address <= (2500*(colorAddr -33)) + (x-x1)+(50*(y-y1));
-        end
-        if (colorAddr==1) begin
-            address <= (2500*(ascii -33)) + (x-x1)+(50*(y-y1));
-        end
+        
     end
+    
+    wire [31:0] address;
+    wire ascii_type,currentblock;
+    wire [7:0] final_ascii, setvals;
+    assign ascii_type = (colorAddr==1);
+    assign currentblock = imgAddress == cursor;
+    
+    assign setvals = 55;
+    
+    assign final_ascii = ascii_type ? currentblock ? asc : setvals : colorAddr;
+    assign address = (2500*(final_ascii -33)) + (x-(x/50)*50)+(50*(y-(y/50)*50));
+    assign LED = x+y;
+    
     
 	RAMvga #(
 		.DEPTH(235000), 		       // Set depth to contain every color		
@@ -112,8 +194,8 @@ module VGAController(
     
   
     //Top left for USERID
-    reg [9:0] x1 = 150;    
-    reg [9:0] y1 = 100;
+    reg [9:0] x1 = 0;    
+    reg [9:0] y1 = 0;
     
     
 	// Image Data to Map Pixel Location to Color Address

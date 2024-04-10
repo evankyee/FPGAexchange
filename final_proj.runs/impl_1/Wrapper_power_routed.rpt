@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Wed Apr 10 15:25:13 2024
+| Date             : Wed Apr 10 18:18:02 2024
 | Host             : P2-01 running 64-bit major release  (build 9200)
 | Command          : report_power -file Wrapper_power_routed.rpt -pb Wrapper_power_summary_routed.pb -rpx Wrapper_power_routed.rpx
 | Design           : Wrapper
@@ -30,15 +30,15 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.140        |
+| Total On-Chip Power (W)  | 0.167        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.041        |
+| Dynamic (W)              | 0.069        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.4         |
-| Junction Temperature (C) | 25.6         |
-| Confidence Level         | Low          |
+| Max Ambient (C)          | 84.2         |
+| Junction Temperature (C) | 25.8         |
+| Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
 | Design Nets Matched      | NA           |
@@ -49,21 +49,24 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |      459 |       --- |             --- |
-|   LUT as Logic |     0.001 |      249 |     63400 |            0.39 |
-|   CARRY4       |    <0.001 |       31 |     15850 |            0.20 |
-|   Register     |    <0.001 |      100 |    126800 |            0.08 |
-|   Others       |     0.000 |       17 |       --- |             --- |
-| Signals        |    <0.001 |      367 |       --- |             --- |
-| Block RAM      |     0.037 |     26.5 |       135 |           19.63 |
-| I/O            |    <0.001 |       18 |       210 |            8.57 |
-| Static Power   |     0.098 |          |           |                 |
-| Total          |     0.140 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.003 |        3 |       --- |             --- |
+| Slice Logic              |    <0.001 |      490 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      227 |     63400 |            0.36 |
+|   CARRY4                 |    <0.001 |       28 |     15850 |            0.18 |
+|   Register               |    <0.001 |      107 |    126800 |            0.08 |
+|   Others                 |     0.000 |       17 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |       21 |     63400 |            0.03 |
+|   LUT as Distributed RAM |     0.000 |       28 |     19000 |            0.15 |
+| Signals                  |     0.004 |      473 |       --- |             --- |
+| Block RAM                |     0.036 |       26 |       135 |           19.26 |
+| DSPs                     |     0.002 |        4 |       240 |            1.67 |
+| I/O                      |     0.023 |       34 |       210 |           16.19 |
+| Static Power             |     0.098 |          |           |                 |
+| Total                    |     0.167 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -72,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.053 |       0.037 |      0.016 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.058 |       0.043 |      0.016 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.011 |       0.007 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -95,12 +98,12 @@ Table of Contents
 | User Input Data             | Confidence | Details                                               | Action                                                                                                             |
 +-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                      |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                          |                                                                                                                    |
 |                             |            |                                                       |                                                                                                                    |
-| Overall confidence level    | Low        |                                                       |                                                                                                                    |
+| Overall confidence level    | Medium     |                                                       |                                                                                                                    |
 +-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -141,9 +144,8 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| Wrapper       |     0.041 |
-|   vga         |     0.041 |
-|     ASCII     |     0.001 |
+| Wrapper       |     0.069 |
+|   vga         |     0.046 |
 |     ImageData |     0.034 |
 |     Sprites   |     0.004 |
 |     p1        |     0.001 |

@@ -25,7 +25,8 @@
  **/
 
 module Wrapper (
-	input clk, 
+	input clk,
+	output [15:0] LED, 
 	input CPU_RESETN,
 	input [3:0] SW,
 	inout PS2_CLK,
@@ -55,7 +56,7 @@ module Wrapper (
 	   end
 	end
 
-    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.SW(SW)); 	
+    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(LED),.SW(SW)); 	
     
 
 	// ADD YOUR MEMORY FILE HERE
