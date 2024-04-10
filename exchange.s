@@ -16,9 +16,11 @@
 
 #everytime we hit 0 on vol for our HEADS, move to next as HEAD!!
 
+#we have pointers to our lists in dmem
+
 main:
-    and $r28, $r28, $r0 #first spot for A buy
-    addi $r27, $r28, 100 #first spot for A sell (100 orders)
+    addi $r28, $r0, 8 #first spot for A buy
+    addi $r27, $r28, 108 #first spot for A sell (100 orders)
     loop1:
         bne $r29, $r0, newdata #check if new data in 29
         j loop1
@@ -27,6 +29,14 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     #first check if can execute trade
     sra $r3, $r29, 31 #need to integrate rll isn
     bne $r3, $r0, newBUY
+
+    #looking at the security
+    sll $r16, $r29, 1
+    sra $r16, $r16, 29 #r16 holds our security!!
+    #WE CAN USE THIS SECURITY TO ACCESS POINTERS!!
+    
+    #TO DO: ADD POINTERS IN DMEM THAT POINT TO LISTS OF BUY AND SELL! WOULD HAVE TO UPDATE OUR OPEN REG28 AND OPEN R27 each time we get new data
+
     newSELL: #want to check if overlap from new trade!
     lw $r4, 0($r25) #highest buy Trade Order is in r4
     #examining prices
