@@ -7,10 +7,10 @@ reg state;
 reg clock;
 reg [7:0] counter2;
 always @(posedge clk) begin
-    if (counter1<50)
-    counter <= counter +1;
+    if (counter2<50)
+    counter2 <= counter2 +1;
     else begin
-        counter <= 0;
+        counter2 <= 0;
         clock <= ~clock;
     end
 
@@ -18,7 +18,7 @@ end
 
 parameter on =1, off=0;
 
-always @(posedge clock or posedge rst) begin
+always @(posedge clock or posedge reset) begin
     if (reset) begin
         state <= 0;
         shiftreg <= 32'b0;
@@ -33,7 +33,7 @@ always @(posedge clock or posedge rst) begin
                     state <= on;
                     comEn <= 1;    
                 end else begin
-                    data_en <= 0;    
+                    comEn <= 0;    
                 end
             on:
                 if (counter<32) begin
