@@ -4,9 +4,21 @@ reg[5:0] counter;
 reg[31:0] shiftreg;
 reg state;
 
+reg clock;
+reg [7:0] counter2;
+always @(posedge clk) begin
+    if (counter1<50)
+    counter <= counter +1;
+    else begin
+        counter <= 0;
+        clock <= ~clock;
+    end
+
+end
+
 parameter on =1, off=0;
 
-always @(posedge clk or posedge rst) begin
+always @(posedge clock or posedge rst) begin
     if (reset) begin
         state <= 0;
         shiftreg <= 32'b0;

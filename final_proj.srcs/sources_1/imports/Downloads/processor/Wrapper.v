@@ -25,8 +25,14 @@
  **/
 
 module Wrapper (
+<<<<<<< HEAD
 	input clk,
 	output [15:0] LED, 
+=======
+	input data_ping_in,
+	input comEn,
+	input clk, 
+>>>>>>> 452f9cc91c501c4b19ceced13a573c86df816378
 	input CPU_RESETN,
 	input [3:0] SW,
 	inout PS2_CLK,
@@ -56,7 +62,11 @@ module Wrapper (
 	   end
 	end
 
+<<<<<<< HEAD
     VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(LED),.SW(SW)); 	
+=======
+    // VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.SW(SW)); 	
+>>>>>>> 452f9cc91c501c4b19ceced13a573c86df816378
     
 
 	// ADD YOUR MEMORY FILE HERE
@@ -71,7 +81,7 @@ module Wrapper (
 		// Regfile
 		.ctrl_writeEnable(rwe),     .ctrl_writeReg(rd),
 		.ctrl_readRegA(rs1),     .ctrl_readRegB(rs2), 
-		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB),
+		.data_writeReg(rData), .data_readRegA(regAReal), .data_readRegB(regB),
 									
 		// RAM
 		.wren(mwe), .address_dmem(memAddr), 
@@ -82,6 +92,26 @@ module Wrapper (
 	InstMem(.clk(clock), 
 		.addr(instAddr[11:0]), 
 		.dataOut(instData));
+
+	reg[31:0] datainReg = 0;
+	assign regAReal = (rs1==20)? datainReg:regA;
+	reg seenRDY = 0;
+
+	always @(posedge clk) begin
+		seenRDY = dataRDY;
+		if (rwe == 1 & rd == 20) begin
+			datainReg <= rData;
+		end else if (dataRDY & seenRDY != dataRDY) begin
+			datainReg <= receiverdata;
+		end
+
+	end
+	//input clk, input reset, input datain, output[31:0] reg data, input comEn, output reg dataRDY
+	wire dataRDY;
+	wire[31:0] receiverdata;
+	receiver datarec(clk, CPU_RESETN, data_ping_in, receiverdata, comEn, dataRDY);
+
+	//ALSO NEED TO READ THE DATA CONSTANTLY FROM THE OUTPUT REGS WHEN TRADES R EXECUTED!!!!!!!!!!!!!!!!!!!!!!
 	
 	// Register File
 	regfile RegisterFile(.clock(clock), 
@@ -97,4 +127,15 @@ module Wrapper (
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
 
+always @(posedge clock) begin
+			if (mwe) begin
+				$display("Wrote %0d into address %0d", memDataIn, memAddr);
+			end
+end
+
+
 endmodule
+
+
+
+
