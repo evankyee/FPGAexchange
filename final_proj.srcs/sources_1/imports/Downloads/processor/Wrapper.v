@@ -93,6 +93,7 @@ module Wrapper (
 		.addr(instAddr[11:0]), 
 		.dataOut(instData));
 
+	wire[31:0] regAReal;
 	reg[31:0] datainReg = 0;
 	assign regAReal = (rs1==20)? datainReg:regA;
 	reg seenRDY = 0;
