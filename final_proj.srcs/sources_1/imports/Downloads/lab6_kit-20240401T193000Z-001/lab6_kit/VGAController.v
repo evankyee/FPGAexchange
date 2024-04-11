@@ -75,10 +75,10 @@ module VGAController(
     wire [7:0] asc;
     reg currentblock;
     
-    always @(*)begin
+    always @(negedge clk)begin
         last_ascii<=ascii;
         ascii <= asc;
-        if (ascii==10)begin
+        if (ascii==10 && read_data)begin
             entercount <= entercount+1;
             
             if(entercount==1)begin
@@ -129,6 +129,7 @@ module VGAController(
                 volume2=32;
                 volume3=32;
                 type=32;
+                entercount=0;
             end
         
         end 
@@ -173,7 +174,7 @@ module VGAController(
     
     assign final_ascii = ascii_type ? currentblock ? asc : setvals : colorAddr;
     assign address = (2500*(final_ascii -33)) + (x-(x/50)*50)+(50*(y-(y/50)*50));
-    assign LED = x+y;
+    assign LED = entercount;
     
     
 	RAMvga #(
