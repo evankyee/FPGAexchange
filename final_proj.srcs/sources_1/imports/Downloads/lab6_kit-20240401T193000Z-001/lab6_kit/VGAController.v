@@ -13,7 +13,7 @@ module VGAController(
 	input [3:0] SW);           //Switches
 	
 	// Lab Memory Files Location
-	localparam FILES_PATH = "C:/Users/eal63/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/";
+	localparam FILES_PATH = "C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
@@ -56,7 +56,7 @@ module VGAController(
     end
     
     reg[3:0]entercount = 0;
-    reg[6:0]cursor = 33;
+    reg[6:0]cursor = 35;
     reg orderready = 0;
     
     
@@ -73,10 +73,9 @@ module VGAController(
     reg [7:0] ascii;
     reg [7:0] last_ascii;
     wire [7:0] asc;
-     
+    reg currentblock;
     
-    
-    always @(posedge read_data)begin
+    always @(*)begin
         last_ascii<=ascii;
         ascii <= asc;
         if (ascii==10)begin
@@ -84,42 +83,42 @@ module VGAController(
             
             if(entercount==1)begin
                 id=last_ascii;
-                cursor <= 45;
+                cursor <= 48;
             end
             if(entercount==2)begin
                 sec=last_ascii;
-                cursor <= 57;
+                cursor <= 61;
             end
             if(entercount==3)begin
                 price1 = last_ascii;
-                cursor <= 58;
+                cursor <= 62;
             end
             if(entercount==4)begin
                 price2 = last_ascii;
-                cursor <= 59;
+                cursor <= 63;
             end
             if(entercount==5)begin
                 price3 = last_ascii;
-                cursor <= 69;
+                cursor <= 74;
             end
             if(entercount==6)begin
                 volume1 = last_ascii;
-                cursor <= 70;
+                cursor <= 75;
             end
             if(entercount==7)begin
                 volume2 = last_ascii;
-                cursor <= 71;
+                cursor <= 76;
             end
             if(entercount==8)begin
                 volume3 = last_ascii;
-                cursor <= 81;
+                cursor <= 87;
             end
             if (entercount==9)begin
                 type = last_ascii;
             end
             
             if(entercount==10)begin
-                cursor=33;
+                cursor=35;
                 orderready=1;
                 id=32;
                 sec=32;
@@ -132,7 +131,8 @@ module VGAController(
                 type=32;
             end
         
-        end   
+        end 
+        currentblock = (imgAddress == cursor);  
     end
     
     
@@ -163,18 +163,13 @@ module VGAController(
     wire cpixel;
 //    reg [31:0] address;
     
-    //Write everything on the screen
-    always@(*)begin
-        
-    end
-    
+
     wire [31:0] address;
     wire ascii_type,currentblock;
     wire [7:0] final_ascii, setvals;
     assign ascii_type = (colorAddr==1);
-    assign currentblock = imgAddress == cursor;
     
-    assign setvals = 55;
+    assign setvals = 32;
     
     assign final_ascii = ascii_type ? currentblock ? asc : setvals : colorAddr;
     assign address = (2500*(final_ascii -33)) + (x-(x/50)*50)+(50*(y-(y/50)*50));
@@ -209,6 +204,7 @@ module VGAController(
 	wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
 	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr; 	 // Color address for the color palette
 	assign imgAddress = (x/50) + 13*(y/50);				 // Address calculated coordinate
+
 
 	RAMvga #(		
 		.DEPTH(PIXEL_COUNT), 				     // Set RAM depth to contain every pixel

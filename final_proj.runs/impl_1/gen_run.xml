@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1712787364">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1712868594">
   <File Type="ROUTE-PWR" Name="Wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Wrapper.tcl"/>
   <File Type="BITSTR-MMI" Name="Wrapper.mmi"/>
@@ -329,6 +329,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/processor/receiver.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/reg32.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/processor/integratedparts/cp2-regfile/reg32.v"/>
@@ -508,16 +515,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_32.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/processor/integratedparts/alu-main/mux_32.v"/>
-        <Attr Name="ImportTime" Val="1711734357"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/processor/integratedparts/alu-main/P.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -553,6 +550,16 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/processor/integratedparts/multdiv/multdiv_tb.v"/>
         <Attr Name="ImportTime" Val="1711734356"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_32.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/processor/integratedparts/alu-main/mux_32.v"/>
+        <Attr Name="ImportTime" Val="1711734357"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -623,6 +630,14 @@
         <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/data.mem"/>
         <Attr Name="ImportTime" Val="1712348019"/>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/processor/communicate.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

@@ -25,14 +25,9 @@
  **/
 
 module Wrapper (
-<<<<<<< HEAD
 	input clk,
 	output [15:0] LED, 
-=======
-	input data_ping_in,
-	input comEn,
-	input clk, 
->>>>>>> 452f9cc91c501c4b19ceced13a573c86df816378
+
 	input CPU_RESETN,
 	input [3:0] SW,
 	inout PS2_CLK,
@@ -62,12 +57,13 @@ module Wrapper (
 	   end
 	end
 
-<<<<<<< HEAD
+
     VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(LED),.SW(SW)); 	
-=======
-    // VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.SW(SW)); 	
->>>>>>> 452f9cc91c501c4b19ceced13a573c86df816378
-    
+
+	wire data_ping_in;
+	assign data_ping_in=0;
+	wire comEn;
+	assign comEn=0;
 
 	// ADD YOUR MEMORY FILE HERE
 	localparam INSTR_FILE = "";
