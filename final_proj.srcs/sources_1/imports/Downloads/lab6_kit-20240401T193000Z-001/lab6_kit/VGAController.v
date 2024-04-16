@@ -51,21 +51,20 @@ module VGAController(
     wire [7:0] rx_data;
     reg [7:0] data_out;
     wire read_data;
-    reg [1:0] counter=0;
+    reg [2:0] counter=0;
+    reg [7:0] scan_code;
     Ps2Interface p1(.ps2_clk(ps2_clk),.ps2_data(ps2_data), .clk(clk), .rst(reset), .tx_data(8'b0),.write_data(1'b0),.rx_data(rx_data),.read_data(read_data),.busy() ,.err());
     always@(posedge read_data)begin
-        counter <= counter+1;
         data_out = rx_data;
-        if(counter==1)begin
-            last_ascii<=ascii;
-            ascii <= asc;
+        if(counter==0)begin
+            scan_code <= rx_data;
         end
-        if(counter==2)begin
-            counter=0;
+        if(counter<2)begin
+            counter <= counter+1;
         end
-
-
-
+        else begin
+            counter <= 0;
+        end
     end
     
     reg[3:0]entercount = 0;
@@ -87,46 +86,46 @@ module VGAController(
     reg [7:0] last_ascii=32;
     wire [7:0] asc;
     reg currentblock;
-    
+    reg enterreg=1;
     
     always @(posedge clk)begin
-        if (ascii==10 && last_ascii!=10 && read_data)begin
-            entercount <= entercount+1;
-            
+        if (asc==10 && enterreg==1)begin
+            entercount = entercount+1;
+            enterreg=0;
             if(entercount==1)begin
-                id=last_ascii;
+                id=ascii;
                 cursor <= 48;
             end
             if(entercount==2)begin
-                sec=last_ascii;
+                sec=ascii;
                 cursor <= 61;
             end
             if(entercount==3)begin
-                price1 = last_ascii;
+                price1 = ascii;
                 cursor <= 62;
             end
             if(entercount==4)begin
-                price2 = last_ascii;
+                price2 = ascii;
                 cursor <= 63;
             end
             if(entercount==5)begin
-                price3 = last_ascii;
+                price3 = ascii;
                 cursor <= 74;
             end
             if(entercount==6)begin
-                volume1 = last_ascii;
+                volume1 = ascii;
                 cursor <= 75;
             end
             if(entercount==7)begin
-                volume2 = last_ascii;
+                volume2 = ascii;
                 cursor <= 76;
             end
             if(entercount==8)begin
-                volume3 = last_ascii;
+                volume3 = ascii;
                 cursor <= 87;
             end
             if (entercount==9)begin
-                type = last_ascii;
+                type = ascii;
             end
             
             if(entercount==10)begin
@@ -141,15 +140,20 @@ module VGAController(
                 volume2=32;
                 volume3=32;
                 type=32;
-                entercount=0;
             end
+            
+            if(entercount==11)begin
+                entercount<=0;
+            end
+        currentblock = (imgAddress == cursor);  
+
         
         end 
-        currentblock = (imgAddress == cursor);  
+        if(asc!=10)begin
+            ascii<=asc;
+            enterreg=1;
+        end
     end
-    
-    
-    
     
     //Ram for ASCII
 	RAMvga #(
@@ -159,7 +163,7 @@ module VGAController(
 		.MEMFILE({FILES_PATH, "ascii.mem"}))  // Memory initialization
 	ASCII(
 		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-		.addr(data_out),					       // Keyboard Value
+		.addr(scan_code),					       // Keyboard Value
 		.dataOut(asc),				           // Corresponding ascii
 		.wEn(1'b0)); 						       // We're always reading
 	
@@ -178,15 +182,15 @@ module VGAController(
     
 
     wire [31:0] address;
-    wire ascii_type,currentblock;
+    wire ascii_type;
     wire [7:0] final_ascii, setvals;
     assign ascii_type = (colorAddr==1);
     
     assign setvals = (imgAddress==35) ? id : (imgAddress==48) ? sec : (imgAddress==61) ? price1 : (imgAddress==62) ? price2 : (imgAddress==63) ? price3 : (imgAddress==74) ? volume1 : (imgAddress==75) ? volume2 : (imgAddress==76) ? volume3 : (imgAddress==87) ? type : 32;
     
-    assign final_ascii = ascii_type ? currentblock ? (asc==10) ? last_ascii : asc : setvals : colorAddr;
+    assign final_ascii = ascii_type ? currentblock ? (asc==10) ? ascii : asc : setvals : colorAddr;
     assign address = (2500*(final_ascii -33)) + (x-(x/50)*50)+(50*(y-(y/50)*50));
-    assign LED = ascii;
+    assign LED = cursor;
     
     
 	RAMvga #(

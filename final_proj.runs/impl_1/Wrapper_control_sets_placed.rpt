@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sat Apr 13 17:17:40 2024
-| Host         : P1-02 running 64-bit major release  (build 9200)
+| Date         : Tue Apr 16 19:05:07 2024
+| Host         : P2-01 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
 | Design       : Wrapper
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    20 |
-|    Minimum number of control sets                        |    20 |
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    52 |
+| Unused register locations in slices containing registers |    58 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    20 |
-| >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     2 |
-| >= 6 to < 8        |    10 |
-| >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     4 |
+| Total control sets |    24 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |    11 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     3 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     1 |
+| >= 14 to < 16      |     0 |
 | >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,41 +58,45 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              48 |           25 |
-| No           | No                    | Yes                    |              16 |            7 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              39 |           12 |
-| Yes          | No                    | Yes                    |              10 |            4 |
-| Yes          | Yes                   | No                     |              67 |           49 |
+| No           | No                    | No                     |              25 |           18 |
+| No           | No                    | Yes                    |              16 |            5 |
+| No           | Yes                   | No                     |               8 |            2 |
+| Yes          | No                    | No                     |              44 |           17 |
+| Yes          | No                    | Yes                    |              10 |            5 |
+| Yes          | Yes                   | No                     |              71 |           58 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-------------------------------+------------------------+------------------+----------------+--------------+
-|  Clock Signal  |         Enable Signal         |    Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+-------------------------------+------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | CPU_RESETN_IBUF               |                        |                2 |              3 |         1.50 |
-|  clk_IBUF_BUFG | vga/p1/shift_frame            | vga/p1/reset_bit_count |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | vga/p1/read_data_reg_0[0]     |                        |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG |                               | vga/Display/AR[0]      |                3 |              6 |         2.00 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[0][0]   | vga/p1/entercount      |                5 |              7 |         1.40 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[1][0]   | vga/p1/entercount      |                5 |              7 |         1.40 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[1]_0[0] | vga/p1/entercount      |                5 |              7 |         1.40 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[2][0]   | vga/p1/entercount      |                5 |              7 |         1.40 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[2]_0[0] | vga/p1/entercount      |                6 |              7 |         1.17 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[1]_2[0] | vga/p1/entercount      |                6 |              7 |         1.17 |
-|  clk_IBUF_BUFG | vga/p1/E[0]                   | vga/p1/entercount      |                7 |              7 |         1.00 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[1]_1[0] | vga/p1/entercount      |                4 |              7 |         1.75 |
-|  clk_IBUF_BUFG | vga/p1/entercount_reg[3][0]   | vga/p1/entercount      |                5 |              7 |         1.40 |
-|  clk_IBUF_BUFG | vga/p1/load_rx_data_reg_n_0   |                        |                1 |              8 |         8.00 |
-|  vga/clk25     |                               | vga/Display/AR[0]      |                4 |             10 |         2.50 |
-|  vga/clk25     | vga/Display/vPos              | vga/Display/AR[0]      |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG | vga/p1/shift_frame            |                        |                3 |             10 |         3.33 |
-|  vga/p1/CLK    |                               |                        |                3 |             10 |         3.33 |
-|  vga/p1/CLK    | vga/ascii[6]_i_1_n_0          |                        |                4 |             14 |         3.50 |
-|  clk_IBUF_BUFG |                               |                        |               22 |             66 |         3.00 |
-+----------------+-------------------------------+------------------------+------------------+----------------+--------------+
++----------------+-------------------------------+-----------------------------+------------------+----------------+--------------+
+|  Clock Signal  |         Enable Signal         |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------+-----------------------------+------------------+----------------+--------------+
+|  vga/p1/CLK    |                               |                             |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG | CPU_RESETN_IBUF               |                             |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG |                               | vga/p1/data_inter0          |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG |                               | vga/p1/clk_inter0           |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | vga/p1/shift_frame            | vga/p1/reset_bit_count      |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_8[0]   | vga/ASCII/enterreg_reg_7[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG |                               | vga/Display/AR[0]           |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_2[0]   | vga/ASCII/SR[0]             |                7 |              7 |         1.00 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_3[0]   | vga/ASCII/SR[0]             |                6 |              7 |         1.17 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_1[0]   | vga/ASCII/SR[0]             |                7 |              7 |         1.00 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_4[0]   | vga/ASCII/SR[0]             |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg[0]     | vga/ASCII/SR[0]             |                7 |              7 |         1.00 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_0[0]   | vga/ASCII/SR[0]             |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_6[0]   | vga/ASCII/SR[0]             |                7 |              7 |         1.00 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_5[0]   | vga/ASCII/SR[0]             |                7 |              7 |         1.00 |
+|  clk_IBUF_BUFG | vga/ASCII/dataOut_reg[3]_0[0] |                             |                6 |              7 |         1.17 |
+|  clk_IBUF_BUFG | vga/ASCII/E[0]                | vga/ASCII/SR[0]             |                6 |              7 |         1.17 |
+|  clk_IBUF_BUFG | vga/p1/load_rx_data_reg_n_0   |                             |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | vga/ASCII/enterreg_reg_8[0]   |                             |                5 |              8 |         1.60 |
+|  vga/p1/CLK    | vga/scan_code[7]_i_1_n_0      |                             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | vga/p1/shift_frame            |                             |                2 |             10 |         5.00 |
+|  vga/clk25     |                               | vga/Display/AR[0]           |                3 |             10 |         3.33 |
+|  vga/clk25     | vga/Display/vPos              | vga/Display/AR[0]           |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG |                               |                             |               17 |             51 |         3.00 |
++----------------+-------------------------------+-----------------------------+------------------+----------------+--------------+
 
 
