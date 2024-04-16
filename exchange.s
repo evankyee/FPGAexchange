@@ -12,9 +12,6 @@
 #r29[23:12] tells us price 12
 #r29[11:0] tells us volume 12
 
-
-#r0 is IO REG!
-
 #PUT SECURITY POINTERS IN MEMORY
 
 #everytime we hit 0 on vol for our HEADS, move to next as HEAD!!
@@ -63,17 +60,19 @@
 #HEAD_H_SELL
 
 main:
-    addi $r28, $r0, 32 #first spot for A buy
-    addi $r27, $r28, 132 #first spot for A sell (100 orders)
+    addi $r28, $r0, 24 #first spot for A buy
+    addi $r27, $r28, 124 #first spot for A sell (100 orders)
     loop1:
         bne $r20, $r0, newdata #check if new data in 29
+        nop
+        nop
+        nop
         j loop1
 
 newdata: #we have (32bits:DATA 32bits:PointertoNext)
     #first check if can execute trade
     addi $r29, $r20, 0 #putting IO reg into 29
     and $r20, $r20, $r0 #clearing IO reg
-
 
     sra $r3, $r29, 31 #need to integrate rll isn
     bne $r3, $r0, newBUY
@@ -93,9 +92,9 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     sra $r5, $r5, 20 #isolating price of HB
     sra $r6, $r6, 20 #isolating price of new sell
     blt $r6, $r5, newSellEX
-    bne $r6, $r5, noSellEX
+    bne $r6, $r5, plswork
     j newSellEX
-    noSellEX:# if we reach here, no trade executed from new sell
+    plswork:
     j sortSell #no execution so now add to mem and sort stack
     newSellEX:
     #new sell order executed trade!
@@ -109,7 +108,7 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     sra $r7, $r7, 20
     blt $r7, $r6, OverflowSell
     #sells don't exceed
-    sub $r7, $r7, $r6; #finding leftover shares on trade!
+    sub $r7, $r7, $r6 #finding leftover shares on trade!
     sra $r4, $r4, 12 #clearing r4 trade order vol
     sll $r4, $r4, 12
     add $r4, $r4, $r7
@@ -135,7 +134,7 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     sra $r4, $r4, 12 #setting vol of HB to zero
     sll $r4, $r4, 12
     add $r24, $r4, $r0 #SENDING EMPTY VOL TO OUTPUT
-    lw $r25 = 1($r25) #head=head.next address
+    lw $r25, 1($r25) #head=head.next address
     sra $r29, $r29, 12 #setting vol of new sale to zero
     sll $r29, $r29, 12
     add $r29, $r29, $r6 #UPDATED VOL IN NEW SALE ORDER (IN REG29, and new head address in r25)
@@ -148,7 +147,7 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     and $r5, $r5, $r0
     and $r6, $r6, $r0
     and $r7, $r7, $r0
-    and $r3, $r3, $r0;
+    and $r3, $r3, $r0
     j loop1
 
 
@@ -164,7 +163,7 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     blt $r5, $r6, newBuyEX
     bne $r6, $r5, noBuyEX
     j newBuyEX
-    noBuyEX:# if we reach here, no trade executed from new buy
+    noBuyEX: #if we reach here, no trade executed from new buy
     j sortBuy #no execution so now add to mem and sort stack
     
     newBuyEX:
@@ -176,7 +175,7 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     blt $r7, $r6, OverflowBuy
 
     #buys don't exceed
-    sub $r7, $r7, $r6; #finding leftover shares on trade!
+    sub $r7, $r7, $r6 #finding leftover shares on trade!
     sra $r4, $r4, 12 #clearing r4 trade order vol
     sll $r4, $r4, 12
     add $r4, $r4, $r7
@@ -202,7 +201,7 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     sra $r29, $r29, 12 #setting vol of new sale to zero
     sll $r29, $r29, 12
     add $r29, $r29, $r6 #UPDATED VOL IN NEW SALE ORDER (IN REG29, and new head address in r25)
-    j newBuy #START SALE CHECK OVER AGAIN
+    j newBUY #START SALE CHECK OVER AGAIN
 
 
 
@@ -214,7 +213,7 @@ sortSell: #new order in reg29 (maybe after already executing trades from overflo
     sra $r9, $r9, 20 #now we have remaining vol from curr highest sell in r9
 
     #SAVING OUR NEW DATA TO MEM
-    sw $r29, 0($r27)#write new thing to dmem
+    sw $r29, 0($r27) #write new thing to dmem
     addi $r10, $r27, 2    #store next pointer
     sw $r10, 1($r27) #store right next to our new  (NEW DATA POINTER NOW IN r27!!)
 
@@ -243,9 +242,9 @@ sortSell: #new order in reg29 (maybe after already executing trades from overflo
     #prev=r13
     #temp=r12
     #curr=r27
-
-    lw $r11, 0($r12) #prev.next order is in 
     bne $r12, $r27, NOTLASTSELL #if these are equal, then we are at end of list so we dont need to do anything!
+    lw $r11, 0($r12) #prev.next order is in 
+    
     #if we are here, then prev.next data is empty
     lw $r27, 1($r27)
     j donesortSell
@@ -263,7 +262,7 @@ sortSell: #new order in reg29 (maybe after already executing trades from overflo
     lw $r15, 1($r27) 
     sw $r12, 1($r27)
     sw $r27, 1($r13)
-    lw $r27, $r15, $r0 #restoring our next open data line
+    add $r27, $r15, $r0 #restoring our next open data line
     j donesortSell
 
 
@@ -296,7 +295,7 @@ sortSell: #new order in reg29 (maybe after already executing trades from overflo
 
 
 
-sortBuy:#new order in reg29 (maybe after already executing trades from overflow!)
+sortBuy: #new order in reg29 (maybe after already executing trades from overflow!)
 ##4 conditions, empty list, fits front, middle, end
 
     lw $r8, 0($r25) #highest curr buy in r8
@@ -304,15 +303,15 @@ sortBuy:#new order in reg29 (maybe after already executing trades from overflow!
     sra $r9, $r9, 20 #now we have remaining vol from curr highest sell in r9
 
     #SAVING OUR NEW DATA TO MEM
-    sw $r29, 0($r28)#write new thing to dmem
-    addi $r10, $r28, 2    #store next pointer
+    sw $r29, 0($r28) #write new thing to dmem
+    addi $r10, $r28, 2 #store next pointer
     sw $r10, 1($r28) #store right next to our new  (NEW DATA POINTER NOW IN r28!!)
 
     bne $r9, $r0, buyListNotEmpty
     #sell list empty so we need to set new order as top!
     add $r25, $r28, $r0 #make new head register 
     lw $r28 1($r28) #restoring open data line in r28
-    j donesortbuy
+    j donesortBuy
 
     buyListNotEmpty:
     #here we have to sort new sell item
@@ -334,9 +333,9 @@ sortBuy:#new order in reg29 (maybe after already executing trades from overflow!
     #prev=r13
     #temp=r12
     #curr=r28
-
-    lw $r11, 0($r12) #prev.next order is in 
     bne $r12, $r28, NOTLASTBUY #if these are equal, then we are at end of list so we dont need to do anything!
+    lw $r11, 0($r12) #prev.next order is in 
+   
     #if we are here, then prev.next data is empty
     lw $r28, 1($r28)
     j donesortBuy
@@ -354,7 +353,7 @@ sortBuy:#new order in reg29 (maybe after already executing trades from overflow!
     lw $r15, 1($r28) 
     sw $r12, 1($r28)
     sw $r28, 1($r13)
-    lw $r28, $r15, $r0 #restoring our next open data line
+    add $r28, $r15, $r0 #restoring our next open data line
     j donesortBuy
     
     NewDatGTLowAsk:
@@ -385,6 +384,6 @@ sortBuy:#new order in reg29 (maybe after already executing trades from overflow!
    # addi $r2, $r28, 64 #getting address of "next" data struct
    # sw $r2, 1($r28) #saving address of next data struct in memory
    # add $r27, $r28, $r0 #pointer to new data!
-   # add $r28, $r2, $r0; #updating our next free space in memory line
+   # add $r28, $r2, $r0 #updating our next free space in memory line
    # #pointer to new data in r27
    # j newsort

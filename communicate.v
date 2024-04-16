@@ -1,10 +1,10 @@
 module communicate(input clk, input start, input reset, input[31:0] word, output reg dataout, output reg comEn);
 
-reg[5:0] counter;
+reg[7:0] counter=0;
 reg[31:0] shiftreg;
-reg state;
+reg state=0;
 
-reg clock;
+reg clock=0;
 reg [7:0] counter2;
 always @(posedge clk) begin
     if (counter2<50)
@@ -18,7 +18,7 @@ end
 
 parameter on =1, off=0;
 
-always @(posedge clock or posedge reset) begin
+always @(posedge clk or posedge reset) begin
     if (reset) begin
         state <= 0;
         shiftreg <= 32'b0;
@@ -32,11 +32,9 @@ always @(posedge clock or posedge reset) begin
                     shiftreg <= word; //at start we put word into reg we are shifting
                     state <= on;
                     comEn <= 1;    
-                end else begin
-                    comEn <= 0;    
-                end
+                end 
             on:
-                if (counter<32) begin
+                if (counter<33) begin
                     dataout <= shiftreg[31];
                     shiftreg <= shiftreg <<1; //shifting reg by 1 and sending MSB to outpt
                     counter <= counter+1;
