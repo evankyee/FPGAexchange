@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Apr 11 18:27:02 2024
-# Process ID: 11660
+# Start of session at: Sat Apr 13 17:16:49 2024
+# Process ID: 5560
 # Current directory: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1
 # Command line: vivado.exe -log Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Wrapper.tcl -notrace
 # Log file: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/Wrapper.vdi
@@ -14,8 +14,8 @@ Command: link_design -top Wrapper -part xc7a100tcsg324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1329.023 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1329.305 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2021.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -28,10 +28,11 @@ CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1329.023 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1329.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 9 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 7 instances
 
 7 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
@@ -45,54 +46,54 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.745 . Memory (MB): peak = 1329.023 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.713 . Memory (MB): peak = 1329.305 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1a19dcd66
+Ending Cache Timing Information Task | Checksum: 22dcc0fef
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1601.699 ; gain = 272.676
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1604.441 ; gain = 275.137
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 169cff956
+Phase 1 Retarget | Checksum: 21fa1d514
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1821.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1823.938 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 2 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 113d35228
+Phase 2 Constant propagation | Checksum: 1cb3f2119
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1821.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1823.938 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 14e9aaa5f
+Phase 3 Sweep | Checksum: 2b3ef5abc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1821.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1823.938 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 14e9aaa5f
+Phase 4 BUFG optimization | Checksum: 2b3ef5abc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1821.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1823.938 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 14e9aaa5f
+Phase 5 Shift Register Optimization | Checksum: 2b3ef5abc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1821.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1823.938 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 14e9aaa5f
+Phase 6 Post Processing Netlist | Checksum: 2b3ef5abc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1821.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1823.938 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -113,10 +114,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1821.871 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1a137c153
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1823.938 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 26a3935fc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1821.871 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1823.938 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -129,44 +130,44 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 27 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 26 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 54
+Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 52
 Number of Flops added for Enable Generation: 4
 
-Ending PowerOpt Patch Enables Task | Checksum: 20c27dd01
+Ending PowerOpt Patch Enables Task | Checksum: 1e6ab5615
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 20c27dd01
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1e6ab5615
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1959.062 ; gain = 137.191
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1983.254 ; gain = 159.316
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 1e8aaa47e
+Ending Logic Optimization Task | Checksum: 15eb4d9b8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 1e8aaa47e
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 15eb4d9b8
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 1e8aaa47e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 15eb4d9b8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 30 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1959.062 ; gain = 630.039
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1983.254 ; gain = 653.949
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/Wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Wrapper_drc_opted.rpt -pb Wrapper_drc_opted.pb -rpx Wrapper_drc_opted.rpx
 Command: report_drc -file Wrapper_drc_opted.rpt -pb Wrapper_drc_opted.pb -rpx Wrapper_drc_opted.rpx
@@ -186,26 +187,26 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
@@ -215,53 +216,53 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 10f47c982
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f9814489
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 156b829d4
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f41241d9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.278 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.289 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1aed40147
+Phase 1.3 Build Placer Netlist Model | Checksum: 11a02377f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.482 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.504 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1aed40147
+Phase 1.4 Constrain Clocks/Macros | Checksum: 11a02377f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.484 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1aed40147
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.506 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 11a02377f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.487 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.508 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 20afacde4
+Phase 2.1 Floorplanning | Checksum: 1c6c4b426
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.568 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.620 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 20c628c19
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 13af0b188
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.606 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.667 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 20c628c19
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 13af0b188
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.607 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.668 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 27 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 24 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 12 nets or LUTs. Breaked 0 LUT, combined 12 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 11 nets or LUTs. Breaked 0 LUT, combined 11 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -277,7 +278,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -286,7 +287,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |             12  |                    12  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |             11  |                    11  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -295,69 +296,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |             12  |                    12  |           0  |           9  |  00:00:00  |
+|  Total                                            |            0  |             11  |                    11  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.1 Physical Synthesis In Placer | Checksum: 1fece51b8
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 67836d7b
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 1d7064525
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: dc225fcb
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1d7064525
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 2 Global Placement | Checksum: dc225fcb
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1df9c352f
+Phase 3.1 Commit Multi Column Macros | Checksum: 122725b0a
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c6437e87
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1140715e8
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1560e8b7d
+Phase 3.3 Area Swap Optimization | Checksum: 1611bcb36
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 2168c2a37
+Phase 3.4 Pipeline Register Optimization | Checksum: 1133943f1
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 1d2e308d0
+Phase 3.5 Fast Optimization | Checksum: 1445f4136
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 110caa29b
+Phase 3.6 Small Shape Detail Placement | Checksum: e67e56c3
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 157172f84
+Phase 3.7 Re-assign LUT pins | Checksum: 4e902b74
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 23162edb6
+Phase 3.8 Pipeline Register Optimization | Checksum: d2dcdb5e
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 1cd207426
+Phase 3.9 Fast Optimization | Checksum: 14b854c8b
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1cd207426
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 14b854c8b
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -365,7 +366,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: aa9163c9
+Post Placement Optimization Initialization | Checksum: 2a6850981
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -373,33 +374,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.427 | TNS=-1648.118 |
-Phase 1 Physical Synthesis Initialization | Checksum: 155738149
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.876 | TNS=-1707.513 |
+Phase 1 Physical Synthesis Initialization | Checksum: 212636d15
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 150ee1f4f
+Ending Physical Synthesis Task | Checksum: 2487cc2bb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: aa9163c9
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2a6850981
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-11.908. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 18698ec7c
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-11.331. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1f6d2d91b
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 18698ec7c
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1f6d2d91b
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 18698ec7c
+Phase 4.2 Post Placement Cleanup | Checksum: 1f6d2d91b
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -418,161 +419,319 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 18698ec7c
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1f6d2d91b
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 18698ec7c
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1f6d2d91b
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2197bd42d
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 112b94d75
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Ending Placer Task | Checksum: 1793fb7ae
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Ending Placer Task | Checksum: 8a2516e8
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 72 Infos, 23 Warnings, 2 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1959.062 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/Wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file Wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1959.062 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_placed.rpt -pb Wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1959.062 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1983.254 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 0.17s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 0.00s |  WALL: 0.17s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.908 | TNS=-1573.108 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1a1097fda
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.331 | TNS=-1525.151 |
+Phase 1 Physical Synthesis Initialization | Checksum: 230fcb880
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.262 . Memory (MB): peak = 1959.062 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.908 | TNS=-1573.108 |
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.265 . Memory (MB): peak = 1983.254 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.331 | TNS=-1525.151 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 1a1097fda
+Phase 2 DSP Register Optimization | Checksum: 230fcb880
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.264 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.267 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.908 | TNS=-1573.108 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/Sprites/MemoryArray_reg_7' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_7_n_35. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.331 | TNS=-1525.151 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/Sprites/MemoryArray_reg_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_7' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2.  Did not re-place instance vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP
+INFO: [Physopt 32-735] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.319 | TNS=-1525.139 |
+INFO: [Physopt 32-662] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2.  Did not re-place instance vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP
+INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/address__2[15]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/address__0_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/address_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[4].  Did not re-place instance vga/ImageData/address1_i_3
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_19_n_0.  Did not re-place instance vga/ImageData/address1_i_19
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[4]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_3_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_19_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.312 | TNS=-1524.145 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[5].  Did not re-place instance vga/ImageData/address1_i_2
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_13_n_0.  Did not re-place instance vga/ImageData/address1_i_13
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[5]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_2_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.312 | TNS=-1524.145 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[3].  Did not re-place instance vga/ImageData/address1_i_4
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_23_n_0.  Re-placed instance vga/ImageData/address1_i_23
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_23_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.299 | TNS=-1522.299 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[1].  Did not re-place instance vga/ImageData/address1_i_6
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_31_n_0.  Did not re-place instance vga/ImageData/address1_i_31
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[1]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_6_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_31_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.290 | TNS=-1521.021 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[2].  Did not re-place instance vga/ImageData/address1_i_5
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_27_n_0.  Did not re-place instance vga/ImageData/address1_i_27
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[2]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_5_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_27_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.279 | TNS=-1519.459 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_23_n_0.  Did not re-place instance vga/ImageData/address1_i_23
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[3]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_4_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_23_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.217 | TNS=-1510.655 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[6].  Did not re-place instance vga/ImageData/address1_i_1
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_12_n_0.  Did not re-place instance vga/ImageData/address1_i_12
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[6]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_1_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.203 | TNS=-1508.667 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_18_n_0.  Did not re-place instance vga/ImageData/address1_i_18
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[5]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_2_comp_1.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_18_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.151 | TNS=-1501.283 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_8_n_0.  Did not re-place instance vga/ImageData/address1_i_8
+INFO: [Physopt 32-242] Processed net vga/ImageData/address1_i_8_n_0. Rewired (signal push) vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0 to 4 loads. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.142 | TNS=-1500.005 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_8_n_0_repN.  Did not re-place instance vga/ImageData/address1_i_8_replica
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[6]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.994 | TNS=-1478.989 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_6' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[0].  Did not re-place instance vga/ImageData/address1_i_7
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_35_n_0.  Did not re-place instance vga/ImageData/address1_i_35
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[0]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_7_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_35_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.933 | TNS=-1470.327 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_8_n_0_repN.  Re-placed instance vga/ImageData/address1_i_8_replica
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.915 | TNS=-1467.771 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Re-placed instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.864 | TNS=-1460.529 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_8_n_0_repN.  Re-placed instance vga/ImageData/address1_i_8_replica
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.848 | TNS=-1458.257 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Re-placed instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.827 | TNS=-1455.275 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[1]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_6_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.749 | TNS=-1444.199 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[2]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_5_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.715 | TNS=-1439.371 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[3]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_4_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.713 | TNS=-1439.087 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_8_n_0_repN.  Re-placed instance vga/ImageData/address1_i_8_replica
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.711 | TNS=-1438.803 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_8_n_0_repN.  Did not re-place instance vga/ImageData/address1_i_8_replica
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[5]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_2_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.708 | TNS=-1438.377 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Re-placed instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.691 | TNS=-1435.963 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[4]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_3_comp.
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.673 | TNS=-1433.407 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_4' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_8_n_0.  Re-placed instance vga/ImageData/address1_i_8_rewire
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.553 | TNS=-1416.367 |
 INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
 INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/address__2[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/address__0_n_106. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/address_n_106. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net vga/ImageData/D[6].  Re-placed instance vga/ImageData/address1_i_2
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_8_n_0.  Did not re-place instance vga/ImageData/address1_i_8_rewire
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[1]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_6_comp_1.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.547 | TNS=-1415.515 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_8_n_0.  Re-placed instance vga/ImageData/address1_i_8_rewire
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.518 | TNS=-1411.397 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_60_n_0.  Re-placed instance vga/ImageData/address1_i_60
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_60_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.418 | TNS=-1397.197 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_8_n_0.  Did not re-place instance vga/ImageData/address1_i_8_rewire
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[2]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_5_comp_1.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.400 | TNS=-1394.641 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_8_n_0.  Did not re-place instance vga/ImageData/address1_i_8_rewire
+INFO: [Physopt 32-572] Net vga/ImageData/address1_i_8_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net vga/ImageData/address1_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/address1_n_89. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_1_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2.  Did not re-place instance vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP
+INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/address__2[15]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[3].  Did not re-place instance vga/ImageData/address1_i_4_comp
+INFO: [Physopt 32-735] Processed net vga/ImageData/D[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.367 | TNS=-1391.813 |
+INFO: [Physopt 32-663] Processed net vga/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_sig_4.  Re-placed instance vga/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_gate_5_LOPT_REMAP
+INFO: [Physopt 32-735] Processed net vga/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_sig_4. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.366 | TNS=-1391.741 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/D[1].  Re-placed instance vga/ImageData/address1_i_6_comp_1
+INFO: [Physopt 32-735] Processed net vga/ImageData/D[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.363 | TNS=-1389.315 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[6].  Did not re-place instance vga/ImageData/address1_i_1_comp_1
 INFO: [Physopt 32-735] Processed net vga/ImageData/D[6]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.904 | TNS=-1572.540 |
-INFO: [Physopt 32-663] Processed net vga/ImageData/D[7].  Re-placed instance vga/ImageData/address1_i_1
-INFO: [Physopt 32-735] Processed net vga/ImageData/D[7]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.887 | TNS=-1570.126 |
-INFO: [Physopt 32-662] Processed net vga/ImageData/D[7].  Did not re-place instance vga/ImageData/address1_i_1
-INFO: [Physopt 32-702] Processed net vga/ImageData/D[7]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_9_n_0.  Did not re-place instance vga/ImageData/address1_i_9
-INFO: [Physopt 32-710] Processed net vga/ImageData/D[7]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_1_comp.
-INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.881 | TNS=-1569.274 |
-INFO: [Physopt 32-663] Processed net vga/ImageData/D[5].  Re-placed instance vga/ImageData/address1_i_3
-INFO: [Physopt 32-735] Processed net vga/ImageData/D[5]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.877 | TNS=-1568.706 |
-INFO: [Physopt 32-662] Processed net vga/ImageData/D[6].  Did not re-place instance vga/ImageData/address1_i_2
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.322 | TNS=-1383.493 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[0].  Did not re-place instance vga/ImageData/address1_i_7_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_60_n_0.  Did not re-place instance vga/ImageData/address1_i_60
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_60_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.307 | TNS=-1381.363 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[6].  Did not re-place instance vga/ImageData/address1_i_1_comp_1
 INFO: [Physopt 32-702] Processed net vga/ImageData/D[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_9_n_0.  Did not re-place instance vga/ImageData/address1_i_9
-INFO: [Physopt 32-134] Processed net vga/ImageData/address1_i_9_n_0. Rewiring did not optimize the net.
-INFO: [Physopt 32-572] Net vga/ImageData/address1_i_9_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.868 | TNS=-1567.360 |
-INFO: [Physopt 32-663] Processed net vga/currentblock.  Re-placed instance vga/currentblock_reg
-INFO: [Physopt 32-735] Processed net vga/currentblock. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.809 | TNS=-1559.050 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_4' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_9_n_0.  Did not re-place instance vga/ImageData/address1_i_9
-INFO: [Physopt 32-134] Processed net vga/ImageData/address1_i_9_n_0. Rewiring did not optimize the net.
-INFO: [Physopt 32-572] Net vga/ImageData/address1_i_9_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net vga/ImageData/address1_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Re-placed instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.259 | TNS=-1374.547 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[5].  Did not re-place instance vga/ImageData/address1_i_2_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.255 | TNS=-1373.911 |
+INFO: [Physopt 32-663] Processed net vga/ASCII/D[0].  Re-placed instance vga/ASCII/dataOut_reg[0]
+INFO: [Physopt 32-735] Processed net vga/ASCII/D[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.158 | TNS=-1360.205 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[1].  Did not re-place instance vga/ImageData/address1_i_6_comp_1
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_8_n_0_repN_2.  Re-placed instance vga/ImageData/address1_i_8_rewire_comp
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0_repN_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.158 | TNS=-1360.205 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[3].  Did not re-place instance vga/ImageData/address1_i_4_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/ImageData/address1_i_8_n_0.  Re-placed instance vga/ImageData/address1_i_8_rewire
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.155 | TNS=-1359.779 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_60_n_0.  Did not re-place instance vga/ImageData/address1_i_60
+INFO: [Physopt 32-702] Processed net vga/ImageData/address1_i_60_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net vga/address1_n_89. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_1_4' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[6]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_7_n_35. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/address__2[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/D[6].  Did not re-place instance vga/ImageData/address1_i_2
-INFO: [Physopt 32-702] Processed net vga/ImageData/D[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_9_n_0.  Did not re-place instance vga/ImageData/address1_i_9
-INFO: [Physopt 32-702] Processed net vga/ImageData/address1_i_9_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/address1_n_89. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.809 | TNS=-1559.050 |
-Phase 3 Critical Path Optimization | Checksum: 1a1097fda
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.155 | TNS=-1359.779 |
+Phase 3 Critical Path Optimization | Checksum: 230fcb880
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.254 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.809 | TNS=-1559.050 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/Sprites/MemoryArray_reg_7' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_7_n_35. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_4' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/address__2[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.155 | TNS=-1359.779 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/Sprites/MemoryArray_reg_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_6' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2.  Did not re-place instance vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP
+INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/address__2[15]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net vga/address__0_n_106. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net vga/address_n_106. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/D[6].  Did not re-place instance vga/ImageData/address1_i_2
-INFO: [Physopt 32-702] Processed net vga/ImageData/D[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_9_n_0.  Did not re-place instance vga/ImageData/address1_i_9
-INFO: [Physopt 32-134] Processed net vga/ImageData/address1_i_9_n_0. Rewiring did not optimize the net.
-INFO: [Physopt 32-572] Net vga/ImageData/address1_i_9_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net vga/ImageData/address1_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[0].  Did not re-place instance vga/ImageData/address1_i_7_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_60_n_0.  Did not re-place instance vga/ImageData/address1_i_60
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[0]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_7_comp_1.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_60_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.151 | TNS=-1359.211 |
+INFO: [Physopt 32-663] Processed net vga/ImageData/D[2].  Re-placed instance vga/ImageData/address1_i_5_comp_1
+INFO: [Physopt 32-735] Processed net vga/ImageData/D[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.128 | TNS=-1355.945 |
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[5].  Did not re-place instance vga/ImageData/address1_i_2_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[5]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_2_comp_2.
+INFO: [Physopt 32-735] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.096 | TNS=-1353.401 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_3' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[3].  Did not re-place instance vga/ImageData/address1_i_4_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_8_n_0.  Did not re-place instance vga/ImageData/address1_i_8_rewire
+INFO: [Physopt 32-710] Processed net vga/ImageData/D[3]. Critical path length was reduced through logic transformation on cell vga/ImageData/address1_i_4_comp_1.
+INFO: [Physopt 32-735] Processed net vga/ImageData/address1_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.085 | TNS=-1351.839 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_0_5' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/MemoryArray_reg_0_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[1].  Did not re-place instance vga/ImageData/address1_i_6_comp_1
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0_repN.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net vga/address1_n_89. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_1_4' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'vga/ImageData/MemoryArray_reg_1_5' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[5]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_7_n_35. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/address__2[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/D[6].  Did not re-place instance vga/ImageData/address1_i_2
-INFO: [Physopt 32-702] Processed net vga/ImageData/D[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net vga/ImageData/address1_i_9_n_0.  Did not re-place instance vga/ImageData/address1_i_9
-INFO: [Physopt 32-702] Processed net vga/ImageData/address1_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2.  Did not re-place instance vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP
+INFO: [Physopt 32-702] Processed net vga/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/address__2[15]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/D[1].  Did not re-place instance vga/ImageData/address1_i_6_comp_1
+INFO: [Physopt 32-702] Processed net vga/ImageData/D[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0_repN.  Did not re-place instance vga/ImageData/VGA_R_OBUF[3]_inst_i_6_comp
+INFO: [Physopt 32-702] Processed net vga/ImageData/VGA_R_OBUF[3]_inst_i_6_n_0_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net vga/address1_n_89. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga/ImageData/colorAddr[5]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.809 | TNS=-1559.050 |
-Phase 4 Critical Path Optimization | Checksum: 1a1097fda
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.085 | TNS=-1351.839 |
+Phase 4 Critical Path Optimization | Checksum: 230fcb880
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1959.062 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-11.809 | TNS=-1559.050 |
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1983.254 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-10.085 | TNS=-1351.839 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -582,24 +741,25 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.099  |         14.058  |            0  |              0  |                     6  |           0  |           2  |  00:00:02  |
-|  Total          |          0.099  |         14.058  |            0  |              0  |                     6  |           0  |           3  |  00:00:02  |
+|  Critical Path  |          1.246  |        173.312  |            1  |              0  |                    42  |           0  |           2  |  00:00:05  |
+|  Total          |          1.246  |        173.312  |            1  |              0  |                    42  |           0  |           3  |  00:00:05  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.062 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 1e5f230a0
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.254 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 236e66917
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-171 Infos, 23 Warnings, 2 Critical Warnings and 0 Errors encountered.
+331 Infos, 23 Warnings, 2 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1959.062 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1983.254 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/Wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
@@ -615,51 +775,51 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: b58d0b24 ConstDB: 0 ShapeSum: 33910836 RouteDB: 0
+Checksum: PlaceDB: b3581b18 ConstDB: 0 ShapeSum: d64a64f4 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 1388490de
+Phase 1 Build RT Design | Checksum: 2bc3eba2
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2007.996 ; gain = 48.934
-Post Restoration Checksum: NetGraph: 7604b91c NumContArr: c27fd7c2 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2008.312 ; gain = 25.059
+Post Restoration Checksum: NetGraph: 23b58429 NumContArr: 80e6779 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 1388490de
+Phase 2.1 Create Timer | Checksum: 2bc3eba2
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2007.996 ; gain = 48.934
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2008.312 ; gain = 25.059
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 1388490de
+Phase 2.2 Fix Topology Constraints | Checksum: 2bc3eba2
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2014.598 ; gain = 55.535
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2014.902 ; gain = 31.648
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 1388490de
+Phase 2.3 Pre Route Cleanup | Checksum: 2bc3eba2
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2014.598 ; gain = 55.535
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2014.902 ; gain = 31.648
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 234bf3494
+Phase 2.4 Update Timing | Checksum: 2cfc415e6
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2043.332 ; gain = 84.270
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.725| TNS=-1546.942| WHS=-0.143 | THS=-1.885 |
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2038.145 ; gain = 54.891
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.097| TNS=-1352.771| WHS=-0.096 | THS=-2.237 |
 
-Phase 2 Router Initialization | Checksum: 25941314b
+Phase 2 Router Initialization | Checksum: 2ae8a119c
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2043.332 ; gain = 84.270
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2038.145 ; gain = 54.891
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.00130565 %
-  Global Horizontal Routing Utilization  = 0.00106564 %
+  Global Vertical Routing Utilization    = 0.00121861 %
+  Global Horizontal Routing Utilization  = 0.00156294 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 462
+  Number of Failed Nets               = 621
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 460
+  Number of Unrouted Nets             = 619
   Number of Partially Routed Nets     = 2
   Number of Node Overlaps             = 0
 
@@ -667,90 +827,88 @@ Router Utilization Summary
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 25941314b
+Phase 3.1 Global Routing | Checksum: 2ae8a119c
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2043.332 ; gain = 84.270
-Phase 3 Initial Routing | Checksum: 13dd00662
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2038.145 ; gain = 54.891
+Phase 3 Initial Routing | Checksum: 16700dbf8
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2048.785 ; gain = 89.723
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 2052.906 ; gain = 69.652
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 22
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 49
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 5
  Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.567| TNS=-1540.883| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.352| TNS=-1387.233| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 25c87c7c5
+Phase 4.1 Global Iteration 0 | Checksum: 1b766a1c6
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 2048.785 ; gain = 89.723
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2052.906 ; gain = 69.652
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 19
- Number of Nodes with overlaps = 9
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.573| TNS=-1538.675| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.358| TNS=-1391.799| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 16a4eddf6
+Phase 4.2 Global Iteration 1 | Checksum: 1b34ffa75
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2048.785 ; gain = 89.723
-Phase 4 Rip-up And Reroute | Checksum: 16a4eddf6
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 2052.906 ; gain = 69.652
+Phase 4 Rip-up And Reroute | Checksum: 1b34ffa75
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2048.785 ; gain = 89.723
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 2052.906 ; gain = 69.652
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1a8daa9ae
+Phase 5.1.1 Update Timing | Checksum: 1915c601d
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2048.785 ; gain = 89.723
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.567| TNS=-1540.786| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 2052.906 ; gain = 69.652
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.345| TNS=-1386.239| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 2668e25fa
+Phase 5.1 Delay CleanUp | Checksum: 21f316e42
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 2668e25fa
+Phase 5.2 Clock Skew Optimization | Checksum: 21f316e42
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
-Phase 5 Delay and Skew Optimization | Checksum: 2668e25fa
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
+Phase 5 Delay and Skew Optimization | Checksum: 21f316e42
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1c0f96c37
+Phase 6.1.1 Update Timing | Checksum: 258003a0e
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.555| TNS=-1534.389| WHS=0.130  | THS=0.000  |
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.339| TNS=-1385.668| WHS=0.159  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1c0f96c37
+Phase 6.1 Hold Fix Iter | Checksum: 258003a0e
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
-Phase 6 Post Hold Fix | Checksum: 1c0f96c37
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
+Phase 6 Post Hold Fix | Checksum: 258003a0e
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.228968 %
-  Global Horizontal Routing Utilization  = 0.104007 %
+  Global Vertical Routing Utilization    = 0.202681 %
+  Global Horizontal Routing Utilization  = 0.257459 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -761,10 +919,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 27.027%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 54.0541%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 23.5294%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 35.2941%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 32.4324%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 72.0721%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 63.2353%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 29.4118%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -786,45 +944,45 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 209744f0a
+Phase 7 Route finalize | Checksum: 1f55ebfd8
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 209744f0a
+Phase 8 Verifying routed nets | Checksum: 1f55ebfd8
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 14da12a15
+Phase 9 Depositing Routes | Checksum: 206db2c3c
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-11.555| TNS=-1534.389| WHS=0.130  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-10.339| TNS=-1385.668| WHS=0.159  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 14da12a15
+Phase 10 Post Router Timing | Checksum: 206db2c3c
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2051.816 ; gain = 92.754
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2056.938 ; gain = 73.684
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-189 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+349 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 2051.816 ; gain = 92.754
+route_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:29 . Memory (MB): peak = 2056.938 ; gain = 73.684
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.093 . Memory (MB): peak = 2051.816 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.111 . Memory (MB): peak = 2056.938 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/Wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Wrapper_drc_routed.rpt -pb Wrapper_drc_routed.pb -rpx Wrapper_drc_routed.rpx
 Command: report_drc -file Wrapper_drc_routed.rpt -pb Wrapper_drc_routed.pb -rpx Wrapper_drc_routed.rpx
@@ -844,7 +1002,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-201 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+361 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file Wrapper_route_status.rpt -pb Wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file Wrapper_timing_summary_routed.rpt -pb Wrapper_timing_summary_routed.pb -rpx Wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -857,13 +1015,13 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file Wrapper_clock_utiliz
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Wrapper_bus_skew_routed.rpt -pb Wrapper_bus_skew_routed.pb -rpx Wrapper_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 18:28:26 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 17:18:17 2024...
 #-----------------------------------------------------------
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Apr 11 18:29:32 2024
-# Process ID: 7816
+# Start of session at: Sat Apr 13 17:18:38 2024
+# Process ID: 4192
 # Current directory: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1
 # Command line: vivado.exe -log Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Wrapper.tcl -notrace
 # Log file: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/Wrapper.vdi
@@ -874,10 +1032,10 @@ Command: open_checkpoint Wrapper_routed.dcp
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1329.223 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1329.086 ; gain = 0.000
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1329.223 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1329.086 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2021.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -888,16 +1046,17 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1596.922 ; gain = 6.410
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1598.035 ; gain = 8.133
 Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1596.922 ; gain = 6.410
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1596.922 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1598.035 ; gain = 8.133
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1598.035 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 9 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 7 instances
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2021.1 (64-bit) build 3247384
-open_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1596.922 ; gain = 267.699
+open_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1598.035 ; gain = 268.949
 Command: write_bitstream -force Wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -923,44 +1082,44 @@ WARNING: [DRC DPIP-1] Input pipelining: DSP vga/address__1 input vga/address__1/
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP vga/address1 output vga/address1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP vga/address__1 output vga/address__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP vga/address1 multiplier stage vga/address1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y10 has BlockRam (vga/ImageData/MemoryArray_reg_1_0) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y11 has BlockRam (vga/ImageData/MemoryArray_reg_0_1) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y12 has BlockRam (vga/ImageData/MemoryArray_reg_1_1) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y13 has BlockRam (vga/ImageData/MemoryArray_reg_0_2) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y14 has BlockRam (vga/ImageData/MemoryArray_reg_1_2) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y15 has BlockRam (vga/ImageData/MemoryArray_reg_0_7) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y16 has BlockRam (vga/ImageData/MemoryArray_reg_1_7) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y17 has BlockRam (vga/ImageData/MemoryArray_reg_0_5) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y18 has BlockRam (vga/ImageData/MemoryArray_reg_1_5) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y20 has BlockRam (vga/ImageData/MemoryArray_reg_0_6) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y21 has BlockRam (vga/ImageData/MemoryArray_reg_1_6) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y22 has BlockRam (vga/ImageData/MemoryArray_reg_0_3) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y23 has BlockRam (vga/ImageData/MemoryArray_reg_1_3) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y9 has BlockRam (vga/ImageData/MemoryArray_reg_0_0) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y16 has BlockRam (vga/ImageData/MemoryArray_reg_0_4) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y17 has BlockRam (vga/ImageData/MemoryArray_reg_1_4) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y18 has BlockRam (vga/ImageData/MemoryArray_reg_0_8) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y19 has BlockRam (vga/ImageData/MemoryArray_reg_1_8) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/hPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_7[3]) which is driven by a register (vga/Display/vPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y10 has BlockRam (vga/ImageData/MemoryArray_reg_0_8) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y11 has BlockRam (vga/ImageData/MemoryArray_reg_1_8) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y12 has BlockRam (vga/ImageData/MemoryArray_reg_0_2) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y13 has BlockRam (vga/ImageData/MemoryArray_reg_1_2) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y14 has BlockRam (vga/ImageData/MemoryArray_reg_0_1) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y15 has BlockRam (vga/ImageData/MemoryArray_reg_1_1) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y8 has BlockRam (vga/ImageData/MemoryArray_reg_0_7) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y9 has BlockRam (vga/ImageData/MemoryArray_reg_1_7) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y10 has BlockRam (vga/ImageData/MemoryArray_reg_0_3) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y11 has BlockRam (vga/ImageData/MemoryArray_reg_1_3) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y12 has BlockRam (vga/ImageData/MemoryArray_reg_0_5) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y13 has BlockRam (vga/ImageData/MemoryArray_reg_1_5) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y8 has BlockRam (vga/ImageData/MemoryArray_reg_0_6) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y9 has BlockRam (vga/ImageData/MemoryArray_reg_1_6) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y12 has BlockRam (vga/ImageData/MemoryArray_reg_0_4) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y13 has BlockRam (vga/ImageData/MemoryArray_reg_1_4) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y14 has BlockRam (vga/ImageData/MemoryArray_reg_0_0) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y15 has BlockRam (vga/ImageData/MemoryArray_reg_1_0) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/hPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 vga/ImageData/MemoryArray_reg_0_0 has an input control pin vga/ImageData/MemoryArray_reg_0_0/ADDRARDADDR[7] (net: vga/ImageData/MemoryArray_reg_1_8_0[3]) which is driven by a register (vga/Display/vPos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 47 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
@@ -976,5 +1135,5 @@ INFO: [#UNDEF] WebTalk data collection is mandatory when using a WebPACK part wi
 INFO: [Common 17-83] Releasing license: Implementation
 22 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2114.184 ; gain = 517.262
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 18:29:58 2024...
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2116.332 ; gain = 518.297
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 17:19:05 2024...
