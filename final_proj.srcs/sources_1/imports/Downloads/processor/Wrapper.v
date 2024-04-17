@@ -84,6 +84,8 @@ module Wrapper (
 	InstMem(.clk(clock), 
 		.addr(instAddr[11:0]), 
 		.dataOut(instData));
+		
+	assign LED = receiverdata;
 
 	wire[31:0] regAReal, regBReal;
 	reg[31:0] datainReg = 0;

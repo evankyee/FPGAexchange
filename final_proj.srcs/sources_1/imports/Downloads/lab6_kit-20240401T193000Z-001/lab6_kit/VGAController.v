@@ -11,6 +11,7 @@ module VGAController(
 	inout ps2_data,
 	output [15:0] LED, 
 	output [31:0] order,
+	output ready,
 	input [3:0] SW);           //Switches
 	
 	// Lab Memory Files Location
@@ -70,6 +71,7 @@ module VGAController(
     reg[3:0]entercount = 0;
     reg[6:0]cursor = 35;
     reg orderready = 0;
+    assign ready=orderready;
     
     
     reg [7:0] id = 32;
@@ -85,7 +87,7 @@ module VGAController(
     reg [7:0] ascii=32;
     reg [7:0] last_ascii=32;
     wire [7:0] asc;
-    reg currentblock;
+    wire currentblock;
     reg enterreg=1;
     
     always @(posedge clk)begin
@@ -144,10 +146,8 @@ module VGAController(
             
             if(entercount==11)begin
                 entercount<=0;
+                orderready=0;
             end
-        currentblock = (imgAddress == cursor);  
-
-        
         end 
         if(asc!=10)begin
             ascii<=asc;
@@ -185,12 +185,13 @@ module VGAController(
     wire ascii_type;
     wire [7:0] final_ascii, setvals;
     assign ascii_type = (colorAddr==1);
-    
+    assign currentblock = (imgAddress == cursor);  
+
     assign setvals = (imgAddress==35) ? id : (imgAddress==48) ? sec : (imgAddress==61) ? price1 : (imgAddress==62) ? price2 : (imgAddress==63) ? price3 : (imgAddress==74) ? volume1 : (imgAddress==75) ? volume2 : (imgAddress==76) ? volume3 : (imgAddress==87) ? type : 32;
     
     assign final_ascii = ascii_type ? currentblock ? (asc==10) ? ascii : asc : setvals : colorAddr;
     assign address = (2500*(final_ascii -33)) + (x-(x/50)*50)+(50*(y-(y/50)*50));
-    assign LED = cursor;
+    assign LED = order;
     
     
 	RAMvga #(

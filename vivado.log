@@ -1,0 +1,132 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Apr 16 20:14:25 2024
+# Process ID: 8056
+# Current directory: C:/Users/eal63/Desktop/FPGAexchange
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8604 C:\Users\eal63\Desktop\FPGAexchange\final_proj.xpr
+# Log file: C:/Users/eal63/Desktop/FPGAexchange/vivado.log
+# Journal file: C:/Users/eal63/Desktop/FPGAexchange\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/eal63/Desktop/FPGAexchange/final_proj.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1329.168 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property top Wrapper [current_fileset]
+update_compile_order -fileset sources_1
+open_hw_manager
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Nexys A7 -100T-210292AE2497A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Nexys A7 -100T-210292AE2497A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Nexys A7 -100T-210292AE2497A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Nexys A7 -100T-210292AE2497A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE2497A
+set_property PROGRAM.FILE {C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/WrapperUser.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE2497A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE2497A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210292AE2497A}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210292AE2497A
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210292B9CA84A}
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B9CA84A
+set_property PROGRAM.FILE {C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/WrapperUser.bit} [get_hw_devices xc7a100t_0_1]
+current_hw_device [get_hw_devices xc7a100t_0_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0_1] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Tue Apr 16 20:27:28 2024] Launched synth_1...
+Run output will be captured here: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Tue Apr 16 20:28:55 2024] Launched impl_1...
+Run output will be captured here: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/runme.log
+close [ open C:/Users/eal63/Desktop/FPGAexchange/WrapperBook.v w ]
+add_files C:/Users/eal63/Desktop/FPGAexchange/WrapperBook.v
+update_compile_order -fileset sources_1
+set_property top WrapperBook [current_fileset]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property top WrapperBook [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Tue Apr 16 20:37:35 2024] Launched synth_1...
+Run output will be captured here: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Tue Apr 16 20:38:22 2024] Launched impl_1...
+Run output will be captured here: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/runme.log
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 21:46:51 2024...
