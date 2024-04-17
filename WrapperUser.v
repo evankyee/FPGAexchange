@@ -71,81 +71,9 @@ module WrapperUser (
     assign readyf = out1 & ~out2;
     
     VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(LED),.order(), .ready(ready),.SW(SW)); 	
-    
     communicate comMod(clock, readyf, reset, order, dataPingOut, comEnOut);
     
     
-
-	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "";
-	
-	// Main Processing Unit
-	processor CPU(.clock(clock), .reset(reset), 
-								
-		// ROM
-		.address_imem(instAddr), .q_imem(instData),
-									
-		// Regfile
-		.ctrl_writeEnable(rwe),     .ctrl_writeReg(rd),
-		.ctrl_readRegA(rs1),     .ctrl_readRegB(rs2), 
-		.data_writeReg(rData), .data_readRegA(regAReal), .data_readRegB(regBReal),
-									
-		// RAM
-		.wren(mwe), .address_dmem(memAddr), 
-		.data(memDataIn), .q_dmem(memDataOut)); 
-	
-	// Instruction Memory (ROM)
-	ROM #(.MEMFILE({".mem"}))
-	InstMem(.clk(clock), 
-		.addr(instAddr[11:0]), 
-		.dataOut(instData));
-
-	wire[31:0] regAReal, regBReal;
-	reg[31:0] datainReg = 0;
-	assign regAReal = (rs1==20)? datainReg:regA;
-	assign regBReal = (rs2==20)? datainReg:regB;
-	reg seenRDY = 0;
-	always @(posedge clk) begin
-		seenRDY = dataRDY;
-	end
-	always @(posedge ~clk) begin
-		if (rwe == 1 & rd == 20) begin
-			datainReg <= rData;
-		end else if (dataRDY & (seenRDY != dataRDY)) begin
-			datainReg <= receiverdata;
-		end
-
-	end
-	//input clk, input reset, input datain, output[31:0] reg data, input comEn, output reg dataRDY
-	wire dataRDY;
-	wire[31:0] receiverdata;
-	receiver datarec(clk, reset, data_ping_in, receiverdata, comEn, dataRDY);
-
-	//ALSO NEED TO READ THE DATA CONSTANTLY FROM THE OUTPUT REGS WHEN TRADES R EXECUTED!!!!!!!!!!!!!!!!!!!!!!
-	
-	// Register File
-	regfile RegisterFile(.clock(clock), 
-		.ctrl_writeEnable(rwe), .ctrl_reset(reset), 
-		.ctrl_writeReg(rd),
-		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
-		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB));
-						
-	// Processor Memory (RAM)
-	RAM ProcMem(.clk(clock), 
-		.wEn(mwe), 
-		.addr(memAddr[11:0]), 
-		.dataIn(memDataIn), 
-		.dataOut(memDataOut));
-
-always @(posedge clock) begin
-
-			if (mwe) begin
-				$display("Wrote %0d into address %0d", memDataIn, memAddr);
-			end
-			if (rwe && rd != 0) begin
-				$display("Wrote %0d into register %0d", rData, rd);
-			end
-end
 
 
 endmodule

@@ -71,7 +71,6 @@ module VGAController(
     reg[3:0]entercount = 0;
     reg[6:0]cursor = 35;
     reg orderready = 0;
-    assign ready=orderready;
     
     
     reg [7:0] id = 32;
@@ -89,6 +88,7 @@ module VGAController(
     wire [7:0] asc;
     wire currentblock;
     reg enterreg=1;
+    reg finished=0;
     
     always @(posedge clk)begin
         if (asc==10 && enterreg==1)begin
@@ -96,43 +96,48 @@ module VGAController(
             enterreg=0;
             if(entercount==1)begin
                 id=ascii;
-                cursor <= 48;
+                cursor <= 49;
             end
             if(entercount==2)begin
                 sec=ascii;
-                cursor <= 61;
+                cursor <= 69;
             end
             if(entercount==3)begin
                 price1 = ascii;
-                cursor <= 62;
+                cursor <= 70;
             end
             if(entercount==4)begin
                 price2 = ascii;
-                cursor <= 63;
+                cursor <= 71;
             end
             if(entercount==5)begin
                 price3 = ascii;
-                cursor <= 74;
+                cursor <= 89;
             end
             if(entercount==6)begin
                 volume1 = ascii;
-                cursor <= 75;
+                cursor <= 90;
             end
             if(entercount==7)begin
                 volume2 = ascii;
-                cursor <= 76;
+                cursor <= 91;
             end
             if(entercount==8)begin
                 volume3 = ascii;
-                cursor <= 87;
+                cursor <= 109;
             end
             if (entercount==9)begin
                 type = ascii;
+                cursor=125;
+            end
+            if(entercount==10)begin
+                orderready=1;
             end
             
-            if(entercount==10)begin
-                cursor=35;
-                orderready=1;
+            if(entercount==11)begin
+                entercount=0;
+                orderready=0;
+                cursor=29;
                 id=32;
                 sec=32;
                 price1=32;
@@ -143,11 +148,7 @@ module VGAController(
                 volume3=32;
                 type=32;
             end
-            
-            if(entercount==11)begin
-                entercount<=0;
-                orderready=0;
-            end
+            ascii=32;
         end 
         if(asc!=10)begin
             ascii<=asc;
@@ -168,13 +169,13 @@ module VGAController(
 		.wEn(1'b0)); 						       // We're always reading
 	
 	
-	//if ascii is 10, we have an enter -- store last_ascii to DMEM
-	//Ram for data
-	RAM data(
-		.clk(clk), 							   	  
-		.addr(8'b0),					               
-		.dataIn(last_ascii),			          
-		.wEn(ascii==10)); 						   
+//	//if ascii is 10, we have an enter -- store last_ascii to DMEM
+//	//Ram for data
+//	RAM data(
+//		.clk(clk), 							   	  
+//		.addr(8'b0),					               
+//		.dataIn(last_ascii),			          
+//		.wEn(ascii==10)); 						   
 
     //Ram for sprites
     wire cpixel;
@@ -187,10 +188,11 @@ module VGAController(
     assign ascii_type = (colorAddr==1);
     assign currentblock = (imgAddress == cursor);  
 
-    assign setvals = (imgAddress==35) ? id : (imgAddress==48) ? sec : (imgAddress==61) ? price1 : (imgAddress==62) ? price2 : (imgAddress==63) ? price3 : (imgAddress==74) ? volume1 : (imgAddress==75) ? volume2 : (imgAddress==76) ? volume3 : (imgAddress==87) ? type : 32;
+    assign setvals = (imgAddress==29) ? id : (imgAddress==49) ? sec : (imgAddress==69) ? price1 : (imgAddress==70) ? price2 : (imgAddress==71) ? price3 : (imgAddress==89) ? volume1 : (imgAddress==90) ? volume2 : (imgAddress==91) ? volume3 : (imgAddress==109) ? type : 32;
     
-    assign final_ascii = ascii_type ? currentblock ? (asc==10) ? ascii : asc : setvals : colorAddr;
-    assign address = (2500*(final_ascii -33)) + (x-(x/50)*50)+(50*(y-(y/50)*50));
+    //
+    assign final_ascii = ascii_type ? currentblock ? (asc==10) ? setvals : asc : setvals : colorAddr;
+    assign address = (2500*(final_ascii -33)) + (x-(x/32)*32)+(50*(y-(y/64)*64));
     assign LED = order;
     
     
@@ -221,7 +223,7 @@ module VGAController(
 
 	wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
 	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr; 	 // Color address for the color palette
-	assign imgAddress = (x/50) + 13*(y/50);				 // Address calculated coordinate
+	assign imgAddress = (x/32) + 20*(y/64);				 // Address calculated coordinate
 
 
 	RAMvga #(		
@@ -266,16 +268,22 @@ module VGAController(
 	
 	
 	
-	
+	//order ready signal is on between the send enter (10th) and the reset enter (11th)
+	//set ready signal on for 1 clock cycle after order ready comes on
+//	wire r1,r2;
+//	dffe_ref f1(r1,orderready,clk,1'b1, 1'b0);
+//	dffe_ref f2(r2,r1,clk,1'b1,1'b0);
+	assign ready = orderready;
+
 	
 	//create the order
 	wire ordertype;
 	assign ordertype = (type==66) ? 1 : (type==83) ? 0 : 0;
-	assign order[31] = ordertype;
-	assign order[30:28]= (sec-65);
-	assign order[27:24]= (id-65);
-	assign order[23:12] = (price1-48)*100 + (price2-48)*10 + (price3-48);
-	assign order[11:0] = (volume1-48)*100 + (volume2-48)*10 + (volume3-48);
+	assign order[31] = orderready?ordertype : 0;
+	assign order[30:28]= orderready ? (sec-65) : 0;
+	assign order[27:24]= orderready ? (id-65) : 0;
+	assign order[23:12] = orderready ? ((price1-48)*100 + (price2-48)*10 + (price3-48)) : 0;
+	assign order[11:0] = orderready ? ((volume1-48)*100 + (volume2-48)*10 + (volume3-48)) : 0;
 	
 	
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Tue Apr 16 21:37:55 2024
+| Date             : Wed Apr 17 17:44:40 2024
 | Host             : P2-01 running 64-bit major release  (build 9200)
 | Command          : report_power -file WrapperUser_power_routed.rpt -pb WrapperUser_power_summary_routed.pb -rpx WrapperUser_power_routed.rpx
 | Design           : WrapperUser
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.153        |
+| Total On-Chip Power (W)  | 0.152        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.055        |
+| Dynamic (W)              | 0.053        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.3         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.003 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |      705 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      304 |     63400 |            0.48 |
-|   CARRY4                 |    <0.001 |       25 |     15850 |            0.16 |
-|   Register               |    <0.001 |      219 |    126800 |            0.17 |
+| Slice Logic              |    <0.001 |      606 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      245 |     63400 |            0.39 |
+|   Register               |    <0.001 |      220 |    126800 |            0.17 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
+|   CARRY4                 |    <0.001 |        3 |     15850 |            0.02 |
 |   Others                 |     0.000 |       23 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       21 |     63400 |            0.03 |
 |   LUT as Distributed RAM |     0.000 |       28 |     19000 |            0.15 |
-| Signals                  |     0.003 |      781 |       --- |             --- |
+| Signals                  |     0.002 |      730 |       --- |             --- |
 | Block RAM                |     0.036 |       26 |       135 |           19.26 |
 | DSPs                     |     0.002 |       10 |       240 |            4.17 |
 | I/O                      |     0.009 |       36 |       210 |           17.14 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.153 |          |           |                 |
+| Total                    |     0.152 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.058 |       0.042 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.056 |       0.041 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,9 +145,9 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| WrapperUser   |     0.055 |
-|   vga         |     0.045 |
-|     ImageData |     0.034 |
+| WrapperUser   |     0.053 |
+|   vga         |     0.043 |
+|     ImageData |     0.033 |
 |     Sprites   |     0.004 |
 +---------------+-----------+
 

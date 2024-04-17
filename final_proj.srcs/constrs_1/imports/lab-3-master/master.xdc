@@ -212,5 +212,5 @@ set_property -dict { PACKAGE_PIN B2    IOSTANDARD LVCMOS33 } [get_ports { PS2_DA
 #set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { QSPI_CSN }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
 
 
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff27/q_i_11__30_n_0];
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff27/q_reg_24];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff27/q_i_11__30_n_0];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff27/q_reg_24];
