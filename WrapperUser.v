@@ -61,16 +61,15 @@ module WrapperUser (
 	end
 
     //order info from user
-    wire [31:0] order;
-    assign order = 32'b00010001000000000100000000000001;
-    
+    wire [31:0] order;    
     wire ready,out1,out2;
   
     dffe_ref flip1(out1,ready,clock,1'b1, 1'b0);
     dffe_ref flip2(out2,out1,clock,1'b1,1'b0);
     assign readyf = out1 & ~out2;
     
-    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(LED),.order(), .ready(ready),.SW(SW)); 	
+    assign LED = dataPingOut;
+    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(),.order(order), .ready(ready),.SW(SW)); 	
     communicate comMod(clock, readyf, reset, order, dataPingOut, comEnOut);
     
     

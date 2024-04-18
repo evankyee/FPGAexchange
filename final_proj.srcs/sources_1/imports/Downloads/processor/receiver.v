@@ -1,11 +1,11 @@
-module receiver(input clk, input reset, input datain, output reg [31:0] data, input comEn, output reg dataRDY);
+module receiver(input clk, input reset, input datain, output reg [31:0] data=0, input comEn, output reg dataRDY=0, output reg[7:0] counter=0);
 
-reg[7:0] counter=0;
+//reg[7:0] counter=0;
 
 reg clock=0;
-reg [7:0] counter2;
+reg [31:0] counter2;
 always @(posedge clk) begin
-    if (counter2<50)
+    if (counter2<500000)
     counter2 <= counter2 +1;
     else begin
         counter2 <= 0;
@@ -13,10 +13,9 @@ always @(posedge clk) begin
     end
 
 end
-always @(posedge comEn) begin
-    counter<=0;
-end
-always @(posedge clk or posedge reset) begin
+
+
+always @(posedge clock or posedge reset) begin
     if (reset) begin
         counter <= 0;
         data <= 32'b0;

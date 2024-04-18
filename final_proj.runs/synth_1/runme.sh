@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log WrapperUser.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source WrapperUser.tcl
+EAStep vivado -log WrapperBook.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source WrapperBook.tcl

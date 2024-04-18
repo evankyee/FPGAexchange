@@ -5,9 +5,9 @@ reg[31:0] shiftreg;
 reg state=0;
 
 reg clock=0;
-reg [7:0] counter2;
+reg [31:0] counter2;
 always @(posedge clk) begin
-    if (counter2<50)
+    if (counter2<500000)
     counter2 <= counter2 +1;
     else begin
         counter2 <= 0;
@@ -16,9 +16,36 @@ always @(posedge clk) begin
 
 end
 
+reg [31:0] counter3=0;
+
+
+always @(posedge clk) begin
+    if (start==1) begin
+        counter3 <= 1;
+    end
+    else if ((counter3<=1280000) & (counter3>0)) begin
+        counter3<=counter3+1;
+    end
+    else if (start==0 & counter3>1280000) begin
+        counter3<=0;
+    end
+end
+
 parameter on =1, off=0;
 
-always @(posedge clk or posedge reset) begin
+reg starter=0;
+always @(*) begin
+    if (counter3>0) begin
+        starter <= 1;
+    end 
+    else begin
+        starter <= 0;
+    end
+
+end
+
+
+always @(posedge clock or posedge reset) begin
     if (reset) begin
         state <= 0;
         shiftreg <= 32'b0;
@@ -28,7 +55,7 @@ always @(posedge clk or posedge reset) begin
     end else begin
         case (state) 
             off:
-                if (start==1) begin
+                if (starter==1) begin
                     shiftreg <= word; //at start we put word into reg we are shifting
                     state <= on;
                     comEn <= 1;    
