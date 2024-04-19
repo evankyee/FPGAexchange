@@ -1,0 +1,1002 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Apr 19 01:31:38 2024
+# Process ID: 10332
+# Current directory: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/synth_1
+# Command line: vivado.exe -log WrapperBook.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WrapperBook.tcl
+# Log file: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/synth_1/WrapperBook.vds
+# Journal file: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/synth_1\vivado.jou
+#-----------------------------------------------------------
+source WrapperBook.tcl -notrace
+Command: synth_design -top WrapperBook -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12124
+WARNING: [Synth 8-2292] literal value truncated to fit in 12 bits [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:137]
+WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:71]
+WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:71]
+WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:94]
+WARNING: [Synth 8-992] y0 is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:38]
+WARNING: [Synth 8-992] c32 is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:58]
+WARNING: [Synth 8-992] aNE is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:42]
+WARNING: [Synth 8-992] aLT is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:42]
+WARNING: [Synth 8-992] aOVF is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:42]
+WARNING: [Synth 8-992] addctrl is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:53]
+WARNING: [Synth 8-992] subctrl is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:53]
+WARNING: [Synth 8-992] trialsub is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:60]
+WARNING: [Synth 8-992] fin is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:72]
+WARNING: [Synth 8-6901] identifier 'aluAxm' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAxm2' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAxm3' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAmw' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAmw2' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluAmw3' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:42]
+WARNING: [Synth 8-6901] identifier 'aluBxm' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBxm2' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBxm3' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBmw' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBmw2' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-6901] identifier 'aluBmw3' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:44]
+WARNING: [Synth 8-992] postopbooth is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mult.v:72]
+WARNING: [Synth 8-992] fin is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mult.v:76]
+WARNING: [Synth 8-6901] identifier 'boothselect' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mult.v:57]
+WARNING: [Synth 8-6901] identifier 'boothselect' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mult.v:57]
+WARNING: [Synth 8-992] xmEX is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:274]
+WARNING: [Synth 8-992] mwEX is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:274]
+WARNING: [Synth 8-992] EXzero is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:274]
+WARNING: [Synth 8-992] exceping is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:299]
+WARNING: [Synth 8-992] inmultA is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:333]
+WARNING: [Synth 8-992] inmultB is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:333]
+WARNING: [Synth 8-992] multdivresult is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:342]
+WARNING: [Synth 8-992] twodiv is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:376]
+WARNING: [Synth 8-992] twomult is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:376]
+WARNING: [Synth 8-992] stallping is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:472]
+WARNING: [Synth 8-6901] identifier 'pcreg_en' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'multdivexception' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'exping2' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'alu_ctrl' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'alu_ctrl' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'stage3opcode' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:96]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:97]
+WARNING: [Synth 8-6901] identifier 'D_bex' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:135]
+WARNING: [Synth 8-6901] identifier 'rtype5' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'iand05' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'iand25' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'jiand15' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'setx' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:136]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:147]
+WARNING: [Synth 8-6901] identifier 'branchsel' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:195]
+WARNING: [Synth 8-6901] identifier 'bypassA' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:202]
+WARNING: [Synth 8-6901] identifier 'bypassB' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:203]
+WARNING: [Synth 8-6901] identifier 'bypassA' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:204]
+WARNING: [Synth 8-6901] identifier 'bypassB' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:205]
+WARNING: [Synth 8-6901] identifier 'XM_irout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'XM_o_out' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'MW_irout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'datawriteReg1' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:212]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:214]
+WARNING: [Synth 8-6901] identifier 'bexB' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:214]
+WARNING: [Synth 8-6901] identifier 'bexExtend' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:214]
+WARNING: [Synth 8-6901] identifier 'XM_irout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'XM_o_out' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'MW_irout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'datawriteReg2' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:215]
+WARNING: [Synth 8-6901] identifier 'bexB' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'XM_irout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'bexB' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'MW_irout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:218]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:230]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'branchAextend' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'setx' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MWtargextend' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'exceptiondat' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'jiand15' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MW_pcout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'regDatSel' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MW_d_out' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'MW_o_out' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:239]
+WARNING: [Synth 8-6901] identifier 'setx' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MWtargextend' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'exceptiondat' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'jiand15' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MW_pcout' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'regDatSel' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MW_d_out' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'MW_o_out' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:240]
+WARNING: [Synth 8-6901] identifier 'BneA' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:251]
+WARNING: [Synth 8-6901] identifier 'BltA' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:251]
+WARNING: [Synth 8-6901] identifier 'bex' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:251]
+WARNING: [Synth 8-6901] identifier 'exping2' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'multdivresult' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:261]
+WARNING: [Synth 8-6901] identifier 'divexp' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:279]
+WARNING: [Synth 8-6901] identifier 'multexp' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:279]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'multdivexception' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:282]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:289]
+WARNING: [Synth 8-6901] identifier 'multactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:293]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:293]
+WARNING: [Synth 8-6901] identifier 'divactive' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:294]
+WARNING: [Synth 8-6901] identifier 'data_resultRDY' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:294]
+WARNING: [Synth 8-6901] identifier 'dmembypass' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:390]
+WARNING: [Synth 8-6901] identifier 'rtype5' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:390]
+WARNING: [Synth 8-6901] identifier 'itype5' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:390]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:436]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:436]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:436]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:436]
+WARNING: [Synth 8-6901] identifier 'stage5opcode' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:436]
+INFO: [Common 17-14] Message 'Synth 8-6901' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-992] one is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/regfile.v:131]
+WARNING: [Synth 8-992] regAReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:181]
+WARNING: [Synth 8-992] regBReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:181]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.762 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'WrapperBook' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+INFO: [Synth 8-6157] synthesizing module 'VGAControllerBook' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:2]
+INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGATimingGenerator.v:2]
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGATimingGenerator.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RAMvga' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 235000 - type: integer 
+	Parameter MEMFILE bound to: 1040'b01000011001110100010111101010101011100110110010101110010011100110010111101100101011000010110110000110110001100110010111101000100011001010111001101101011011101000110111101110000001011110100011001010000010001110100000101100101011110000110001101101000011000010110111001100111011001010010111101100110011010010110111001100001011011000101111101110000011100100110111101101010001011100111001101110010011000110111001100101111011100110110111101110101011100100110001101100101011100110101111100110001001011110110100101101101011100000110111101110010011101000111001100101111010001000110111101110111011011100110110001101111011000010110010001110011001011110110110001100001011000100011011001011111011010110110100101110100001011010011001000110000001100100011010000110000001101000011000000110001010101000011000100111001001100110011000000110000001100000101101000101101001100000011000000110001001011110110110001100001011000100011011001011111011010110110100101110100001011110111001101110000011100100110100101110100011001010111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/sprites.mem' is read successfully [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAMvga' (2#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAMvga' is unconnected for instance 'Sprites' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:103]
+WARNING: [Synth 8-7023] instance 'Sprites' of module 'RAMvga' has 5 connections declared, but only 4 given [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:103]
+INFO: [Synth 8-6157] synthesizing module 'RAMvga__parameterized0' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 1016'b01000011001110100010111101010101011100110110010101110010011100110010111101100101011000010110110000110110001100110010111101000100011001010111001101101011011101000110111101110000001011110100011001010000010001110100000101100101011110000110001101101000011000010110111001100111011001010010111101100110011010010110111001100001011011000101111101110000011100100110111101101010001011100111001101110010011000110111001100101111011100110110111101110101011100100110001101100101011100110101111100110001001011110110100101101101011100000110111101110010011101000111001100101111010001000110111101110111011011100110110001101111011000010110010001110011001011110110110001100001011000100011011001011111011010110110100101110100001011010011001000110000001100100011010000110000001101000011000000110001010101000011000100111001001100110011000000110000001100000101101000101101001100000011000000110001001011110110110001100001011000100011011001011111011010110110100101110100001011110110001001101111011011110110101100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/book.mem' is read successfully [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAMvga__parameterized0' (2#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/RAMvga.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAMvga' is unconnected for instance 'ImageData' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:129]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAMvga' has 5 connections declared, but only 4 given [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'VGAControllerBook' (3#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:2]
+WARNING: [Synth 8-7071] port 'buyA' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'buyB' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'buyC' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'buyD' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'buyE' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'buyF' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'buyG' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'buyH' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellA' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellB' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellC' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellD' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellE' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellF' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellG' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7071] port 'sellH' of module 'VGAControllerBook' is unconnected for instance 'vga2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+WARNING: [Synth 8-7023] instance 'vga2' of module 'VGAControllerBook' has 23 connections declared, but only 7 given [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:61]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:21]
+INFO: [Synth 8-6157] synthesizing module 'reg32' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/reg32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (4#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg32' (5#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/reg32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'and_32' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/and_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'and_32' (6#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/and_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'or_32' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/or_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'or_32' (7#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/or_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2' (8#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll16' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll16' (9#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll8' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll8' (10#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll4' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll4' (11#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll2' (12#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll1' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll1' (13#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll' (14#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra16' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra16' (15#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra8' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra8' (16#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra4' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra4' (17#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra2' (18#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra1' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra1' (19#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra' (20#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/sra.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla32' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla' (21#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla32' (22#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'no' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/no.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'no' (23#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/no.v:1]
+INFO: [Synth 8-6157] synthesizing module 'overflowcalc' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/overflowcalc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'overflowcalc' (24#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/overflowcalc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4' (25#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8' (26#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ovfsub' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/ovfsub.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ovfsub' (27#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/ovfsub.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ovfadd' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/ovfadd.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ovfadd' (28#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/ovfadd.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (29#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'doublereg32' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/doublereg32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'doublereg32' (30#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/doublereg32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mult' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clockcount' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/clockcount.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tffe' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/tffe.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tffe' (31#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/tffe.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clockcount' (32#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/clockcount.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux65_2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mux65_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux65_2' (33#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mux65_2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg65' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/reg65.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg65' (34#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/reg65.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rightshift2' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/rightshift2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rightshift2' (35#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/rightshift2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (36#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'leftshift' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/leftshift.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'leftshift' (37#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/leftshift.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'div' (38#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multdiv' (39#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard' (40#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/hazard.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (41#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:21]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/ROM.v:2]
+	Parameter MEMFILE bound to: 96'b011001010111100001100011011010000110000101101110011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'exchange.mem' is read successfully [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/ROM.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (42#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/ROM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'receiver' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/receiver.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'receiver' (43#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/receiver.v:1]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tristate' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/tristate.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tristate' (44#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/tristate.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (45#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (46#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (47#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/RAM.v:2]
+INFO: [Synth 8-251] Wrote x into register x [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:224]
+INFO: [Synth 8-6155] done synthesizing module 'WrapperBook' (48#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1407.035 ; gain = 77.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1407.035 ; gain = 77.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1407.035 ; gain = 77.273
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.328 . Memory (MB): peak = 1407.035 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff27/q_i_11__30_n_0'. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:215]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:215]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff27/q_reg_24'. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:216]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:216]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff2/q_reg_9'. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:217]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:217]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff2/q_reg_10'. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:218]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:218]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/WrapperBook_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/WrapperBook_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1493.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1493.309 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1493.309 ; gain = 163.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1493.309 ; gain = 163.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1493.309 ; gain = 163.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1493.309 ; gain = 163.547
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'CPU/EXpt1' (dffe_ref) to 'CPU/except'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   5 Input   32 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   3 Input      1 Bit         XORs := 331   
+	   2 Input      1 Bit         XORs := 1158  
++---Registers : 
+	               32 Bit    Registers := 3     
+	               29 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 1778  
++---Multipliers : 
+	               6x32  Multipliers := 1     
+	              12x32  Multipliers := 1     
++---RAMs : 
+	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
+	             229K Bit	(235000 X 1 bit)          RAMs := 1     
+	             128K Bit	(4096 X 32 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   65 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 242   
+	   2 Input   27 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 7     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 57    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP address1, operation Mode is: (D+(A:0x3fffffdf))*(B:0x9c4).
+DSP Report: operator address1 is absorbed into DSP address1.
+DSP Report: operator address2 is absorbed into DSP address1.
+DSP Report: Generating DSP address, operation Mode is: C+A*(B:0x32).
+DSP Report: operator address is absorbed into DSP address.
+DSP Report: operator address0 is absorbed into DSP address.
+DSP Report: Generating DSP address, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
+DSP Report: operator address is absorbed into DSP address.
+DSP Report: Generating DSP address, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator address is absorbed into DSP address.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1506.969 ; gain = 177.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+---------------------+---------------+----------------+
+|Module Name | RTL Object          | Depth x Width | Implemented As | 
++------------+---------------------+---------------+----------------+
+|WrapperBook | InstMem/dataOut_reg | 4096x29       | Block RAM      | 
++------------+---------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name             | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAMvga:                 | MemoryArray_reg         | 229 K x 1(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 8      | 
+|RAMvga__parameterized0: | MemoryArray_reg         | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|WrapperBook             | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
++------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below)
++------------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping                  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|VGAControllerBook | (D+(A:0x3fffffdf))*(B:0x9c4) | 18     | 12     | -      | 8      | 30     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|VGAControllerBook | C+A*(B:0x32)                 | 18     | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|VGAControllerBook | PCIN+(A:0x0):B+(C:0x1)       | 30     | 18     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|VGAControllerBook | PCIN+(A:0x0):B               | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1520.352 ; gain = 190.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+      : CPU/i_0/multdiv_ex
+      : CPU/mult/data_exception
+      : CPU/mult/i_0/data_exception
+      : CPU/mult/i_0/data_operandA[31]
+      : CPU/mult/data_operandA[31]
+      : CPU/i_0/inmultA[31]
+      : CPU/i_0/multdiv_ex
+      : CPU/mult/data_exception
+      : CPU/mult/i_0/data_exception
+      : CPU/mult/i_0/divexcep
+      : CPU/mult/divide/exception
+      : CPU/mult/divide/i_2/exception
+      : CPU/mult/divide/i_2/out[12]
+      : CPU/mult/divide/Apick/out[12]
+      : CPU/mult/divide/Apick/out_inferred/out[12]
+      : CPU/mult/divide/Apick/out_inferred/in1[12]
+      : CPU/mult/divide/Apick/in1[12]
+      : CPU/mult/divide/Asub/data_result[12]
+      : CPU/mult/divide/Asub/i_0/data_result[12]
+      : CPU/mult/divide/Asub/i_0/data_operandB[2]
+      : CPU/mult/divide/Asub/data_operandB[2]
+      : CPU/mult/divide/signA[2]
+      : CPU/mult/data_operandB[2]
+      : CPU/i_0/inmultB[2]
+      : CPU/i_0/ovf
+      : CPU/mainalu/overflow
+      : CPU/mainalu/i_0/overflow
+      : CPU/mainalu/i_0/data_operandA[1]
+      : CPU/mainalu/data_operandA[1]
+      : CPU/i_0/aluA[1]
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:03 . Memory (MB): peak = 1546.441 ; gain = 216.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name             | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAMvga:                 | MemoryArray_reg         | 229 K x 1(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 8      | 
+|RAMvga__parameterized0: | MemoryArray_reg         | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|WrapperBook             | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
++------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_3477/O (LUT3)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3477/I2 (LUT3)
+     2: i_3478/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_3478/I3 (LUT6)
+     4: i_2178/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     5: i_2178/I5 (LUT6)
+     6: i_3738/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     7: i_3738/I3 (LUT5)
+     8: i_4426/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+     9: i_4426/I3 (LUT4)
+    10: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    11: i_4001/I1 (LUT2)
+    12: i_3429/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    13: i_3429/I5 (LUT6)
+    14: i_3477/O (LUT3)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I2 -to O i_3477"
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/I1 (LUT2)
+     2: i_3429/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_3429/I5 (LUT6)
+     4: i_3477/O (LUT3)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     5: i_3477/O (LUT3)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I1 -to O i_4001"
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_2178/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     1: i_2178/I5 (LUT6)
+     2: i_3738/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_3738/I3 (LUT5)
+     4: i_4426/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+     5: i_4426/I3 (LUT4)
+     6: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     7: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I5 -to O i_2178"
+Found timing loop:
+     0: i_3478/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3478/I3 (LUT6)
+     2: i_2178/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     3: i_2178/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I3 -to O i_3478"
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4426/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+     1: i_4426/I3 (LUT4)
+     2: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I3 -to O i_4426"
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3814/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3814/I5 (LUT6)
+     2: i_3998/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_3998/I1 (LUT2)
+     4: i_3030/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/and_32.v:5]
+     5: i_3030/I1 (LUT4)
+     6: i_3018/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:88]
+     7: i_3018/I5 (LUT6)
+     8: i_3024/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:88]
+     9: i_3024/I3 (LUT4)
+    10: \CPU/mult/divide/Apick/i_2772 /O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_2.v:5]
+    11: \CPU/mult/divide/Apick/i_2772 /I0 (LUT6)
+    12: i_4398/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+    13: i_4398/I0 (LUT6)
+    14: i_2812/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v:18]
+    15: i_2812/I5 (LUT6)
+    16: i_3633/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    17: i_3633/I3 (LUT6)
+    18: i_3656/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    19: i_3656/I3 (LUT4)
+    20: i_3814/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I5 -to O i_3814"
+Found timing loop:
+     0: i_2178/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     1: i_2178/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3998/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3998/I1 (LUT2)
+     2: i_3030/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/and_32.v:5]
+     3: i_3030/I1 (LUT4)
+     4: i_3018/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:88]
+     5: i_3018/I5 (LUT6)
+     6: i_3024/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:88]
+     7: i_3024/I3 (LUT4)
+     8: \CPU/mult/divide/Apick/i_2772 /O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_2.v:5]
+     9: \CPU/mult/divide/Apick/i_2772 /I0 (LUT6)
+    10: i_4398/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+    11: i_4398/I0 (LUT6)
+    12: i_2812/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v:18]
+    13: i_2812/I4 (LUT6)
+    14: i_2814/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v:18]
+    15: i_2814/I0 (LUT5)
+    16: i_4000/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    17: i_4000/I0 (LUT2)
+    18: i_3649/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    19: i_3649/I0 (LUT6)
+    20: i_3999/O (LUT3)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    21: i_3999/I1 (LUT3)
+    22: i_3484/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    23: i_3484/I3 (LUT5)
+    24: i_3998/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I1 -to O i_3998"
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3634/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3634/I2 (LUT5)
+     2: i_3814/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_3814/I3 (LUT6)
+     4: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     5: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I2 -to O i_3634"
+Found timing loop:
+     0: i_3634/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3634/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3634/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3634/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3738/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3738/I3 (LUT5)
+     2: i_4426/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+     3: i_4426/O (LUT4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I3 -to O i_3738"
+Found timing loop:
+     0: i_4001/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_4001/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_4426/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+     1: i_4426/O (LUT4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3738/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3738/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3738/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3738/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3738/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3738/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_3738/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_3738/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+INFO: [Synth 8-7052] The timing for the instance vga2/Sprites/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/Sprites/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/Sprites/MemoryArray_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/Sprites/MemoryArray_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga2/ImageData/MemoryArray_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 1610.359 ; gain = 280.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1623.902 ; gain = 294.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1623.902 ; gain = 294.141
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__180/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_12__9/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_4__129/O'
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1623.902 ; gain = 294.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1623.902 ; gain = 294.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1625.047 ; gain = 295.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1625.047 ; gain = 295.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |CARRY4   |     8|
+|3     |DSP48E1  |     4|
+|7     |LUT1     |    12|
+|8     |LUT2     |   417|
+|9     |LUT3     |   382|
+|10    |LUT4     |   495|
+|11    |LUT5     |   592|
+|12    |LUT6     |  1870|
+|13    |MUXF7    |     1|
+|14    |RAMB36E1 |    34|
+|36    |FDCE     |  1528|
+|37    |FDPE     |     2|
+|38    |FDRE     |   273|
+|39    |IBUF     |     4|
+|40    |OBUF     |    30|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1625.047 ; gain = 295.285
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 47 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 1625.047 ; gain = 209.012
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1625.047 ; gain = 295.285
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1640.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1644.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: f208fe27
+INFO: [Common 17-83] Releasing license: Synthesis
+140 Infos, 153 Warnings, 51 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 1644.191 ; gain = 314.430
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/impl_1/synth_1/WrapperBook.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file WrapperBook_utilization_synth.rpt -pb WrapperBook_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 01:33:01 2024...

@@ -58,8 +58,8 @@ module WrapperBook (
 	   end
 	end
 
-    // VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.SW(SW)); 	
-    
+    VGAControllerBook vga2(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B)); 	
+
 	//okay so heads of sell and buy are in reg 26 and reg 25
 
 
@@ -106,7 +106,7 @@ module WrapperBook (
 	reg[31:0] sellG=0;
 	reg[31:0] sellH=0;
  	//nvmnvm
-	always @ (posedge ~clk) begin
+	always @ (posedge clock) begin
 		if (mwe==1 & memAddr==32) begin //BUYA
 			buyA <= memDataIn;
 		end 
@@ -182,17 +182,14 @@ module WrapperBook (
 	reg[31:0] datainReg = 0;
 	assign regAReal = (rs1==20)? datainReg:regA;
 	assign regBReal = (rs2==20)? datainReg:regB;
-	reg seenRDY = 0;
-	always @(posedge ~clock) begin
-		seenRDY = dataRDY;
-	end
-	always @(posedge ~clock) begin
-		if (rwe == 1 & rd == 20) begin
-			datainReg <= rData;
-		end else if (dataRDY & (seenRDY != dataRDY)) begin
+	reg[1:0] seenRDY = 0;
+	always @(posedge clock) begin
+		if (seenRDY[0] & (seenRDY[0] != seenRDY[1])) begin
 			datainReg <= receiverdata;
+		end else if (rwe == 1 & rd == 20) begin
+			datainReg <= rData;
 		end
-
+		seenRDY <= {seenRDY[0], dataRDY};
 	end
 	//input clk, input reset, input datain, output[31:0] reg data, input comEn, output reg dataRDY
 	wire dataRDY;
@@ -201,7 +198,7 @@ module WrapperBook (
 	receiver datarec(clock, reset, data_ping_in, receiverdata, comEn, dataRDY,cnt);
 
 	//ALSO NEED TO READ THE DATA CONSTANTLY FROM THE OUTPUT REGS WHEN TRADES R EXECUTED!!!!!!!!!!!!!!!!!!!!!!
-	assign LED = datainReg;
+	//assign LED = SW[0] ? {seenRDY, dataRDY, (seenRDY[0] & (seenRDY[0] != seenRDY[1]))} : SW[1] ? receiverdata : SW[2] ? cnt : datainReg;
 	// Register File
 	regfile RegisterFile(.clock(clock), 
 		.ctrl_writeEnable(rwe), .ctrl_reset(reset), 
@@ -215,11 +212,13 @@ module WrapperBook (
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
+assign LED = poop;
+reg [11:0] poop=0;
 
 always @(posedge clock) begin
-
-			if (mwe) begin
-				$display("Wrote %0d into address %0d", memDataIn, memAddr);
+        $fdisplay("Hello");
+			if (mwe & memDataIn!=0) begin
+				poop <= memDataIn;
 			end
 			if (rwe && rd != 0) begin
 				$display("Wrote %0d into register %0d", rData, rd);

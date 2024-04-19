@@ -28,7 +28,6 @@ always @(posedge clock or posedge reset) begin
         end
         if (counter==33) begin
             dataRDY <= 1;
-            counter <= 0; 
         end
     end else if (!comEn) begin //making sure if we have dataen off we arent counting/updating our data!
         counter <= 0;

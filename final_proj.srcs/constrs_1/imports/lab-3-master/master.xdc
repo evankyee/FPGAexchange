@@ -215,3 +215,4 @@ set_property -dict { PACKAGE_PIN B2    IOSTANDARD LVCMOS33 } [get_ports { PS2_DA
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff27/q_i_11__30_n_0];
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff27/q_reg_24];
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff2/q_reg_9];
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets CPU/DXlatch/ir/dff2/q_reg_10];
