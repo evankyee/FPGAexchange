@@ -50,7 +50,7 @@ module WrapperBook (
 	reg clock=0;
 	reg [2:0]counter;
 	always@(posedge clk)begin
-	   if(counter <2)
+	   if(counter <4)
 	       counter <= counter +1;
 	   else begin
 	       counter<=0;
@@ -58,7 +58,7 @@ module WrapperBook (
 	   end
 	end
 
-    VGAControllerBook vga2(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B)); 	
+    VGAControllerBook vga2(clk,reset,hSync,vSync,VGA_R,VGA_G,VGA_B, buyA,buyB,buyC,buyD, buyE,buyF,buyG,buyH,sellA,sellB,sellC,sellD,sellE,sellF,sellG,sellH); 	
 
 	//okay so heads of sell and buy are in reg 26 and reg 25
 
@@ -183,10 +183,12 @@ module WrapperBook (
 	assign regAReal = (rs1==20)? datainReg:regA;
 	assign regBReal = (rs2==20)? datainReg:regB;
 	reg[1:0] seenRDY = 0;
+	reg[31:0] dataSentAcrossFPGAS=0;
 	always @(posedge clock) begin
 		if (seenRDY[0] & (seenRDY[0] != seenRDY[1])) begin
 			datainReg <= receiverdata;
 		end else if (rwe == 1 & rd == 20) begin
+		    dataSentAcrossFPGAS <=datainReg;
 			datainReg <= rData;
 		end
 		seenRDY <= {seenRDY[0], dataRDY};
@@ -212,13 +214,15 @@ module WrapperBook (
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
-assign LED = poop;
-reg [11:0] poop=0;
+assign LED = SW[0] ? dataSentAcrossFPGAS : SW[1] ? poop2: poop;
+reg [31:0] poop=0;
+reg [31:0] poop2=0;
 
 always @(posedge clock) begin
         $fdisplay("Hello");
-			if (mwe & memDataIn!=0) begin
+			if (mwe) begin
 				poop <= memDataIn;
+				poop2 <= memAddr;
 			end
 			if (rwe && rd != 0) begin
 				$display("Wrote %0d into register %0d", rData, rd);

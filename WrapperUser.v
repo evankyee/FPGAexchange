@@ -52,7 +52,7 @@ module WrapperUser (
 	reg clock=0;
 	reg [2:0]counter;
 	always@(posedge clk)begin
-	   if(counter <2)
+	   if(counter <4)
 	       counter <= counter +1;
 	   else begin
 	       counter<=0;
