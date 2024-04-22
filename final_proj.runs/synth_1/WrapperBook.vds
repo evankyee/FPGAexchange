@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Fri Apr 19 18:49:29 2024
-# Process ID: 3620
+# Start of session at: Sun Apr 21 19:43:34 2024
+# Process ID: 6900
 # Current directory: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1
 # Command line: vivado.exe -log WrapperBook.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WrapperBook.tcl
 # Log file: C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1/WrapperBook.vds
@@ -17,7 +17,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12864
+INFO: [Synth 8-7075] Helper process launched with PID 12796
 WARNING: [Synth 8-2292] literal value truncated to fit in 12 bits [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:186]
 WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:70]
 WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:70]
@@ -142,26 +142,26 @@ WARNING: [Synth 8-992] twodiv is already implicitly declared earlier [C:/Users/e
 WARNING: [Synth 8-992] twomult is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:376]
 WARNING: [Synth 8-992] stallping is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:472]
 WARNING: [Synth 8-992] one is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/regfile.v:131]
-WARNING: [Synth 8-992] buyA is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:91]
-WARNING: [Synth 8-992] buyB is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:92]
-WARNING: [Synth 8-992] buyC is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:93]
-WARNING: [Synth 8-992] buyD is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:94]
-WARNING: [Synth 8-992] buyE is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:95]
-WARNING: [Synth 8-992] buyF is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:96]
-WARNING: [Synth 8-992] buyG is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:97]
-WARNING: [Synth 8-992] buyH is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:98]
-WARNING: [Synth 8-992] sellA is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:100]
-WARNING: [Synth 8-992] sellB is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:101]
-WARNING: [Synth 8-992] sellC is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:102]
-WARNING: [Synth 8-992] sellD is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:103]
-WARNING: [Synth 8-992] sellE is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:104]
-WARNING: [Synth 8-992] sellF is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:105]
-WARNING: [Synth 8-992] sellG is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:106]
-WARNING: [Synth 8-992] sellH is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:107]
-WARNING: [Synth 8-992] regAReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:181]
-WARNING: [Synth 8-992] regBReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:181]
+WARNING: [Synth 8-992] buyA is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:93]
+WARNING: [Synth 8-992] buyB is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:94]
+WARNING: [Synth 8-992] buyC is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:95]
+WARNING: [Synth 8-992] buyD is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:96]
+WARNING: [Synth 8-992] buyE is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:97]
+WARNING: [Synth 8-992] buyF is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:98]
+WARNING: [Synth 8-992] buyG is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:99]
+WARNING: [Synth 8-992] buyH is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:100]
+WARNING: [Synth 8-992] sellA is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:102]
+WARNING: [Synth 8-992] sellB is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:103]
+WARNING: [Synth 8-992] sellC is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:104]
+WARNING: [Synth 8-992] sellD is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:105]
+WARNING: [Synth 8-992] sellE is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:106]
+WARNING: [Synth 8-992] sellF is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:107]
+WARNING: [Synth 8-992] sellG is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:108]
+WARNING: [Synth 8-992] sellH is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:109]
+WARNING: [Synth 8-992] regAReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:201]
+WARNING: [Synth 8-992] regBReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:201]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.617 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.309 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'WrapperBook' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 INFO: [Synth 8-6157] synthesizing module 'VGAControllerBook' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:2]
@@ -270,31 +270,33 @@ INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/eal63/Desktop/FPGAexcha
 	Parameter MEMFILE bound to: 96'b011001010111100001100011011010000110000101101110011001110110010100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file 'exchange.mem' is read successfully [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/ROM.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'ROM' (43#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/ROM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'communicate' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/communicate.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'communicate' (44#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/communicate.v:1]
 INFO: [Synth 8-6157] synthesizing module 'receiver' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/receiver.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'receiver' (44#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/receiver.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'receiver' (45#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/receiver.v:1]
 INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/regfile.v:1]
 INFO: [Synth 8-6157] synthesizing module 'tristate' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/tristate.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'tristate' (45#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/tristate.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tristate' (46#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/tristate.v:1]
 INFO: [Synth 8-6157] synthesizing module 'decoder' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/decoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'decoder' (46#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/decoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'regfile' (47#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (47#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (48#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/regfile.v:1]
 INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/RAM.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (48#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/RAM.v:2]
-INFO: [Synth 8-251] Wrote x into register x [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:228]
-INFO: [Synth 8-6155] done synthesizing module 'WrapperBook' (49#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (49#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/RAM.v:2]
+INFO: [Synth 8-251] Wrote x into register x [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:248]
+INFO: [Synth 8-6155] done synthesizing module 'WrapperBook' (50#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1408.805 ; gain = 79.188
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1377.410 ; gain = 48.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1408.805 ; gain = 79.188
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1377.410 ; gain = 48.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1408.805 ; gain = 79.188
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1377.410 ; gain = 48.102
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.392 . Memory (MB): peak = 1408.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.391 . Memory (MB): peak = 1377.410 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -312,34 +314,37 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff2/q_reg_10'. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:218]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:218]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'CPU/DXlatch/ir/dff2/q_reg_6'. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:219]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc:219]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/constrs_1/imports/lab-3-master/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/WrapperBook_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/WrapperBook_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1522.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1493.676 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1522.824 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1493.676 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1522.824 ; gain = 193.207
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1493.676 ; gain = 164.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1522.824 ; gain = 193.207
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1493.676 ; gain = 164.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1522.824 ; gain = 193.207
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1493.676 ; gain = 164.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1522.824 ; gain = 193.207
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1493.676 ; gain = 164.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'CPU/EXpt1' (dffe_ref) to 'CPU/except'
 ---------------------------------------------------------------------------------
@@ -347,27 +352,24 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
 	   5 Input   32 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 2     
 	   2 Input    8 Bit       Adders := 96    
-	   2 Input    6 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 576   
-	   2 Input    3 Bit       Adders := 1     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
 +---XORs : 
 	   3 Input      1 Bit         XORs := 331   
 	   2 Input      1 Bit         XORs := 1158  
 +---Registers : 
-	               32 Bit    Registers := 19    
-	               29 Bit    Registers := 1     
-	               16 Bit    Registers := 3     
+	               32 Bit    Registers := 22    
+	               30 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 1778  
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 1784  
 +---Multipliers : 
 	               6x32  Multipliers := 1     
 	              12x32  Multipliers := 1     
@@ -379,7 +381,8 @@ Detailed RTL Component Info :
 	                    ROMs := 1     
 +---Muxes : 
 	   2 Input   65 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 242   
+	   2 Input   32 Bit        Muxes := 243   
+	   4 Input   32 Bit        Muxes := 1     
 	   2 Input   27 Bit        Muxes := 2     
 	   2 Input   16 Bit        Muxes := 2     
 	   2 Input   12 Bit        Muxes := 2     
@@ -387,13 +390,13 @@ Detailed RTL Component Info :
 	   2 Input    9 Bit        Muxes := 1     
 	  13 Input    8 Bit        Muxes := 4     
 	   2 Input    8 Bit        Muxes := 8     
-	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 7     
 	   2 Input    4 Bit        Muxes := 576   
 	  13 Input    4 Bit        Muxes := 4     
 	   6 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 57    
+	   2 Input    1 Bit        Muxes := 62    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -420,7 +423,7 @@ DSP Report: operator address is absorbed into DSP address.
 DSP Report: Generating DSP address, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator address is absorbed into DSP address.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:15 . Memory (MB): peak = 1567.484 ; gain = 237.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 1541.527 ; gain = 212.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -430,7 +433,7 @@ ROM: Preliminary Mapping Report
 +------------+---------------------+---------------+----------------+
 |Module Name | RTL Object          | Depth x Width | Implemented As | 
 +------------+---------------------+---------------+----------------+
-|WrapperBook | InstMem/dataOut_reg | 4096x29       | Block RAM      | 
+|WrapperBook | InstMem/dataOut_reg | 4096x30       | Block RAM      | 
 +------------+---------------------+---------------+----------------+
 
 
@@ -463,7 +466,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:22 . Memory (MB): peak = 1567.484 ; gain = 237.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1541.527 ; gain = 212.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -499,7 +502,7 @@ Start Timing Optimization
       : CPU/mainalu/data_operandA[1]
       : CPU/i_0/aluA[1]
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:34 . Memory (MB): peak = 1604.758 ; gain = 275.141
+Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:35 . Memory (MB): peak = 1573.500 ; gain = 244.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -521,299 +524,340 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 Found timing loop:
-     0: i_6044/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6044/I1 (LUT2)
-     2: i_5054/O (LUT4)
+     1: i_6072/I1 (LUT2)
+     2: i_5480/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_5480/I5 (LUT6)
+     4: i_5497/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     5: i_5497/I4 (LUT5)
+     6: i_5499/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     7: i_5499/I3 (LUT4)
+     8: i_5504/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     9: i_5504/I2 (LUT6)
+    10: i_5620/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    11: i_5620/I3 (LUT6)
+    12: i_6005/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    13: i_6005/I1 (LUT4)
+    14: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I1 -to O i_6072"
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6069/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6069/I1 (LUT2)
+     2: i_5060/O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/and_32.v:5]
-     3: i_5054/I1 (LUT4)
-     4: i_5042/O (LUT6)
+     3: i_5060/I1 (LUT4)
+     4: i_5048/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:88]
-     5: i_5042/I5 (LUT6)
-     6: i_5048/O (LUT4)
+     5: i_5048/I5 (LUT6)
+     6: i_5054/O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v:88]
-     7: i_5048/I3 (LUT4)
-     8: \CPU/mult/divide/Apick/i_4779 /O (LUT6)
+     7: i_5054/I3 (LUT4)
+     8: \CPU/mult/divide/Apick/i_4782 /O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_2.v:5]
-     9: \CPU/mult/divide/Apick/i_4779 /I5 (LUT6)
-    10: i_5592/O (LUT5)
+     9: \CPU/mult/divide/Apick/i_4782 /I3 (LUT4)
+    10: i_5590/O (LUT5)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    11: i_5592/I4 (LUT5)
-    12: i_5682/O (LUT6)
+    11: i_5590/I4 (LUT5)
+    12: i_5730/O (LUT5)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    13: i_5682/I0 (LUT6)
-    14: i_6531/O (LUT4)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-    15: i_6531/I2 (LUT4)
-    16: i_6047/O (LUT2)
+    13: i_5730/I4 (LUT5)
+    14: i_6041/O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    17: i_6047/I1 (LUT2)
-    18: i_5474/O (LUT4)
+    15: i_6041/I2 (LUT4)
+    16: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    19: i_5474/I3 (LUT4)
-    20: i_6044/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    17: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Inferred a: "set_disable_timing -from I1 -to O i_6044"
+Inferred a: "set_disable_timing -from I1 -to O i_6069"
 Found timing loop:
-     0: i_6531/O (LUT4)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-     1: i_6531/I2 (LUT4)
-     2: i_6047/O (LUT2)
+     0: i_6041/O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     3: i_6047/I1 (LUT2)
-     4: i_5474/O (LUT4)
+     1: i_6041/I2 (LUT4)
+     2: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     5: i_5474/I3 (LUT4)
-     6: i_6044/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     7: i_6044/O (LUT2)
+     3: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Inferred a: "set_disable_timing -from I2 -to O i_6531"
+Inferred a: "set_disable_timing -from I2 -to O i_6041"
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6076/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/I1 (LUT2)
-     2: i_5474/O (LUT4)
+     1: i_6076/I1 (LUT2)
+     2: i_5570/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     3: i_5474/I3 (LUT4)
-     4: i_6044/O (LUT2)
+     3: i_5570/I4 (LUT6)
+     4: i_5571/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     5: i_6044/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Inferred a: "set_disable_timing -from I1 -to O i_6047"
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_4189/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
-     1: i_4189/I4 (LUT6)
-     2: i_4227/O (LUT3)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
-     3: i_4227/I2 (LUT3)
-     4: i_5878/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     5: i_5878/I1 (LUT2)
-     6: i_5881/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     7: i_5881/I5 (LUT6)
-     8: i_6051/O (LUT2)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     9: i_6051/I1 (LUT2)
-    10: i_5568/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    11: i_5568/I5 (LUT6)
-    12: i_5569/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    13: i_5569/I0 (LUT6)
-    14: i_4698/O (LUT6)
+     5: i_5571/I2 (LUT6)
+     6: i_4762/O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:74]
-    15: i_4698/I4 (LUT6)
-    16: i_4699/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:74]
-    17: i_4699/I5 (LUT6)
-    18: i_4714/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:74]
-    19: i_4714/I3 (LUT6)
-    20: i_4761/O (LUT4)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:74]
-    21: i_4761/I3 (LUT4)
-    22: i_6050/O (LUT2)
+     7: i_4762/I3 (LUT4)
+     8: i_5735/O (LUT5)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    23: i_6050/I0 (LUT2)
-    24: i_5676/O (LUT6)
+     9: i_5735/I2 (LUT5)
+    10: i_6074/O (LUT3)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    25: i_5676/I0 (LUT6)
-    26: i_6049/O (LUT3)
+    11: i_6074/I1 (LUT3)
+    12: i_5531/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    27: i_6049/I1 (LUT3)
-    28: i_5521/O (LUT4)
+    13: i_5531/I4 (LUT6)
+    14: i_6069/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-    29: i_5521/I3 (LUT4)
-    30: i_6411/O (LUT5)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-    31: i_6411/I2 (LUT5)
-    32: i_4189/O (LUT6)
+    15: i_6069/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I1 -to O i_6076"
+Found timing loop:
+     0: i_4192/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     1: i_4192/I5 (LUT6)
+     2: i_4209/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     3: i_4209/I4 (LUT6)
+     4: i_4230/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     5: i_4230/I5 (LUT6)
+     6: i_4354/O (LUT4)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     7: i_4354/I3 (LUT4)
+     8: i_4380/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
+     9: i_4380/I4 (LUT5)
+    10: i_5733/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    11: i_5733/I2 (LUT5)
+    12: i_6070/O (LUT3)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    13: i_6070/I1 (LUT3)
+    14: i_5523/O (LUT3)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    15: i_5523/I2 (LUT3)
+    16: i_5526/O (LUT6)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+    17: i_5526/I3 (LUT6)
+    18: i_4192/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Inferred a: "set_disable_timing -from I4 -to O i_4189"
+Inferred a: "set_disable_timing -from I5 -to O i_4192"
 Found timing loop:
-     0: i_5524/O (LUT6)
+     0: i_6041/O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_5524/I3 (LUT6)
-     2: i_4189/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
-     3: i_4189/O (LUT6)
+     1: i_6041/O (LUT4)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Inferred a: "set_disable_timing -from I3 -to O i_5524"
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6069/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6069/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6044/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6044/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_5735/O (LUT5)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_4189/O (LUT6)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
-     1: i_4189/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6044/O (LUT2)
+     1: i_5735/I2 (LUT5)
+     2: i_6074/O (LUT3)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6044/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
+     3: i_6074/I1 (LUT3)
+     4: i_5531/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
+     5: i_5531/I4 (LUT6)
+     6: i_6069/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     7: i_6069/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I2 -to O i_5735"
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6074/O (LUT3)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
+     1: i_6074/I1 (LUT3)
+     2: i_5531/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
+     3: i_5531/I4 (LUT6)
+     4: i_6069/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     5: i_6069/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I1 -to O i_6074"
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6069/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6069/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6531/O (LUT4)
-      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-     1: i_6531/O (LUT4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 Found timing loop:
-     0: i_6047/O (LUT2)
+     0: i_6072/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
-     1: i_6047/O (LUT2)
+     1: i_6072/O (LUT2)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_5735/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_5735/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_5735/O (LUT5)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_5735/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_6072/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_6072/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Found timing loop:
+     0: i_5915/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     1: i_5915/I0 (LUT2)
+     2: i_6069/O (LUT2)
+      [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/processor.v:73]
+     3: i_6069/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
+Inferred a: "set_disable_timing -from I0 -to O i_5915"
 INFO: [Synth 8-7052] The timing for the instance vga2/Sprites/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vga2/Sprites/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vga2/Sprites/MemoryArray_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -836,7 +880,7 @@ INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_1 (implemen
 INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:42 ; elapsed = 00:01:43 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:45 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -854,77 +898,74 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:01:45 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished IO Insertion : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:01:45 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_3__218/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__174/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_7__65/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__174/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__185/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__191/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__185/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_30__2/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_6__25/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \CPU/mult/divide/Apick/q_i_2 /O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_5__93/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_1__102/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \CPU/aluBreg/dff0/q_reg /D'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__190/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__188/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__189/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__187/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__194/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__195/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__193/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__196/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__198/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__200/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__201/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__199/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_3__157/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__197/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__193/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__194/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__191/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_3__161/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__192/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__211/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__210/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__243/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__208/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__209/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__241/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__242/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__203/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__204/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__202/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_3__159/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__207/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__205/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__206/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_1__263/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through MemoryArray_reg_0_i_17/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_5__97/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_6__86/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_3__180/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_4__136/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_1__199/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_22__11/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_3__102/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__207/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__212/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__210/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__211/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__204/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__203/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__205/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__201/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__202/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__199/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__200/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_3__169/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_2__130/O'
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:47 ; elapsed = 00:01:48 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:47 ; elapsed = 00:01:48 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:01:46 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:48 ; elapsed = 00:01:48 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:48 ; elapsed = 00:01:48 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -940,44 +981,44 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     3|
-|2     |CARRY4   |     8|
+|1     |BUFG     |     4|
+|2     |CARRY4   |    21|
 |3     |DSP48E1  |     4|
-|7     |LUT1     |    11|
-|8     |LUT2     |   485|
-|9     |LUT3     |   435|
-|10    |LUT4     |   720|
-|11    |LUT5     |   997|
-|12    |LUT6     |  2976|
+|7     |LUT1     |    14|
+|8     |LUT2     |   490|
+|9     |LUT3     |   512|
+|10    |LUT4     |   723|
+|11    |LUT5     |  1018|
+|12    |LUT6     |  2944|
 |13    |RAMB36E1 |    34|
-|35    |FDCE     |  1528|
+|35    |FDCE     |  1572|
 |36    |FDPE     |     2|
-|37    |FDRE     |   694|
+|37    |FDRE     |   732|
 |38    |IBUF     |     6|
-|39    |OBUF     |    30|
+|39    |OBUF     |    32|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:48 ; elapsed = 00:01:48 . Memory (MB): peak = 2230.305 ; gain = 900.996
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 39 critical warnings and 40 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:35 ; elapsed = 00:01:42 . Memory (MB): peak = 2270.637 ; gain = 827.000
-Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 2270.637 ; gain = 941.020
+Synthesis finished with 0 errors, 43 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:37 ; elapsed = 00:01:44 . Memory (MB): peak = 2230.305 ; gain = 784.730
+Synthesis Optimization Complete : Time (s): cpu = 00:01:48 ; elapsed = 00:01:48 . Memory (MB): peak = 2230.305 ; gain = 900.996
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 2270.637 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 2230.305 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2270.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2230.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 4a175fad
+Synth Design complete, checksum: c66abc50
 INFO: [Common 17-83] Releasing license: Synthesis
-142 Infos, 189 Warnings, 43 Critical Warnings and 0 Errors encountered.
+144 Infos, 187 Warnings, 48 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 2270.637 ; gain = 941.020
+synth_design: Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 2230.305 ; gain = 900.996
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1/WrapperBook.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file WrapperBook_utilization_synth.rpt -pb WrapperBook_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 18:51:27 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 21 19:45:34 2024...

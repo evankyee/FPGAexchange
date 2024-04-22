@@ -28,6 +28,8 @@ module WrapperBook (
 	output [15:0] LED, 
 	input data_ping_in,
 	input comEn,
+	output comEnOut,
+	output dataPingOut,
 	input clk, 
 	input CPU_RESETN,
 	input [3:0] SW,
@@ -50,7 +52,7 @@ module WrapperBook (
 	reg clock=0;
 	reg [2:0]counter;
 	always@(posedge clk)begin
-	   if(counter <4)
+	   if(counter <2)
 	       counter <= counter +1;
 	   else begin
 	       counter<=0;
@@ -155,7 +157,24 @@ module WrapperBook (
 		else if (mwe==1 & memAddr==47) begin //SELLH
 			sellH <= memDataIn;
 		end 
+		if (rwe == 1 & rd == 19) begin //buyguy
+		  executionout<=rData;
+		  ready<=1;
+		end
+		else if (ready==1)begin
+		  ready<=0;
+		end
+		
+		
 	end
+	reg[31:0] executionout=0;
+	reg ready=0;
+	wire out1,out2;
+    dffe_ref flip12(out1,ready,clock,1'b1, 1'b0);
+    dffe_ref flip22(out2,out1,clock,1'b1,1'b0);
+    assign readyf = out1 & ~out2;
+	
+	communicate combook(clock, readyf, reset, executionout, dataPingOut, comEnOut);
 	/*
 #32 1 Head Buy Val
 #33 2 Head Buy Val
@@ -176,6 +195,7 @@ module WrapperBook (
 #47 8 Head Sell Val
 
 	*/
+	
 
 
 	wire[31:0] regAReal, regBReal;
@@ -214,21 +234,21 @@ module WrapperBook (
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
-assign LED = SW[0] ? dataSentAcrossFPGAS : SW[1] ? poop2: poop;
-reg [31:0] poop=0;
-reg [31:0] poop2=0;
+    assign LED = SW[0] ? dataPingOut : SW[1] ? executionout: ready;
+    reg [31:0] poop=0;
+    reg [31:0] poop2=0;
 
-always @(posedge clock) begin
-        $fdisplay("Hello");
-			if (mwe) begin
-				poop <= memDataIn;
-				poop2 <= memAddr;
-			end
-			if (rwe && rd != 0) begin
-				$display("Wrote %0d into register %0d", rData, rd);
-			end
-end
-
+    always @(posedge clock) begin
+            $fdisplay("Hello");
+                if (mwe) begin
+                    poop <= memDataIn;
+                    poop2 <= memAddr;
+                end
+                if (rwe && rd != 0) begin
+                    $display("Wrote %0d into register %0d", rData, rd);
+                end
+    end
+    
 
 endmodule
 

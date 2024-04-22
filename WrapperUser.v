@@ -52,7 +52,7 @@ module WrapperUser (
 	reg clock=0;
 	reg [2:0]counter;
 	always@(posedge clk)begin
-	   if(counter <4)
+	   if(counter <2)
 	       counter <= counter +1;
 	   else begin
 	       counter<=0;
@@ -68,9 +68,24 @@ module WrapperUser (
     dffe_ref flip2(out2,out1,clock,1'b1,1'b0);
     assign readyf = out1 & ~out2;
     
-    assign LED = dataPingOut;
-    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(),.order(order), .ready(ready),.SW(SW)); 	
+    assign LED = datainReg;
+    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(),.order(order), .ready(ready),.SW(SW),.datain(datainReg)); 	
     communicate comMod(clock, readyf, reset, order, dataPingOut, comEnOut);
+    
+    
+    reg[31:0] datainReg = 0;
+    reg[1:0] seenRDY = 0;
+	always @(posedge clock) begin
+		if (seenRDY[0] & (seenRDY[0] != seenRDY[1])) begin
+			datainReg <= receiverdata;
+		end 
+		seenRDY <= {seenRDY[0], dataRDY};
+	end
+	//input clk, input reset, input datain, output[31:0] reg data, input comEn, output reg dataRDY
+	wire dataRDY;
+	wire[31:0] receiverdata;
+	wire[7:0] cnt;
+	receiver datarec(clock, reset, data_ping_in, receiverdata, comEn, dataRDY,cnt);
     
     
 

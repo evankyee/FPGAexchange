@@ -108,6 +108,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla32.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/clockcount.v
+  C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/communicate.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/decoder.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/cp2-regfile/dffe_ref.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/div.v

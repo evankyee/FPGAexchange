@@ -12,7 +12,8 @@ module VGAController(
 	output [15:0] LED, 
 	output [31:0] order,
 	output ready,
-	input [3:0] SW);           //Switches
+	input [3:0] SW,
+	input [31:0] datain);           
 	
 	// Lab Memory Files Location
 	localparam FILES_PATH = "C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/";
@@ -82,6 +83,9 @@ module VGAController(
     reg [7:0] volume2 = 32;
     reg [7:0] volume3 = 32;
     reg [7:0] type = 32;
+    reg [7:0] trade1 =32;
+    reg [7:0] trade2 =32;
+    reg [7:0] trade3 = 32;
     
     reg [7:0] ascii=32;
     reg [7:0] last_ascii=32;
@@ -91,44 +95,51 @@ module VGAController(
     reg finished=0;
     
     always @(posedge clk)begin
+        //parse last trade
+        if(datain)begin
+            trade1 = datain[30:28] + 65;
+            trade2 = datain[27:24] +65;
+            trade3 = datain[3:0] +65;
+        end
+    
         if (asc==10 && enterreg==1)begin
             entercount = entercount+1;
             enterreg=0;
             if(entercount==1)begin
                 id=ascii;
-                cursor <= 49;
+                cursor <= 29;
             end
             if(entercount==2)begin
                 sec=ascii;
-                cursor <= 69;
+                cursor <= 49;
             end
             if(entercount==3)begin
                 price1 = ascii;
-                cursor <= 70;
+                cursor <= 50;
             end
             if(entercount==4)begin
                 price2 = ascii;
-                cursor <= 71;
+                cursor <= 51;
             end
             if(entercount==5)begin
                 price3 = ascii;
-                cursor <= 89;
+                cursor <= 69;
             end
             if(entercount==6)begin
                 volume1 = ascii;
-                cursor <= 90;
+                cursor <= 70;
             end
             if(entercount==7)begin
                 volume2 = ascii;
-                cursor <= 91;
+                cursor <= 71;
             end
             if(entercount==8)begin
                 volume3 = ascii;
-                cursor <= 109;
+                cursor <= 89;
             end
             if (entercount==9)begin
                 type = ascii;
-                cursor=125;
+                cursor=105;
             end
             if(entercount==10)begin
                 orderready=1;
@@ -167,33 +178,23 @@ module VGAController(
 		.addr(scan_code),					       // Keyboard Value
 		.dataOut(asc),				           // Corresponding ascii
 		.wEn(1'b0)); 						       // We're always reading
-	
-	
-//	//if ascii is 10, we have an enter -- store last_ascii to DMEM
-//	//Ram for data
-//	RAM data(
-//		.clk(clk), 							   	  
-//		.addr(8'b0),					               
-//		.dataIn(last_ascii),			          
-//		.wEn(ascii==10)); 						   
+			   
 
     //Ram for sprites
     wire cpixel;
-//    reg [31:0] address;
     
 
     wire [31:0] address;
     wire ascii_type;
-    wire [7:0] final_ascii, setvals;
+    wire [7:0] final_ascii, setvals,tradeinfo;
     assign ascii_type = (colorAddr==1);
     assign currentblock = (imgAddress == cursor);  
 
-    assign setvals = (imgAddress==29) ? id : (imgAddress==49) ? sec : (imgAddress==69) ? price1 : (imgAddress==70) ? price2 : (imgAddress==71) ? price3 : (imgAddress==89) ? volume1 : (imgAddress==90) ? volume2 : (imgAddress==91) ? volume3 : (imgAddress==109) ? type : 32;
+    assign setvals = (imgAddress==9) ? id : (imgAddress==29) ? sec : (imgAddress==49) ? price1 : (imgAddress==50) ? price2 : (imgAddress==51) ? price3 : (imgAddress==69) ? volume1 : (imgAddress==70) ? volume2 : (imgAddress==71) ? volume3 : (imgAddress==89) ? type : 32;
     
-    //
-    assign final_ascii = ascii_type ? currentblock ? (asc==10) ? setvals : asc : setvals : colorAddr;
+    assign tradevals = (imgAddress==129) ? trade1 : (imgAddress==131) ? trade2 : (imgAddress==133) ? trade3 : 32;
+    assign final_ascii = (colorAddr==2) ? tradevals : ascii_type ? currentblock ? (asc==10) ? setvals : asc : setvals : colorAddr;
     assign address = (2500*(final_ascii -33)) + (x-(x/32)*32)+(50*(y-(y/64)*64));
-    assign LED = order;
     
     
 	RAMvga #(
@@ -207,11 +208,7 @@ module VGAController(
 		.dataOut(cpixel),				       // Color at current pixel
 		.wEn(1'b0)); 						       // We're always reading
     
-  
-    //Top left for USERID
-    reg [9:0] x1 = 0;    
-    reg [9:0] y1 = 0;
-    
+
     
 	// Image Data to Map Pixel Location to Color Address
 	localparam 
@@ -240,17 +237,6 @@ module VGAController(
 	// Color Palette to Map Color Address to 12-Bit Color
 	wire[BITS_PER_COLOR-1:0] colorData; // 12-bit color data at current pixel
 
-//	RAMvga #(
-//		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
-//		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
-//		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
-//		.MEMFILE({FILES_PATH, "colors.mem"}))  // Memory initialization
-//	ColorPalette(
-//		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-//		.addr(colorAddr),					       // Address from the ImageData RAM
-//		.dataOut(colorData),				       // Color at current pixel
-//		.wEn(1'b0)); 						       // We're always reading
-
     assign colorData = 12'hffffff;
 
 	// Assign to output color from register if active
@@ -265,14 +251,7 @@ module VGAController(
 	// Quickly assign the output colors to their channels using concatenation
 	assign {VGA_R, VGA_G, VGA_B} = colorOut2;
 	
-	
-	
-	
-	//order ready signal is on between the send enter (10th) and the reset enter (11th)
-	//set ready signal on for 1 clock cycle after order ready comes on
-//	wire r1,r2;
-//	dffe_ref f1(r1,orderready,clk,1'b1, 1'b0);
-//	dffe_ref f2(r2,r1,clk,1'b1,1'b0);
+
 	assign ready = orderready;
 
 	
