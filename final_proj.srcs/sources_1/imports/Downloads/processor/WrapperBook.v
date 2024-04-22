@@ -90,6 +90,15 @@ module WrapperBook (
 		.dataOut(instData));
 
 	//GENERATE 16 32 bit regs to store all the buy and sell heads!
+
+	//[3:0] price hundreds digit
+	//[7:4] price tens digit
+	//[11:8] price ones digit
+	//[15:12] volume hundreds digit
+	//[19:16] volume tens digit
+	//[23:20] volume ones digit
+	
+	
 	reg[31:0] buyA=0;
 	reg[31:0] buyB=0;
 	reg[31:0] buyC=0;
@@ -234,20 +243,17 @@ module WrapperBook (
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
-    assign LED = SW[0] ? dataPingOut : SW[1] ? executionout: ready;
-    reg [31:0] poop=0;
-    reg [31:0] poop2=0;
+    assign LED = SW[0] ? dataPingOut : SW[1] ? comEnOut: executionout;
 
-    always @(posedge clock) begin
-            $fdisplay("Hello");
-                if (mwe) begin
-                    poop <= memDataIn;
-                    poop2 <= memAddr;
-                end
-                if (rwe && rd != 0) begin
-                    $display("Wrote %0d into register %0d", rData, rd);
-                end
-    end
+
+//    always @(posedge clock) begin
+//            $fdisplay("Hello");
+//                if (mwe) begin
+//                end
+//                if (rwe && rd != 0) begin
+//                    $display("Wrote %0d into register %0d", rData, rd);
+//                end
+//    end
     
 
 endmodule

@@ -13,7 +13,10 @@ module VGAController(
 	output [31:0] order,
 	output ready,
 	input [3:0] SW,
-	input [31:0] datain);           
+	input [7:0] trade1,
+    input [7:0] trade2,
+    input [7:0] trade3
+    );           
 	
 	// Lab Memory Files Location
 	localparam FILES_PATH = "C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/";
@@ -83,10 +86,7 @@ module VGAController(
     reg [7:0] volume2 = 32;
     reg [7:0] volume3 = 32;
     reg [7:0] type = 32;
-    reg [7:0] trade1 =32;
-    reg [7:0] trade2 =32;
-    reg [7:0] trade3 = 32;
-    
+
     reg [7:0] ascii=32;
     reg [7:0] last_ascii=32;
     wire [7:0] asc;
@@ -95,13 +95,7 @@ module VGAController(
     reg finished=0;
     
     always @(posedge clk)begin
-        //parse last trade
-        if(datain)begin
-            trade1 = datain[30:28] + 65;
-            trade2 = datain[27:24] +65;
-            trade3 = datain[3:0] +65;
-        end
-    
+
         if (asc==10 && enterreg==1)begin
             entercount = entercount+1;
             enterreg=0;
@@ -148,7 +142,7 @@ module VGAController(
             if(entercount==11)begin
                 entercount=0;
                 orderready=0;
-                cursor=29;
+                cursor=9;
                 id=32;
                 sec=32;
                 price1=32;
@@ -191,12 +185,12 @@ module VGAController(
     assign currentblock = (imgAddress == cursor);  
 
     assign setvals = (imgAddress==9) ? id : (imgAddress==29) ? sec : (imgAddress==49) ? price1 : (imgAddress==50) ? price2 : (imgAddress==51) ? price3 : (imgAddress==69) ? volume1 : (imgAddress==70) ? volume2 : (imgAddress==71) ? volume3 : (imgAddress==89) ? type : 32;
-    
-    assign tradevals = (imgAddress==129) ? trade1 : (imgAddress==131) ? trade2 : (imgAddress==133) ? trade3 : 32;
+    wire[7:0] tradevals;
+    assign tradevals = (imgAddress==130) ? trade1 : (imgAddress==132) ? trade2 : (imgAddress==134) ? trade3 : 32;
     assign final_ascii = (colorAddr==2) ? tradevals : ascii_type ? currentblock ? (asc==10) ? setvals : asc : setvals : colorAddr;
     assign address = (2500*(final_ascii -33)) + (x-(x/32)*32)+(50*(y-(y/64)*64));
     
-    
+    //assign LED = SW[0] ? trade1 : SW[1] ? trade2 : trade3;
 	RAMvga #(
 		.DEPTH(235000), 		       // Set depth to contain every color		
 		.DATA_WIDTH(1), 		       // Set data width according to the bits per color

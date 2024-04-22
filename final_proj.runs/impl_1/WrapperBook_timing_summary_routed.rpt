@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sun Apr 21 19:47:34 2024
+| Date         : Mon Apr 22 19:00:16 2024
 | Host         : P2-06 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file WrapperBook_timing_summary_routed.rpt -pb WrapperBook_timing_summary_routed.pb -rpx WrapperBook_timing_summary_routed.rpx -warn_on_violation
 | Design       : WrapperBook
@@ -152,7 +152,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-    -11.946    -1632.483                    142                  147        0.232        0.000                      0                  147        4.500        0.000                       0                    38  
+    -12.027    -1638.644                    142                  147        0.278        0.000                      0                  147        4.500        0.000                       0                    38  
 
 
 Timing constraints are not met.
@@ -175,7 +175,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin       -11.946    -1632.483                    142                  147        0.232        0.000                      0                  147        4.500        0.000                       0                    38  
+sys_clk_pin       -12.027    -1638.644                    142                  147        0.278        0.000                      0                  147        4.500        0.000                       0                    38  
 
 
 ------------------------------------------------------------------------------------------------
@@ -206,196 +206,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :          142  Failing Endpoints,  Worst Slack      -11.946ns,  Total Violation    -1632.483ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.232ns,  Total Violation        0.000ns
+Setup :          142  Failing Endpoints,  Worst Slack      -12.027ns,  Total Violation    -1638.644ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.278ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -11.946ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_4/ENARDEN
-                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.417ns  (logic 14.358ns (67.041%)  route 7.059ns (32.959%))
-  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT4=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.051ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.038ns = ( 15.038 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.025     3.506    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
-  -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[15])
-                                                      1.518    25.015 f  vga2/address__1/P[15]
-                         net (fo=12, routed)          1.205    26.220    vga2/Sprites/P[15]
-    SLICE_X73Y112        LUT4 (Prop_lut4_I2_O)        0.124    26.344 r  vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_gate_8_LOPT_REMAP/O
-                         net (fo=1, routed)           0.341    26.686    vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_sig_6
-    RAMB36_X2Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/ENARDEN
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    E3                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.920    13.331    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.616    15.038    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X2Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/CLKARDCLK
-                         clock pessimism              0.180    15.218    
-                         clock uncertainty           -0.035    15.183    
-    RAMB36_X2Y22         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
-                                                     -0.443    14.740    vga2/Sprites/MemoryArray_reg_4
-  -------------------------------------------------------------------
-                         required time                         14.740    
-                         arrival time                         -26.686    
-  -------------------------------------------------------------------
-                         slack                                -11.946    
-
-Slack (VIOLATED) :        -11.897ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_0/ENARDEN
-                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.366ns  (logic 14.358ns (67.199%)  route 7.008ns (32.801%))
-  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT4=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.053ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.036ns = ( 15.036 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.025     3.506    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
-  -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[17])
-                                                      1.518    25.015 f  vga2/address__1/P[17]
-                         net (fo=9, routed)           0.996    26.011    vga2/Sprites/P[17]
-    SLICE_X79Y121        LUT4 (Prop_lut4_I0_O)        0.124    26.135 r  vga2/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.501    26.636    vga2/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2
-    RAMB36_X3Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/ENARDEN
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    E3                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.920    13.331    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.614    15.036    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/CLKARDCLK
-                         clock pessimism              0.180    15.216    
-                         clock uncertainty           -0.035    15.181    
-    RAMB36_X3Y24         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
-                                                     -0.443    14.738    vga2/Sprites/MemoryArray_reg_0
-  -------------------------------------------------------------------
-                         required time                         14.738    
-                         arrival time                         -26.636    
-  -------------------------------------------------------------------
-                         slack                                -11.897    
-
-Slack (VIOLATED) :        -11.853ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -12.027ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            vga2/Sprites/MemoryArray_reg_2/ENARDEN
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.314ns  (logic 14.358ns (67.364%)  route 6.956ns (32.636%))
-  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT4=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.028ns = ( 15.028 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.509ns  (logic 14.482ns (67.331%)  route 7.027ns (32.669%))
+  Logic Levels:           12  (DSP48E1=4 LUT3=1 LUT4=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.053ns = ( 15.053 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.276ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -411,40 +243,42 @@ Slack (VIOLATED) :        -11.853ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[17])
-                                                      1.518    25.015 f  vga2/address__1/P[17]
-                         net (fo=9, routed)           1.080    26.095    vga2/Sprites/P[17]
-    SLICE_X74Y122        LUT4 (Prop_lut4_I1_O)        0.124    26.219 r  vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_gate_5_LOPT_REMAP/O
-                         net (fo=1, routed)           0.364    26.583    vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_sig_4
-    RAMB36_X2Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/ENARDEN
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[17])
+                                                      1.518    25.142 f  vga2/address__1/P[17]
+                         net (fo=9, routed)           1.022    26.164    vga2/Sprites/P[17]
+    SLICE_X81Y79         LUT4 (Prop_lut4_I1_O)        0.124    26.288 r  vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_gate_5_LOPT_REMAP/O
+                         net (fo=1, routed)           0.590    26.878    vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_sig_4
+    RAMB36_X3Y14         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/ENARDEN
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -454,32 +288,32 @@ Slack (VIOLATED) :        -11.853ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.606    15.028    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X2Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/CLKARDCLK
-                         clock pessimism              0.180    15.208    
-                         clock uncertainty           -0.035    15.173    
-    RAMB36_X2Y24         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
-                                                     -0.443    14.730    vga2/Sprites/MemoryArray_reg_2
+                         net (fo=37, routed)          1.631    15.053    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y14         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/CLKARDCLK
+                         clock pessimism              0.276    15.329    
+                         clock uncertainty           -0.035    15.294    
+    RAMB36_X3Y14         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.851    vga2/Sprites/MemoryArray_reg_2
   -------------------------------------------------------------------
-                         required time                         14.730    
-                         arrival time                         -26.583    
+                         required time                         14.851    
+                         arrival time                         -26.878    
   -------------------------------------------------------------------
-                         slack                                -11.853    
+                         slack                                -12.027    
 
-Slack (VIOLATED) :        -11.842ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -12.003ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_3/ENARDEN
+  Destination:            vga2/Sprites/MemoryArray_reg_4/ENARDEN
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.306ns  (logic 14.358ns (67.391%)  route 6.948ns (32.609%))
-  Logic Levels:           11  (DSP48E1=4 LUT2=1 LUT3=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.031ns = ( 15.031 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.483ns  (logic 14.482ns (67.411%)  route 7.001ns (32.589%))
+  Logic Levels:           12  (DSP48E1=4 LUT3=1 LUT4=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.042ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.068ns = ( 15.068 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -495,40 +329,42 @@ Slack (VIOLATED) :        -11.842ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[17])
-                                                      1.518    25.015 f  vga2/address__1/P[17]
-                         net (fo=9, routed)           1.073    26.088    vga2/Sprites/P[17]
-    SLICE_X75Y127        LUT2 (Prop_lut2_I1_O)        0.124    26.212 r  vga2/Sprites/MemoryArray_reg_2_i_1__0/O
-                         net (fo=2, routed)           0.363    26.575    vga2/Sprites/MemoryArray_reg_2_i_1__0_n_0
-    RAMB36_X2Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_3/ENARDEN
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[17])
+                                                      1.518    25.142 r  vga2/address__1/P[17]
+                         net (fo=9, routed)           1.038    26.180    vga2/Sprites/P[17]
+    SLICE_X81Y85         LUT4 (Prop_lut4_I0_O)        0.124    26.304 r  vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_gate_8_LOPT_REMAP/O
+                         net (fo=1, routed)           0.548    26.852    vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_sig_6
+    RAMB36_X3Y18         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/ENARDEN
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -538,32 +374,32 @@ Slack (VIOLATED) :        -11.842ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.609    15.031    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X2Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_3/CLKARDCLK
-                         clock pessimism              0.180    15.211    
-                         clock uncertainty           -0.035    15.176    
-    RAMB36_X2Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
-                                                     -0.443    14.733    vga2/Sprites/MemoryArray_reg_3
+                         net (fo=37, routed)          1.646    15.068    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y18         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/CLKARDCLK
+                         clock pessimism              0.259    15.327    
+                         clock uncertainty           -0.035    15.292    
+    RAMB36_X3Y18         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.849    vga2/Sprites/MemoryArray_reg_4
   -------------------------------------------------------------------
-                         required time                         14.733    
-                         arrival time                         -26.575    
+                         required time                         14.849    
+                         arrival time                         -26.852    
   -------------------------------------------------------------------
-                         slack                                -11.842    
+                         slack                                -12.003    
 
-Slack (VIOLATED) :        -11.830ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -11.978ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_1/ENARDEN
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[5]
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.302ns  (logic 14.358ns (67.401%)  route 6.944ns (32.599%))
-  Logic Levels:           11  (DSP48E1=4 LUT2=1 LUT3=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.039ns = ( 15.039 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.336ns  (logic 14.358ns (67.296%)  route 6.978ns (32.704%))
+  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -579,40 +415,40 @@ Slack (VIOLATED) :        -11.830ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[17])
-                                                      1.518    25.015 f  vga2/address__1/P[17]
-                         net (fo=9, routed)           0.710    25.725    vga2/Sprites/P[17]
-    SLICE_X79Y120        LUT2 (Prop_lut2_I0_O)        0.124    25.849 r  vga2/Sprites/MemoryArray_reg_0_i_1/O
-                         net (fo=2, routed)           0.723    26.571    vga2/Sprites/MemoryArray_reg_0_i_1_n_0
-    RAMB36_X3Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_1/ENARDEN
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[5])
+                                                      1.518    25.142 r  vga2/address__1/P[5]
+                         net (fo=8, routed)           1.562    26.705    vga2/Sprites/P[5]
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[5]
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -622,32 +458,32 @@ Slack (VIOLATED) :        -11.830ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.617    15.039    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_1/CLKARDCLK
-                         clock pessimism              0.180    15.219    
-                         clock uncertainty           -0.035    15.184    
-    RAMB36_X3Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
-                                                     -0.443    14.741    vga2/Sprites/MemoryArray_reg_1
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[5])
+                                                     -0.566    14.727    vga2/Sprites/MemoryArray_reg_5
   -------------------------------------------------------------------
-                         required time                         14.741    
-                         arrival time                         -26.571    
+                         required time                         14.727    
+                         arrival time                         -26.705    
   -------------------------------------------------------------------
-                         slack                                -11.830    
+                         slack                                -11.978    
 
-Slack (VIOLATED) :        -11.826ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -11.904ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_3/ADDRARDADDR[6]
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[14]
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.167ns  (logic 14.234ns (67.245%)  route 6.933ns (32.755%))
-  Logic Levels:           10  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.031ns = ( 15.031 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.262ns  (logic 14.358ns (67.530%)  route 6.904ns (32.470%))
+  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -663,38 +499,40 @@ Slack (VIOLATED) :        -11.826ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[6])
-                                                      1.518    25.015 r  vga2/address__1/P[6]
-                         net (fo=8, routed)           1.422    26.437    vga2/Sprites/P[6]
-    RAMB36_X2Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_3/ADDRARDADDR[6]
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[14])
+                                                      1.518    25.142 r  vga2/address__1/P[14]
+                         net (fo=8, routed)           1.489    26.631    vga2/Sprites/P[14]
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[14]
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -704,32 +542,32 @@ Slack (VIOLATED) :        -11.826ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.609    15.031    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X2Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_3/CLKARDCLK
-                         clock pessimism              0.180    15.211    
-                         clock uncertainty           -0.035    15.176    
-    RAMB36_X2Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[6])
-                                                     -0.566    14.610    vga2/Sprites/MemoryArray_reg_3
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[14])
+                                                     -0.566    14.727    vga2/Sprites/MemoryArray_reg_5
   -------------------------------------------------------------------
-                         required time                         14.610    
-                         arrival time                         -26.437    
+                         required time                         14.727    
+                         arrival time                         -26.631    
   -------------------------------------------------------------------
-                         slack                                -11.826    
+                         slack                                -11.904    
 
-Slack (VIOLATED) :        -11.823ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -11.878ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_1/ADDRARDADDR[5]
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[15]
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.172ns  (logic 14.234ns (67.231%)  route 6.938ns (32.769%))
-  Logic Levels:           10  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.039ns = ( 15.039 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.287ns  (logic 14.358ns (67.449%)  route 6.929ns (32.551%))
+  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -745,38 +583,40 @@ Slack (VIOLATED) :        -11.823ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[5])
-                                                      1.518    25.015 r  vga2/address__1/P[5]
-                         net (fo=8, routed)           1.426    26.441    vga2/Sprites/P[5]
-    RAMB36_X3Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_1/ADDRARDADDR[5]
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[15])
+                                                      1.518    25.142 r  vga2/address__1/P[15]
+                         net (fo=12, routed)          1.514    26.656    vga2/Sprites/P[15]
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[15]
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -786,32 +626,32 @@ Slack (VIOLATED) :        -11.823ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.617    15.039    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_1/CLKARDCLK
-                         clock pessimism              0.180    15.219    
-                         clock uncertainty           -0.035    15.184    
-    RAMB36_X3Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[5])
-                                                     -0.566    14.618    vga2/Sprites/MemoryArray_reg_1
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[15])
+                                                     -0.515    14.778    vga2/Sprites/MemoryArray_reg_5
   -------------------------------------------------------------------
-                         required time                         14.618    
-                         arrival time                         -26.441    
+                         required time                         14.778    
+                         arrival time                         -26.656    
   -------------------------------------------------------------------
-                         slack                                -11.823    
+                         slack                                -11.878    
 
-Slack (VIOLATED) :        -11.800ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -11.874ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_1/ADDRARDADDR[3]
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[9]
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.149ns  (logic 14.234ns (67.305%)  route 6.915ns (32.695%))
-  Logic Levels:           10  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.039ns = ( 15.039 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.231ns  (logic 14.358ns (67.626%)  route 6.873ns (32.374%))
+  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -827,38 +667,40 @@ Slack (VIOLATED) :        -11.800ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[3])
-                                                      1.518    25.015 r  vga2/address__1/P[3]
-                         net (fo=8, routed)           1.403    26.418    vga2/Sprites/P[3]
-    RAMB36_X3Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_1/ADDRARDADDR[3]
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[9])
+                                                      1.518    25.142 r  vga2/address__1/P[9]
+                         net (fo=8, routed)           1.458    26.601    vga2/Sprites/P[9]
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[9]
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -868,32 +710,32 @@ Slack (VIOLATED) :        -11.800ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.617    15.039    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_1/CLKARDCLK
-                         clock pessimism              0.180    15.219    
-                         clock uncertainty           -0.035    15.184    
-    RAMB36_X3Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[3])
-                                                     -0.566    14.618    vga2/Sprites/MemoryArray_reg_1
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[9])
+                                                     -0.566    14.727    vga2/Sprites/MemoryArray_reg_5
   -------------------------------------------------------------------
-                         required time                         14.618    
-                         arrival time                         -26.418    
+                         required time                         14.727    
+                         arrival time                         -26.601    
   -------------------------------------------------------------------
-                         slack                                -11.800    
+                         slack                                -11.874    
 
-Slack (VIOLATED) :        -11.793ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -11.869ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_6/ENARDEN
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[3]
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.272ns  (logic 14.358ns (67.497%)  route 6.914ns (32.503%))
-  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT4=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.046ns = ( 15.046 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.227ns  (logic 14.358ns (67.641%)  route 6.869ns (32.359%))
+  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -909,40 +751,40 @@ Slack (VIOLATED) :        -11.793ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[17])
-                                                      1.518    25.015 r  vga2/address__1/P[17]
-                         net (fo=9, routed)           0.858    25.873    vga2/Sprites/P[17]
-    SLICE_X79Y118        LUT4 (Prop_lut4_I0_O)        0.124    25.997 r  vga2/Sprites/MemoryArray_reg_6_ENARDEN_cooolgate_en_gate_11_LOPT_REMAP/O
-                         net (fo=1, routed)           0.544    26.541    vga2/Sprites/MemoryArray_reg_6_ENARDEN_cooolgate_en_sig_8
-    RAMB36_X3Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_6/ENARDEN
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[3])
+                                                      1.518    25.142 r  vga2/address__1/P[3]
+                         net (fo=8, routed)           1.453    26.596    vga2/Sprites/P[3]
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[3]
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -952,32 +794,32 @@ Slack (VIOLATED) :        -11.793ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.624    15.046    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_6/CLKARDCLK
-                         clock pessimism              0.180    15.226    
-                         clock uncertainty           -0.035    15.191    
-    RAMB36_X3Y22         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
-                                                     -0.443    14.748    vga2/Sprites/MemoryArray_reg_6
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[3])
+                                                     -0.566    14.727    vga2/Sprites/MemoryArray_reg_5
   -------------------------------------------------------------------
-                         required time                         14.748    
-                         arrival time                         -26.541    
+                         required time                         14.727    
+                         arrival time                         -26.596    
   -------------------------------------------------------------------
-                         slack                                -11.793    
+                         slack                                -11.869    
 
-Slack (VIOLATED) :        -11.782ns  (required time - arrival time)
-  Source:                 vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Slack (VIOLATED) :        -11.863ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_3/ADDRARDADDR[3]
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ENARDEN
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        21.123ns  (logic 14.234ns (67.387%)  route 6.889ns (32.613%))
-  Logic Levels:           10  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=3 RAMB36E1=1)
-  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.031ns = ( 15.031 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.269ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Data Path Delay:        21.343ns  (logic 14.482ns (67.852%)  route 6.861ns (32.148%))
+  Logic Levels:           12  (DSP48E1=4 LUT2=1 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -993,38 +835,42 @@ Slack (VIOLATED) :        -11.782ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.667     5.269    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X1Y16         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X1Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     8.141 r  vga2/ImageData/MemoryArray_reg_0_6/CASCADEOUTA
-                         net (fo=1, routed)           0.065     8.206    vga2/ImageData/MemoryArray_reg_0_6_n_0
-    RAMB36_X1Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     8.631 r  vga2/ImageData/MemoryArray_reg_1_6/DOADO[0]
-                         net (fo=3, routed)           1.407    10.039    vga2/ImageData/colorAddr[6]
-    SLICE_X72Y95         LUT5 (Prop_lut5_I4_O)        0.124    10.163 r  vga2/ImageData/address1_i_9/O
-                         net (fo=24, routed)          0.670    10.833    vga2/ImageData/address1_i_9_n_0
-    SLICE_X73Y96         LUT3 (Prop_lut3_I1_O)        0.124    10.957 f  vga2/ImageData/address1_i_32/O
-                         net (fo=7, routed)           0.499    11.456    vga2/Display/sel0[2]
-    SLICE_X76Y96         LUT6 (Prop_lut6_I5_O)        0.124    11.580 r  vga2/Display/address1_i_45/O
-                         net (fo=3, routed)           0.596    12.176    vga2/Display/address1_i_45_n_0
-    SLICE_X77Y97         LUT6 (Prop_lut6_I4_O)        0.124    12.300 r  vga2/Display/address1_i_20_comp/O
-                         net (fo=1, routed)           0.580    12.880    vga2/Display/address1_i_20_n_0
-    SLICE_X77Y96         LUT6 (Prop_lut6_I2_O)        0.124    13.004 r  vga2/Display/address1_i_6_comp/O
-                         net (fo=1, routed)           0.565    13.569    vga2/final_ascii[2]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[2]_P[10])
-                                                      5.070    18.639 r  vga2/address1/P[10]
-                         net (fo=1, routed)           1.125    19.764    vga2/address1_n_95
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[10]_PCOUT[47])
-                                                      2.016    21.780 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002    21.782    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.713    23.495 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002    23.497    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[3])
-                                                      1.518    25.015 r  vga2/address__1/P[3]
-                         net (fo=8, routed)           1.377    26.392    vga2/Sprites/P[3]
-    RAMB36_X2Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_3/ADDRARDADDR[3]
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[16])
+                                                      1.518    25.142 f  vga2/address__1/P[16]
+                         net (fo=9, routed)           0.697    25.840    vga2/Sprites/P[16]
+    SLICE_X78Y85         LUT2 (Prop_lut2_I1_O)        0.124    25.964 r  vga2/Sprites/MemoryArray_reg_4_i_1/O
+                         net (fo=2, routed)           0.749    26.713    vga2/Sprites/MemoryArray_reg_4_i_1_n_0
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ENARDEN
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1034,17 +880,185 @@ Slack (VIOLATED) :        -11.782ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          1.609    15.031    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X2Y25         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_3/CLKARDCLK
-                         clock pessimism              0.180    15.211    
-                         clock uncertainty           -0.035    15.176    
-    RAMB36_X2Y25         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[3])
-                                                     -0.566    14.610    vga2/Sprites/MemoryArray_reg_3
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.850    vga2/Sprites/MemoryArray_reg_5
   -------------------------------------------------------------------
-                         required time                         14.610    
-                         arrival time                         -26.392    
+                         required time                         14.850    
+                         arrival time                         -26.713    
   -------------------------------------------------------------------
-                         slack                                -11.782    
+                         slack                                -11.863    
+
+Slack (VIOLATED) :        -11.861ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        21.219ns  (logic 14.358ns (67.667%)  route 6.861ns (32.333%))
+  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[6])
+                                                      1.518    25.142 r  vga2/address__1/P[6]
+                         net (fo=8, routed)           1.445    26.588    vga2/Sprites/P[6]
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[6])
+                                                     -0.566    14.727    vga2/Sprites/MemoryArray_reg_5
+  -------------------------------------------------------------------
+                         required time                         14.727    
+                         arrival time                         -26.588    
+  -------------------------------------------------------------------
+                         slack                                -11.861    
+
+Slack (VIOLATED) :        -11.851ns  (required time - arrival time)
+  Source:                 vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[1]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        21.208ns  (logic 14.358ns (67.700%)  route 6.850ns (32.300%))
+  Logic Levels:           11  (DSP48E1=4 LUT3=1 LUT5=1 LUT6=4 RAMB36E1=1)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.069ns = ( 15.069 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.369ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          1.767     5.369    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X3Y10         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X3Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     8.241 r  vga2/ImageData/MemoryArray_reg_0_5/CASCADEOUTA
+                         net (fo=1, routed)           0.065     8.306    vga2/ImageData/MemoryArray_reg_0_5_n_0
+    RAMB36_X3Y11         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     8.731 r  vga2/ImageData/MemoryArray_reg_1_5/DOADO[0]
+                         net (fo=4, routed)           1.388    10.119    vga2/ImageData/colorAddr[5]
+    SLICE_X72Y58         LUT5 (Prop_lut5_I2_O)        0.124    10.243 r  vga2/ImageData/address1_i_9/O
+                         net (fo=35, routed)          0.751    10.994    vga2/ImageData/address1_i_9_n_0
+    SLICE_X74Y59         LUT3 (Prop_lut3_I1_O)        0.124    11.118 f  vga2/ImageData/address1_i_33/O
+                         net (fo=7, routed)           0.600    11.718    vga2/Display/sel0[1]
+    SLICE_X75Y61         LUT6 (Prop_lut6_I5_O)        0.124    11.842 r  vga2/Display/address1_i_45_comp_2/O
+                         net (fo=1, routed)           0.305    12.148    vga2/Display/address1_i_45_n_0_repN
+    SLICE_X74Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.272 r  vga2/Display/address1_i_26_comp_8/O
+                         net (fo=1, routed)           0.165    12.437    vga2/Display/address1_i_26_n_0
+    SLICE_X74Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.561 r  vga2/Display/address1_i_25_comp_1/O
+                         net (fo=1, routed)           0.406    12.966    vga2/Display/address1_i_25_n_0
+    SLICE_X77Y60         LUT6 (Prop_lut6_I3_O)        0.124    13.090 r  vga2/Display/address1_i_8_comp/O
+                         net (fo=1, routed)           0.561    13.651    vga2/final_ascii[0]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[0]_P[7])
+                                                      5.070    18.721 r  vga2/address1/P[7]
+                         net (fo=1, routed)           1.170    19.891    vga2/address1_n_98
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[7]_PCOUT[47])
+                                                      2.016    21.907 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.909    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    23.622 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.624    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[1])
+                                                      1.518    25.142 r  vga2/address__1/P[1]
+                         net (fo=8, routed)           1.435    26.577    vga2/Sprites/P[1]
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/ADDRARDADDR[1]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          1.647    15.069    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y19         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_5/CLKARDCLK
+                         clock pessimism              0.259    15.328    
+                         clock uncertainty           -0.035    15.293    
+    RAMB36_X3Y19         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[1])
+                                                     -0.566    14.727    vga2/Sprites/MemoryArray_reg_5
+  -------------------------------------------------------------------
+                         required time                         14.727    
+                         arrival time                         -26.577    
+  -------------------------------------------------------------------
+                         slack                                -11.851    
 
 
 
@@ -1052,109 +1066,7 @@ Slack (VIOLATED) :        -11.782ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.232ns  (arrival time - required time)
-  Source:                 vga2/pixCounter_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/pixCounter_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.339ns  (logic 0.183ns (53.966%)  route 0.156ns (46.034%))
-  Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.028ns
-    Source Clock Delay      (SCD):    1.509ns
-    Clock Pessimism Removal (CPR):    0.518ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.644     0.894    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.590     1.509    vga2/clk_IBUF_BUFG
-    SLICE_X75Y109        FDRE                                         r  vga2/pixCounter_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X75Y109        FDRE (Prop_fdre_C_Q)         0.141     1.650 r  vga2/pixCounter_reg[0]/Q
-                         net (fo=2, routed)           0.156     1.807    vga2/pixCounter_reg_n_0_[0]
-    SLICE_X75Y109        LUT2 (Prop_lut2_I0_O)        0.042     1.849 r  vga2/pixCounter[1]_i_1/O
-                         net (fo=1, routed)           0.000     1.849    vga2/pixCounter[1]_i_1_n_0
-    SLICE_X75Y109        FDRE                                         r  vga2/pixCounter_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.699     1.136    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.863     2.028    vga2/clk_IBUF_BUFG
-    SLICE_X75Y109        FDRE                                         r  vga2/pixCounter_reg[1]/C
-                         clock pessimism             -0.518     1.509    
-    SLICE_X75Y109        FDRE (Hold_fdre_C_D)         0.107     1.616    vga2/pixCounter_reg[1]
-  -------------------------------------------------------------------
-                         required time                         -1.616    
-                         arrival time                           1.849    
-  -------------------------------------------------------------------
-                         slack                                  0.232    
-
-Slack (MET) :             0.251ns  (arrival time - required time)
-  Source:                 vga2/pixCounter_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/pixCounter_reg[0]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.342ns  (logic 0.186ns (54.369%)  route 0.156ns (45.631%))
-  Logic Levels:           1  (LUT1=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.028ns
-    Source Clock Delay      (SCD):    1.509ns
-    Clock Pessimism Removal (CPR):    0.518ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.644     0.894    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.590     1.509    vga2/clk_IBUF_BUFG
-    SLICE_X75Y109        FDRE                                         r  vga2/pixCounter_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X75Y109        FDRE (Prop_fdre_C_Q)         0.141     1.650 f  vga2/pixCounter_reg[0]/Q
-                         net (fo=2, routed)           0.156     1.807    vga2/pixCounter_reg_n_0_[0]
-    SLICE_X75Y109        LUT1 (Prop_lut1_I0_O)        0.045     1.852 r  vga2/pixCounter[0]_i_1/O
-                         net (fo=1, routed)           0.000     1.852    vga2/pixCounter[0]_i_1_n_0
-    SLICE_X75Y109        FDRE                                         r  vga2/pixCounter_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.699     1.136    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.863     2.028    vga2/clk_IBUF_BUFG
-    SLICE_X75Y109        FDRE                                         r  vga2/pixCounter_reg[0]/C
-                         clock pessimism             -0.518     1.509    
-    SLICE_X75Y109        FDRE (Hold_fdre_C_D)         0.091     1.600    vga2/pixCounter_reg[0]
-  -------------------------------------------------------------------
-                         required time                         -1.600    
-                         arrival time                           1.852    
-  -------------------------------------------------------------------
-                         slack                                  0.251    
-
-Slack (MET) :             0.281ns  (arrival time - required time)
+Slack (MET) :             0.278ns  (arrival time - required time)
   Source:                 clock_reg/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clock_reg/D
@@ -1162,12 +1074,12 @@ Slack (MET) :             0.281ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.401ns  (logic 0.209ns (52.141%)  route 0.192ns (47.859%))
+  Data Path Delay:        0.369ns  (logic 0.186ns (50.452%)  route 0.183ns (49.548%))
   Logic Levels:           1  (LUT2=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.994ns
-    Source Clock Delay      (SCD):    1.480ns
-    Clock Pessimism Removal (CPR):    0.513ns
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.483ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1178,14 +1090,14 @@ Slack (MET) :             0.281ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.561     1.480    clk_IBUF_BUFG
-    SLICE_X50Y84         FDRE                                         r  clock_reg/C
+                         net (fo=37, routed)          0.564     1.483    clk_IBUF_BUFG
+    SLICE_X47Y88         FDRE                                         r  clock_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X50Y84         FDRE (Prop_fdre_C_Q)         0.164     1.644 r  clock_reg/Q
-                         net (fo=7, routed)           0.192     1.836    clock
-    SLICE_X50Y84         LUT2 (Prop_lut2_I1_O)        0.045     1.881 r  clock_i_1__1/O
-                         net (fo=1, routed)           0.000     1.881    clock_i_1__1_n_0
-    SLICE_X50Y84         FDRE                                         r  clock_reg/D
+    SLICE_X47Y88         FDRE (Prop_fdre_C_Q)         0.141     1.624 r  clock_reg/Q
+                         net (fo=7, routed)           0.183     1.807    clock
+    SLICE_X47Y88         LUT2 (Prop_lut2_I1_O)        0.045     1.852 r  clock_i_1__1/O
+                         net (fo=1, routed)           0.000     1.852    clock_i_1__1_n_0
+    SLICE_X47Y88         FDRE                                         r  clock_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1195,17 +1107,17 @@ Slack (MET) :             0.281ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.829     1.994    clk_IBUF_BUFG
-    SLICE_X50Y84         FDRE                                         r  clock_reg/C
-                         clock pessimism             -0.513     1.480    
-    SLICE_X50Y84         FDRE (Hold_fdre_C_D)         0.120     1.600    clock_reg
+                         net (fo=37, routed)          0.835     2.000    clk_IBUF_BUFG
+    SLICE_X47Y88         FDRE                                         r  clock_reg/C
+                         clock pessimism             -0.516     1.483    
+    SLICE_X47Y88         FDRE (Hold_fdre_C_D)         0.091     1.574    clock_reg
   -------------------------------------------------------------------
-                         required time                         -1.600    
-                         arrival time                           1.881    
+                         required time                         -1.574    
+                         arrival time                           1.852    
   -------------------------------------------------------------------
-                         slack                                  0.281    
+                         slack                                  0.278    
 
-Slack (MET) :             0.298ns  (arrival time - required time)
+Slack (MET) :             0.296ns  (arrival time - required time)
   Source:                 counter_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            counter_reg[1]/D
@@ -1213,12 +1125,12 @@ Slack (MET) :             0.298ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.429ns  (logic 0.208ns (48.473%)  route 0.221ns (51.527%))
+  Data Path Delay:        0.403ns  (logic 0.184ns (45.646%)  route 0.219ns (54.354%))
   Logic Levels:           1  (LUT2=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.994ns
-    Source Clock Delay      (SCD):    1.480ns
-    Clock Pessimism Removal (CPR):    0.513ns
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.483ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1229,14 +1141,14 @@ Slack (MET) :             0.298ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.561     1.480    clk_IBUF_BUFG
-    SLICE_X50Y84         FDRE                                         r  counter_reg[0]/C
+                         net (fo=37, routed)          0.564     1.483    clk_IBUF_BUFG
+    SLICE_X47Y88         FDRE                                         r  counter_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X50Y84         FDRE (Prop_fdre_C_Q)         0.164     1.644 r  counter_reg[0]/Q
-                         net (fo=2, routed)           0.221     1.865    counter_reg_n_0_[0]
-    SLICE_X50Y84         LUT2 (Prop_lut2_I0_O)        0.044     1.909 r  counter[1]_i_1/O
-                         net (fo=1, routed)           0.000     1.909    counter[1]_i_1_n_0
-    SLICE_X50Y84         FDRE                                         r  counter_reg[1]/D
+    SLICE_X47Y88         FDRE (Prop_fdre_C_Q)         0.141     1.624 r  counter_reg[0]/Q
+                         net (fo=2, routed)           0.219     1.843    counter_reg_n_0_[0]
+    SLICE_X47Y88         LUT2 (Prop_lut2_I0_O)        0.043     1.886 r  counter[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.886    counter[1]_i_1_n_0
+    SLICE_X47Y88         FDRE                                         r  counter_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1246,17 +1158,17 @@ Slack (MET) :             0.298ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.829     1.994    clk_IBUF_BUFG
-    SLICE_X50Y84         FDRE                                         r  counter_reg[1]/C
-                         clock pessimism             -0.513     1.480    
-    SLICE_X50Y84         FDRE (Hold_fdre_C_D)         0.131     1.611    counter_reg[1]
+                         net (fo=37, routed)          0.835     2.000    clk_IBUF_BUFG
+    SLICE_X47Y88         FDRE                                         r  counter_reg[1]/C
+                         clock pessimism             -0.516     1.483    
+    SLICE_X47Y88         FDRE (Hold_fdre_C_D)         0.107     1.590    counter_reg[1]
   -------------------------------------------------------------------
-                         required time                         -1.611    
-                         arrival time                           1.909    
+                         required time                         -1.590    
+                         arrival time                           1.886    
   -------------------------------------------------------------------
-                         slack                                  0.298    
+                         slack                                  0.296    
 
-Slack (MET) :             0.309ns  (arrival time - required time)
+Slack (MET) :             0.313ns  (arrival time - required time)
   Source:                 counter_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            counter_reg[0]/D
@@ -1264,12 +1176,12 @@ Slack (MET) :             0.309ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.430ns  (logic 0.209ns (48.593%)  route 0.221ns (51.407%))
+  Data Path Delay:        0.405ns  (logic 0.186ns (45.914%)  route 0.219ns (54.086%))
   Logic Levels:           1  (LUT2=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.994ns
-    Source Clock Delay      (SCD):    1.480ns
-    Clock Pessimism Removal (CPR):    0.513ns
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.483ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1280,14 +1192,14 @@ Slack (MET) :             0.309ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.561     1.480    clk_IBUF_BUFG
-    SLICE_X50Y84         FDRE                                         r  counter_reg[0]/C
+                         net (fo=37, routed)          0.564     1.483    clk_IBUF_BUFG
+    SLICE_X47Y88         FDRE                                         r  counter_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X50Y84         FDRE (Prop_fdre_C_Q)         0.164     1.644 f  counter_reg[0]/Q
-                         net (fo=2, routed)           0.221     1.865    counter_reg_n_0_[0]
-    SLICE_X50Y84         LUT2 (Prop_lut2_I0_O)        0.045     1.910 r  counter[0]_i_1/O
-                         net (fo=1, routed)           0.000     1.910    counter[0]_i_1_n_0
-    SLICE_X50Y84         FDRE                                         r  counter_reg[0]/D
+    SLICE_X47Y88         FDRE (Prop_fdre_C_Q)         0.141     1.624 f  counter_reg[0]/Q
+                         net (fo=2, routed)           0.219     1.843    counter_reg_n_0_[0]
+    SLICE_X47Y88         LUT2 (Prop_lut2_I0_O)        0.045     1.888 r  counter[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.888    counter[0]_i_1_n_0
+    SLICE_X47Y88         FDRE                                         r  counter_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1297,17 +1209,119 @@ Slack (MET) :             0.309ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.829     1.994    clk_IBUF_BUFG
-    SLICE_X50Y84         FDRE                                         r  counter_reg[0]/C
-                         clock pessimism             -0.513     1.480    
-    SLICE_X50Y84         FDRE (Hold_fdre_C_D)         0.121     1.601    counter_reg[0]
+                         net (fo=37, routed)          0.835     2.000    clk_IBUF_BUFG
+    SLICE_X47Y88         FDRE                                         r  counter_reg[0]/C
+                         clock pessimism             -0.516     1.483    
+    SLICE_X47Y88         FDRE (Hold_fdre_C_D)         0.092     1.575    counter_reg[0]
   -------------------------------------------------------------------
-                         required time                         -1.601    
-                         arrival time                           1.910    
+                         required time                         -1.575    
+                         arrival time                           1.888    
   -------------------------------------------------------------------
-                         slack                                  0.309    
+                         slack                                  0.313    
 
-Slack (MET) :             0.460ns  (arrival time - required time)
+Slack (MET) :             0.415ns  (arrival time - required time)
+  Source:                 vga2/pixCounter_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vga2/pixCounter_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.522ns  (logic 0.185ns (35.433%)  route 0.337ns (64.567%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.996ns
+    Source Clock Delay      (SCD):    1.480ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.561     1.480    vga2/clk_IBUF_BUFG
+    SLICE_X69Y68         FDRE                                         r  vga2/pixCounter_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y68         FDRE (Prop_fdre_C_Q)         0.141     1.621 r  vga2/pixCounter_reg[0]/Q
+                         net (fo=2, routed)           0.337     1.958    vga2/pixCounter_reg_n_0_[0]
+    SLICE_X69Y68         LUT2 (Prop_lut2_I0_O)        0.044     2.002 r  vga2/pixCounter[1]_i_1/O
+                         net (fo=1, routed)           0.000     2.002    vga2/pixCounter[1]_i_1_n_0
+    SLICE_X69Y68         FDRE                                         r  vga2/pixCounter_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.831     1.996    vga2/clk_IBUF_BUFG
+    SLICE_X69Y68         FDRE                                         r  vga2/pixCounter_reg[1]/C
+                         clock pessimism             -0.515     1.480    
+    SLICE_X69Y68         FDRE (Hold_fdre_C_D)         0.107     1.587    vga2/pixCounter_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.587    
+                         arrival time                           2.002    
+  -------------------------------------------------------------------
+                         slack                                  0.415    
+
+Slack (MET) :             0.432ns  (arrival time - required time)
+  Source:                 vga2/pixCounter_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vga2/pixCounter_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.523ns  (logic 0.186ns (35.557%)  route 0.337ns (64.443%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.996ns
+    Source Clock Delay      (SCD):    1.480ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.561     1.480    vga2/clk_IBUF_BUFG
+    SLICE_X69Y68         FDRE                                         r  vga2/pixCounter_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y68         FDRE (Prop_fdre_C_Q)         0.141     1.621 f  vga2/pixCounter_reg[0]/Q
+                         net (fo=2, routed)           0.337     1.958    vga2/pixCounter_reg_n_0_[0]
+    SLICE_X69Y68         LUT1 (Prop_lut1_I0_O)        0.045     2.003 r  vga2/pixCounter[0]_i_1/O
+                         net (fo=1, routed)           0.000     2.003    vga2/pixCounter[0]_i_1_n_0
+    SLICE_X69Y68         FDRE                                         r  vga2/pixCounter_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.831     1.996    vga2/clk_IBUF_BUFG
+    SLICE_X69Y68         FDRE                                         r  vga2/pixCounter_reg[0]/C
+                         clock pessimism             -0.515     1.480    
+    SLICE_X69Y68         FDRE (Hold_fdre_C_D)         0.091     1.571    vga2/pixCounter_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.571    
+                         arrival time                           2.003    
+  -------------------------------------------------------------------
+                         slack                                  0.432    
+
+Slack (MET) :             0.516ns  (arrival time - required time)
   Source:                 vga2/Sprites/vga2/Sprites/MemoryArray_reg_0_cooolgate_en_gate_1_cooolDelFlop/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            vga2/Sprites/MemoryArray_reg_0/ENARDEN
@@ -1315,11 +1329,11 @@ Slack (MET) :             0.460ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.633ns  (logic 0.209ns (33.030%)  route 0.424ns (66.970%))
+  Data Path Delay:        0.691ns  (logic 0.209ns (30.236%)  route 0.482ns (69.764%))
   Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.076ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.060ns
-    Source Clock Delay      (SCD):    1.504ns
+  Clock Path Skew:        0.079ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.074ns
+    Source Clock Delay      (SCD):    1.515ns
     Clock Pessimism Removal (CPR):    0.479ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1331,66 +1345,14 @@ Slack (MET) :             0.460ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.585     1.504    vga2/Sprites/clk_IBUF_BUFG
-    SLICE_X78Y120        FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_0_cooolgate_en_gate_1_cooolDelFlop/C
+                         net (fo=37, routed)          0.596     1.515    vga2/Sprites/clk_IBUF_BUFG
+    SLICE_X78Y85         FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_0_cooolgate_en_gate_1_cooolDelFlop/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X78Y120        FDCE (Prop_fdce_C_Q)         0.164     1.668 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_0_cooolgate_en_gate_1_cooolDelFlop/Q
-                         net (fo=1, routed)           0.212     1.881    vga2/Sprites/vga2/Sprites/MemoryArray_reg_0_cooolgate_en_sig_1
-    SLICE_X79Y121        LUT4 (Prop_lut4_I3_O)        0.045     1.926 r  vga2/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.212     2.137    vga2/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2
-    RAMB36_X3Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/ENARDEN
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.699     1.136    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.895     2.060    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/CLKARDCLK
-                         clock pessimism             -0.479     1.581    
-    RAMB36_X3Y24         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
-                                                      0.096     1.677    vga2/Sprites/MemoryArray_reg_0
-  -------------------------------------------------------------------
-                         required time                         -1.677    
-                         arrival time                           2.137    
-  -------------------------------------------------------------------
-                         slack                                  0.460    
-
-Slack (MET) :             0.461ns  (arrival time - required time)
-  Source:                 vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_gate_10_cooolDelFlop/C
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_6/ENARDEN
-                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.642ns  (logic 0.186ns (28.949%)  route 0.456ns (71.051%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.085ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.070ns
-    Source Clock Delay      (SCD):    1.505ns
-    Clock Pessimism Removal (CPR):    0.479ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.644     0.894    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.586     1.505    vga2/Sprites/clk_IBUF_BUFG
-    SLICE_X79Y119        FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_gate_10_cooolDelFlop/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X79Y119        FDCE (Prop_fdce_C_Q)         0.141     1.646 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_gate_10_cooolDelFlop/Q
-                         net (fo=1, routed)           0.210     1.857    vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_sig_7
-    SLICE_X79Y118        LUT4 (Prop_lut4_I3_O)        0.045     1.902 r  vga2/Sprites/MemoryArray_reg_6_ENARDEN_cooolgate_en_gate_11_LOPT_REMAP/O
-                         net (fo=1, routed)           0.246     2.148    vga2/Sprites/MemoryArray_reg_6_ENARDEN_cooolgate_en_sig_8
-    RAMB36_X3Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_6/ENARDEN
+    SLICE_X78Y85         FDCE (Prop_fdce_C_Q)         0.164     1.679 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_0_cooolgate_en_gate_1_cooolDelFlop/Q
+                         net (fo=1, routed)           0.328     2.007    vga2/Sprites/vga2/Sprites/MemoryArray_reg_0_cooolgate_en_sig_1
+    SLICE_X81Y81         LUT4 (Prop_lut4_I3_O)        0.045     2.052 r  vga2/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_gate_2_LOPT_REMAP/O
+                         net (fo=1, routed)           0.154     2.207    vga2/Sprites/MemoryArray_reg_0_ENARDEN_cooolgate_en_sig_2
+    RAMB36_X3Y16         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/ENARDEN
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1400,18 +1362,18 @@ Slack (MET) :             0.461ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.905     2.070    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_6/CLKARDCLK
-                         clock pessimism             -0.479     1.591    
-    RAMB36_X3Y22         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
-                                                      0.096     1.687    vga2/Sprites/MemoryArray_reg_6
+                         net (fo=37, routed)          0.909     2.074    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y16         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/CLKARDCLK
+                         clock pessimism             -0.479     1.595    
+    RAMB36_X3Y16         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
+                                                      0.096     1.691    vga2/Sprites/MemoryArray_reg_0
   -------------------------------------------------------------------
-                         required time                         -1.687    
-                         arrival time                           2.148    
+                         required time                         -1.691    
+                         arrival time                           2.207    
   -------------------------------------------------------------------
-                         slack                                  0.461    
+                         slack                                  0.516    
 
-Slack (MET) :             0.481ns  (arrival time - required time)
+Slack (MET) :             0.518ns  (arrival time - required time)
   Source:                 vga2/Sprites/vga2/Sprites/MemoryArray_reg_4_cooolgate_en_gate_7_cooolDelFlop/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            vga2/Sprites/MemoryArray_reg_4/ENARDEN
@@ -1419,11 +1381,63 @@ Slack (MET) :             0.481ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.636ns  (logic 0.186ns (29.235%)  route 0.450ns (70.765%))
+  Data Path Delay:        0.700ns  (logic 0.186ns (26.566%)  route 0.514ns (73.434%))
   Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.059ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.063ns
-    Source Clock Delay      (SCD):    1.502ns
+  Clock Path Skew:        0.086ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.081ns
+    Source Clock Delay      (SCD):    1.515ns
+    Clock Pessimism Removal (CPR):    0.479ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.596     1.515    vga2/Sprites/clk_IBUF_BUFG
+    SLICE_X79Y85         FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_4_cooolgate_en_gate_7_cooolDelFlop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X79Y85         FDCE (Prop_fdce_C_Q)         0.141     1.656 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_4_cooolgate_en_gate_7_cooolDelFlop/Q
+                         net (fo=1, routed)           0.280     1.936    vga2/Sprites/vga2/Sprites/MemoryArray_reg_4_cooolgate_en_sig_5
+    SLICE_X81Y85         LUT4 (Prop_lut4_I3_O)        0.045     1.981 r  vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_gate_8_LOPT_REMAP/O
+                         net (fo=1, routed)           0.234     2.215    vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_sig_6
+    RAMB36_X3Y18         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.916     2.081    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y18         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/CLKARDCLK
+                         clock pessimism             -0.479     1.602    
+    RAMB36_X3Y18         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
+                                                      0.096     1.698    vga2/Sprites/MemoryArray_reg_4
+  -------------------------------------------------------------------
+                         required time                         -1.698    
+                         arrival time                           2.215    
+  -------------------------------------------------------------------
+                         slack                                  0.518    
+
+Slack (MET) :             0.551ns  (arrival time - required time)
+  Source:                 vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_gate_10_cooolDelFlop/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vga2/Sprites/MemoryArray_reg_6/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.702ns  (logic 0.186ns (26.509%)  route 0.516ns (73.491%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.054ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.067ns
+    Source Clock Delay      (SCD):    1.511ns
     Clock Pessimism Removal (CPR):    0.501ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1435,14 +1449,14 @@ Slack (MET) :             0.481ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.583     1.502    vga2/Sprites/clk_IBUF_BUFG
-    SLICE_X73Y117        FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_4_cooolgate_en_gate_7_cooolDelFlop/C
+                         net (fo=37, routed)          0.592     1.511    vga2/Sprites/clk_IBUF_BUFG
+    SLICE_X73Y87         FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_gate_10_cooolDelFlop/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X73Y117        FDCE (Prop_fdce_C_Q)         0.141     1.643 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_4_cooolgate_en_gate_7_cooolDelFlop/Q
-                         net (fo=1, routed)           0.298     1.941    vga2/Sprites/vga2/Sprites/MemoryArray_reg_4_cooolgate_en_sig_5
-    SLICE_X73Y112        LUT4 (Prop_lut4_I3_O)        0.045     1.986 r  vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_gate_8_LOPT_REMAP/O
-                         net (fo=1, routed)           0.152     2.139    vga2/Sprites/MemoryArray_reg_4_ENARDEN_cooolgate_en_sig_6
-    RAMB36_X2Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/ENARDEN
+    SLICE_X73Y87         FDCE (Prop_fdce_C_Q)         0.141     1.652 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_gate_10_cooolDelFlop/Q
+                         net (fo=1, routed)           0.344     1.996    vga2/Sprites/vga2/Sprites/MemoryArray_reg_6_cooolgate_en_sig_7
+    SLICE_X75Y82         LUT4 (Prop_lut4_I3_O)        0.045     2.041 r  vga2/Sprites/MemoryArray_reg_6_ENARDEN_cooolgate_en_gate_11_LOPT_REMAP/O
+                         net (fo=1, routed)           0.172     2.213    vga2/Sprites/MemoryArray_reg_6_ENARDEN_cooolgate_en_sig_8
+    RAMB36_X2Y16         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_6/ENARDEN
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1452,18 +1466,18 @@ Slack (MET) :             0.481ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.898     2.063    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X2Y22         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_4/CLKARDCLK
-                         clock pessimism             -0.501     1.562    
-    RAMB36_X2Y22         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
-                                                      0.096     1.658    vga2/Sprites/MemoryArray_reg_4
+                         net (fo=37, routed)          0.902     2.067    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X2Y16         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_6/CLKARDCLK
+                         clock pessimism             -0.501     1.566    
+    RAMB36_X2Y16         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
+                                                      0.096     1.662    vga2/Sprites/MemoryArray_reg_6
   -------------------------------------------------------------------
-                         required time                         -1.658    
-                         arrival time                           2.139    
+                         required time                         -1.662    
+                         arrival time                           2.213    
   -------------------------------------------------------------------
-                         slack                                  0.481    
+                         slack                                  0.551    
 
-Slack (MET) :             0.523ns  (arrival time - required time)
+Slack (MET) :             0.553ns  (arrival time - required time)
   Source:                 vga2/Sprites/vga2/Sprites/MemoryArray_reg_2_cooolgate_en_gate_4_cooolDelFlop/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            vga2/Sprites/MemoryArray_reg_2/ENARDEN
@@ -1471,11 +1485,11 @@ Slack (MET) :             0.523ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.693ns  (logic 0.186ns (26.859%)  route 0.507ns (73.141%))
+  Data Path Delay:        0.725ns  (logic 0.186ns (25.659%)  route 0.539ns (74.341%))
   Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.073ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.053ns
-    Source Clock Delay      (SCD):    1.500ns
+  Clock Path Skew:        0.075ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.066ns
+    Source Clock Delay      (SCD):    1.511ns
     Clock Pessimism Removal (CPR):    0.479ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1487,79 +1501,14 @@ Slack (MET) :             0.523ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.581     1.500    vga2/Sprites/clk_IBUF_BUFG
-    SLICE_X75Y127        FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_2_cooolgate_en_gate_4_cooolDelFlop/C
+                         net (fo=37, routed)          0.592     1.511    vga2/Sprites/clk_IBUF_BUFG
+    SLICE_X81Y78         FDCE                                         r  vga2/Sprites/vga2/Sprites/MemoryArray_reg_2_cooolgate_en_gate_4_cooolDelFlop/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X75Y127        FDCE (Prop_fdce_C_Q)         0.141     1.641 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_2_cooolgate_en_gate_4_cooolDelFlop/Q
-                         net (fo=1, routed)           0.333     1.975    vga2/Sprites/vga2/Sprites/MemoryArray_reg_2_cooolgate_en_sig_3
-    SLICE_X74Y122        LUT4 (Prop_lut4_I3_O)        0.045     2.020 r  vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_gate_5_LOPT_REMAP/O
-                         net (fo=1, routed)           0.173     2.193    vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_sig_4
-    RAMB36_X2Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/ENARDEN
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.699     1.136    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.888     2.053    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X2Y24         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/CLKARDCLK
-                         clock pessimism             -0.479     1.574    
-    RAMB36_X2Y24         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
-                                                      0.096     1.670    vga2/Sprites/MemoryArray_reg_2
-  -------------------------------------------------------------------
-                         required time                         -1.670    
-                         arrival time                           2.193    
-  -------------------------------------------------------------------
-                         slack                                  0.523    
-
-Slack (MET) :             3.269ns  (arrival time - required time)
-  Source:                 vga2/ImageData/MemoryArray_reg_1_7/CLKARDCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            vga2/Sprites/MemoryArray_reg_7/ADDRARDADDR[0]
-                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.715ns  (logic 2.061ns (55.473%)  route 1.654ns (44.527%))
-  Logic Levels:           5  (DSP48E1=4 LUT6=1)
-  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.066ns
-    Source Clock Delay      (SCD):    1.558ns
-    Clock Pessimism Removal (CPR):    0.245ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    E3                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.644     0.894    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
-                         net (fo=37, routed)          0.638     1.558    vga2/ImageData/clk_IBUF_BUFG
-    RAMB36_X2Y19         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_1_7/CLKARDCLK
-  -------------------------------------------------------------------    -------------------
-    RAMB36_X2Y19         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[0])
-                                                      0.585     2.143 r  vga2/ImageData/MemoryArray_reg_1_7/DOADO[0]
-                         net (fo=3, routed)           0.368     2.511    vga2/ImageData/colorAddr[7]
-    SLICE_X73Y94         LUT6 (Prop_lut6_I5_O)        0.045     2.556 r  vga2/ImageData/address1_i_1/O
-                         net (fo=1, routed)           0.444     3.000    vga2/final_ascii[7]
-    DSP48_X2Y38          DSP48E1 (Prop_dsp48e1_D[7]_P[17])
-                                                      0.587     3.587 r  vga2/address1/P[17]
-                         net (fo=1, routed)           0.492     4.078    vga2/address1_n_88
-    DSP48_X2Y44          DSP48E1 (Prop_dsp48e1_C[17]_PCOUT[47])
-                                                      0.331     4.409 r  vga2/address/PCOUT[47]
-                         net (fo=1, routed)           0.002     4.411    vga2/address_n_106
-    DSP48_X2Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      0.267     4.678 r  vga2/address__0/PCOUT[47]
-                         net (fo=1, routed)           0.002     4.680    vga2/address__0_n_106
-    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
-                                                      0.246     4.926 r  vga2/address__1/P[0]
-                         net (fo=8, routed)           0.347     5.273    vga2/Sprites/P[0]
-    RAMB36_X3Y23         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_7/ADDRARDADDR[0]
+    SLICE_X81Y78         FDCE (Prop_fdce_C_Q)         0.141     1.652 f  vga2/Sprites/vga2/Sprites/MemoryArray_reg_2_cooolgate_en_gate_4_cooolDelFlop/Q
+                         net (fo=1, routed)           0.273     1.926    vga2/Sprites/vga2/Sprites/MemoryArray_reg_2_cooolgate_en_sig_3
+    SLICE_X81Y79         LUT4 (Prop_lut4_I3_O)        0.045     1.971 r  vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_gate_5_LOPT_REMAP/O
+                         net (fo=1, routed)           0.266     2.236    vga2/Sprites/MemoryArray_reg_2_ENARDEN_cooolgate_en_sig_4
+    RAMB36_X3Y14         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/ENARDEN
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1570,15 +1519,80 @@ Slack (MET) :             3.269ns  (arrival time - required time)
                          net (fo=1, routed)           0.699     1.136    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
                          net (fo=37, routed)          0.901     2.066    vga2/Sprites/clk_IBUF_BUFG
-    RAMB36_X3Y23         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_7/CLKARDCLK
-                         clock pessimism             -0.245     1.821    
-    RAMB36_X3Y23         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[0])
-                                                      0.183     2.004    vga2/Sprites/MemoryArray_reg_7
+    RAMB36_X3Y14         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_2/CLKARDCLK
+                         clock pessimism             -0.479     1.587    
+    RAMB36_X3Y14         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ENARDEN)
+                                                      0.096     1.683    vga2/Sprites/MemoryArray_reg_2
   -------------------------------------------------------------------
-                         required time                         -2.004    
-                         arrival time                           5.273    
+                         required time                         -1.683    
+                         arrival time                           2.236    
   -------------------------------------------------------------------
-                         slack                                  3.269    
+                         slack                                  0.553    
+
+Slack (MET) :             3.428ns  (arrival time - required time)
+  Source:                 vga2/ImageData/MemoryArray_reg_1_7/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vga2/Sprites/MemoryArray_reg_0/ADDRARDADDR[14]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.653ns  (logic 2.061ns (56.413%)  route 1.592ns (43.587%))
+  Logic Levels:           5  (DSP48E1=4 LUT6=1)
+  Clock Path Skew:        0.042ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.074ns
+    Source Clock Delay      (SCD):    1.553ns
+    Clock Pessimism Removal (CPR):    0.479ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.633     1.553    vga2/ImageData/clk_IBUF_BUFG
+    RAMB36_X2Y12         RAMB36E1                                     r  vga2/ImageData/MemoryArray_reg_1_7/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y12         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[0])
+                                                      0.585     2.138 r  vga2/ImageData/MemoryArray_reg_1_7/DOADO[0]
+                         net (fo=4, routed)           0.434     2.572    vga2/ImageData/colorAddr[7]
+    SLICE_X78Y61         LUT6 (Prop_lut6_I5_O)        0.045     2.617 r  vga2/ImageData/address1_i_1/O
+                         net (fo=1, routed)           0.303     2.920    vga2/final_ascii[7]
+    DSP48_X2Y24          DSP48E1 (Prop_dsp48e1_D[7]_P[1])
+                                                      0.587     3.507 r  vga2/address1/P[1]
+                         net (fo=1, routed)           0.517     4.025    vga2/address1_n_104
+    DSP48_X2Y30          DSP48E1 (Prop_dsp48e1_C[1]_PCOUT[47])
+                                                      0.331     4.356 r  vga2/address/PCOUT[47]
+                         net (fo=1, routed)           0.002     4.358    vga2/address_n_106
+    DSP48_X2Y31          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      0.267     4.625 r  vga2/address__0/PCOUT[47]
+                         net (fo=1, routed)           0.002     4.627    vga2/address__0_n_106
+    DSP48_X2Y32          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[14])
+                                                      0.246     4.873 r  vga2/address__1/P[14]
+                         net (fo=8, routed)           0.334     5.206    vga2/Sprites/P[14]
+    RAMB36_X3Y16         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/ADDRARDADDR[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=37, routed)          0.909     2.074    vga2/Sprites/clk_IBUF_BUFG
+    RAMB36_X3Y16         RAMB36E1                                     r  vga2/Sprites/MemoryArray_reg_0/CLKARDCLK
+                         clock pessimism             -0.479     1.595    
+    RAMB36_X3Y16         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[14])
+                                                      0.183     1.778    vga2/Sprites/MemoryArray_reg_0
+  -------------------------------------------------------------------
+                         required time                         -1.778    
+                         arrival time                           5.206    
+  -------------------------------------------------------------------
+                         slack                                  3.428    
 
 
 
@@ -1591,37 +1605,37 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { clk }
 
-Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X3Y20   vga2/ImageData/MemoryArray_reg_0_0/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y20   vga2/ImageData/MemoryArray_reg_0_1/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y14   vga2/ImageData/MemoryArray_reg_0_2/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y16   vga2/ImageData/MemoryArray_reg_0_3/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y18   vga2/ImageData/MemoryArray_reg_0_4/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X3Y18   vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y16   vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y18   vga2/ImageData/MemoryArray_reg_0_7/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y20   vga2/ImageData/MemoryArray_reg_0_8/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X3Y21   vga2/ImageData/MemoryArray_reg_1_0/CLKARDCLK
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   clock_reg/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   clock_reg/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[0]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[0]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[1]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[1]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[0]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[0]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[1]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[1]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   clock_reg/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   clock_reg/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[0]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[1]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y84   counter_reg[1]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[0]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[1]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X75Y109  vga2/pixCounter_reg[1]/C
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y13  vga2/ImageData/MemoryArray_reg_0_0/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y13  vga2/ImageData/MemoryArray_reg_0_1/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y6   vga2/ImageData/MemoryArray_reg_0_2/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y11  vga2/ImageData/MemoryArray_reg_0_3/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X3Y12  vga2/ImageData/MemoryArray_reg_0_4/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X3Y10  vga2/ImageData/MemoryArray_reg_0_5/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y9   vga2/ImageData/MemoryArray_reg_0_6/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y11  vga2/ImageData/MemoryArray_reg_0_7/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y9   vga2/ImageData/MemoryArray_reg_0_8/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y14  vga2/ImageData/MemoryArray_reg_1_0/CLKARDCLK
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  clock_reg/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  clock_reg/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  clock_reg/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  clock_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[1]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X47Y88  counter_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[1]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y68  vga2/pixCounter_reg[1]/C
 
 
 

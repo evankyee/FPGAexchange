@@ -76,7 +76,17 @@ module VGAControllerBook(
     bitmath avolb(buyA[11:0],avbh,avbt,avbo);
     bitmath aprices(sellA[23:12],apsh,apst,apso);
     bitmath avols(sellA[11:0],avsh,avst,avso);
+    //assign aval = imgAddress==3 ? (buyA[3:0]+48): imgAddress==4 ? (buyA[7:4]+48): imgAddress==5 ? (buyA[11:8]+48) : imgAddress==7 ? (buyA[15:12]+48) : imgAddress==8 ? (buyA[19:16]+48): imgAddress==9 ? (buyA[23:20]+48): imgAddress==12 ? (sellA[3:0]+48): imgAddress==13 ? (sellA[7:4]+48): imgAddress==14 ? (sellA[11:8]+48) : imgAddress==16 ? (sellA[15:12]+48): imgAddress==17 ? (sellA[19:16]+48): imgAddress==18 ? (sellA[23:20]+48): 32;
     assign aval = imgAddress==3 ? (apbh+48): imgAddress==4 ? (apbt+48): imgAddress==5 ? (apbo+48) : imgAddress==7 ? (avbh+48) : imgAddress==8 ? (avbt+48): imgAddress==9 ? (avbo+48): imgAddress==12 ? (apsh+48): imgAddress==13 ? (apst+48): imgAddress==14 ? (apso+48) : imgAddress==16 ? (avsh+48): imgAddress==17 ? (avst+48): imgAddress==18 ? (avso+48): 32;
+
+	//[3:0] price hundreds digit
+	//[7:4] price tens digit
+	//[11:8] price ones digit
+	//[15:12] volume hundreds digit
+	//[19:16] volume tens digit
+	//[23:20] volume ones digit
+	
+    //assign aval = imgAddress==3 ? (buyA[3:0]+48): imgAddress==4 ? (buyA[7:4]+48): imgAddress==5 ? (buyA[11:8]+48) : imgAddress==7 ? (buyA[15:12]+48) : imgAddress==8 ? (buyA[19:16]+48): imgAddress==9 ? (buyA[23:20]+48): imgAddress==12 ? (sellA[3:0]+48): imgAddress==13 ? (sellA[7:4]+48): imgAddress==14 ? (sellA[11:8]+48) : imgAddress==16 ? (sellA[15:12]+48): imgAddress==17 ? (sellA[19:16]+48): imgAddress==18 ? (sellA[23:20]+48): 32;
     
     //sec B
     wire[7:0] bpbh,bpbt,bpbo,bvbh,bvbt,bvbo,bpsh,bpst,bpso,bvsh,bvst,bvso;
@@ -85,6 +95,106 @@ module VGAControllerBook(
     bitmath bprices(sellB[23:12],bpsh,bpst,bpso);
     bitmath bvols(sellB[11:0],bvsh,bvst,bvso);
     assign bval = imgAddress==23 ? (bpbh+48): imgAddress==24 ? (bpbt+48): imgAddress==25 ? (bpbo+48) : imgAddress==27 ? (bvbh+48) : imgAddress==28 ? (bvbt+48): imgAddress==29 ? (bvbo+48): imgAddress==32 ? (bpsh+48): imgAddress==33 ? (bpst+48): imgAddress==34 ? (bpso+48) : imgAddress==36 ? (bvsh+48): imgAddress==37 ? (bvst+48): imgAddress==38 ? (bvso+48): 32;
+//    assign bval = imgAddress == 23 ? (buyB[3:0]+48) :
+//        imgAddress == 24 ? (buyB[7:4]+48) :
+//        imgAddress == 25 ? (buyB[11:8]+48) :
+//        imgAddress == 27 ? (buyB[15:12]+48) :
+//        imgAddress == 28 ? (buyB[19:16]+48) :
+//        imgAddress == 29 ? (buyB[23:20]+48) :
+//        imgAddress == 32 ? (sellB[3:0]+48) :
+//        imgAddress == 33 ? (sellB[7:4]+48) :
+//        imgAddress == 34 ? (sellB[11:8]+48) :
+//        imgAddress == 36 ? (sellB[15:12]+48) :
+//        imgAddress == 37 ? (sellB[19:16]+48) :
+//        imgAddress == 38 ? (sellB[23:20]+48) :
+//        32;
+
+//        assign cval = imgAddress == 43 ? (buyC[3:0]+48) :
+//        imgAddress == 44 ? (buyC[7:4]+48) :
+//        imgAddress == 45 ? (buyC[11:8]+48) :
+//        imgAddress == 47 ? (buyC[15:12]+48) :
+//        imgAddress == 48 ? (buyC[19:16]+48) :
+//        imgAddress == 49 ? (buyC[23:20]+48) :
+//        imgAddress == 52 ? (sellC[3:0]+48) :
+//        imgAddress == 53 ? (sellC[7:4]+48) :
+//        imgAddress == 54 ? (sellC[11:8]+48) :
+//        imgAddress == 56 ? (sellC[15:12]+48) :
+//        imgAddress == 57 ? (sellC[19:16]+48) :
+//        imgAddress == 58 ? (sellC[23:20]+48) :
+//        32;
+
+//        assign dval = imgAddress == 63 ? (buyD[3:0]+48) :
+//        imgAddress == 64 ? (buyD[7:4]+48) :
+//        imgAddress == 65 ? (buyD[11:8]+48) :
+//        imgAddress == 67 ? (buyD[15:12]+48) :
+//        imgAddress == 68 ? (buyD[19:16]+48) :
+//        imgAddress == 69 ? (buyD[23:20]+48) :
+//        imgAddress == 72 ? (sellD[3:0]+48) :
+//        imgAddress == 73 ? (sellD[7:4]+48) :
+//        imgAddress == 74 ? (sellD[11:8]+48) :
+//        imgAddress == 76 ? (sellD[15:12]+48) :
+//        imgAddress == 77 ? (sellD[19:16]+48) :
+//        imgAddress == 78 ? (sellD[23:20]+48) :
+//        32;
+        
+//        assign eval = imgAddress == 83 ? (buyE[3:0]+48) :
+//        imgAddress == 84 ? (buyE[7:4]+48) :
+//        imgAddress == 85 ? (buyE[11:8]+48) :
+//        imgAddress == 87 ? (buyE[15:12]+48) :
+//        imgAddress == 88 ? (buyE[19:16]+48) :
+//        imgAddress == 89 ? (buyE[23:20]+48) :
+//        imgAddress == 92 ? (sellE[3:0]+48) :
+//        imgAddress == 93 ? (sellE[7:4]+48) :
+//        imgAddress == 94 ? (sellE[11:8]+48) :
+//        imgAddress == 96 ? (sellE[15:12]+48) :
+//        imgAddress == 97 ? (sellE[19:16]+48) :
+//        imgAddress == 98 ? (sellE[23:20]+48) :
+//        32;
+
+
+//        assign fval = imgAddress == 103 ? (buyF[3:0]+48) :
+//        imgAddress == 104 ? (buyF[7:4]+48) :
+//        imgAddress == 105 ? (buyF[11:8]+48) :
+//        imgAddress == 107 ? (buyF[15:12]+48) :
+//        imgAddress == 108 ? (buyF[19:16]+48) :
+//        imgAddress == 109 ? (buyF[23:20]+48) :
+//        imgAddress == 112 ? (sellF[3:0]+48) :
+//        imgAddress == 113 ? (sellF[7:4]+48) :
+//        imgAddress == 114 ? (sellF[11:8]+48) :
+//        imgAddress == 116 ? (sellF[15:12]+48) :
+//        imgAddress == 117 ? (sellF[19:16]+48) :
+//        imgAddress == 118 ? (sellF[23:20]+48) :
+//        32;
+        
+//        assign gval = imgAddress == 123 ? (buyG[3:0]+48) :
+//        imgAddress == 124 ? (buyG[7:4]+48) :
+//        imgAddress == 125 ? (buyG[11:8]+48) :
+//        imgAddress == 127 ? (buyG[15:12]+48) :
+//        imgAddress == 128 ? (buyG[19:16]+48) :
+//        imgAddress == 129 ? (buyG[23:20]+48) :
+//        imgAddress == 132 ? (sellG[3:0]+48) :
+//        imgAddress == 133 ? (sellG[7:4]+48) :
+//        imgAddress == 134 ? (sellG[11:8]+48) :
+//        imgAddress == 136 ? (sellG[15:12]+48) :
+//        imgAddress == 137 ? (sellG[19:16]+48) :
+//        imgAddress == 138 ? (sellG[23:20]+48) :
+//        32;
+
+//        assign hval = (imgAddress == 143) ? (buyH[3:0]+48) :
+//        imgAddress == 144 ? (buyH[7:4]+48) :
+//        imgAddress == 145 ? (buyH[11:8]+48) :
+//        imgAddress == 147 ? (buyH[15:12]+48) :
+//        imgAddress == 148 ? (buyH[19:16]+48) :
+//        imgAddress == 149 ? (buyH[23:20]+48) :
+//        imgAddress == 152 ? (sellH[3:0]+48) :
+//        imgAddress == 153 ? (sellH[7:4]+48) :
+//        imgAddress == 154 ? (sellH[11:8]+48) :
+//        imgAddress == 156 ? (sellH[15:12]+48) :
+//        imgAddress == 157 ? (sellH[19:16]+48) :
+//        imgAddress == 158 ? (sellH[23:20]+48) :
+//        32;
+
+
     
     //sec C
     wire[7:0] cpbh,cpbt,cpbo,cvbh,cvbt,cvbo,cpsh,cpst,cpso,cvsh,cvst,cvso;

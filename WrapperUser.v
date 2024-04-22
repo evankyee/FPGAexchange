@@ -68,8 +68,21 @@ module WrapperUser (
     dffe_ref flip2(out2,out1,clock,1'b1,1'b0);
     assign readyf = out1 & ~out2;
     
-    assign LED = datainReg;
-    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(),.order(order), .ready(ready),.SW(SW),.datain(datainReg)); 	
+    
+    
+    
+    wire [2:0] sectrade;
+    wire [3:0] user1,user2;
+    wire [7:0] trade1,trade2,trade3;
+    assign user1=datainReg[3:0];
+    assign user2=datainReg[27:24];
+    assign sectrade=datainReg[30:28];
+    assign trade1 = datainReg ? (sectrade + 65) : 32;
+    assign trade2 = datainReg ? (user1 +65) : 32;
+    assign trade3 = datainReg ? (user2 +65) : 32;
+    
+    assign LED = SW[0] ? trade1 : SW[1] ? trade2 : SW[2]? trade3 :datainReg;
+    VGAController vga(.clk(clk),.reset(reset),.hSync(hSync),.vSync(vSync),.VGA_R(VGA_R),.VGA_G(VGA_G),.VGA_B(VGA_B),.ps2_clk(PS2_CLK),.ps2_data(PS2_DATA),.LED(LED),.order(order), .ready(ready),.SW(SW),.trade1(trade1), .trade2(trade2), .trade3(trade3)); 	
     communicate comMod(clock, readyf, reset, order, dataPingOut, comEnOut);
     
     
@@ -77,7 +90,9 @@ module WrapperUser (
     reg[1:0] seenRDY = 0;
 	always @(posedge clock) begin
 		if (seenRDY[0] & (seenRDY[0] != seenRDY[1])) begin
-			datainReg <= receiverdata;
+			if(receiverdata!=32'b11111111111111111111111111111111)begin
+			     datainReg <= receiverdata;
+			end
 		end 
 		seenRDY <= {seenRDY[0], dataRDY};
 	end
