@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Mon Apr 22 18:59:07 2024
-| Host         : P2-06 running 64-bit major release  (build 9200)
+| Date         : Tue Apr 23 01:35:51 2024
+| Host         : P1-07 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file WrapperBook_control_sets_placed.rpt
 | Design       : WrapperBook
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    72 |
-|    Minimum number of control sets                        |    72 |
+| Total control sets                                       |    70 |
+|    Minimum number of control sets                        |    70 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    65 |
+| Unused register locations in slices containing registers |    58 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    72 |
+| Total control sets |    70 |
 | >= 0 to < 4        |     2 |
 | >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     1 |
-| >= 8 to < 10       |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     4 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    62 |
+| >= 16              |    60 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              29 |           20 |
+| No           | No                    | No                     |              29 |           18 |
 | No           | No                    | Yes                    |              87 |           38 |
 | No           | Yes                   | No                     |              38 |           10 |
-| Yes          | No                    | No                     |             638 |          293 |
-| Yes          | No                    | Yes                    |            1488 |          577 |
+| Yes          | No                    | No                     |             590 |          219 |
+| Yes          | No                    | Yes                    |            1495 |          587 |
 | Yes          | Yes                   | No                     |              31 |            8 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,81 +70,79 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------+------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|       Clock Signal      |                  Enable Signal                 |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------------+------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|  counter_reg[5]_i_2_n_0 |                                                | RegisterFile/reg31/dff31/CPU_RESETN |                1 |              1 |         1.00 |
-|  counter_reg[5]_i_3_n_0 |                                                | RegisterFile/reg31/dff31/CPU_RESETN |                1 |              1 |         1.00 |
-| ~clock_BUFG             |                                                | CPU/DXlatch/ir/dff5/clock_reg       |                1 |              5 |         5.00 |
-| ~clock_BUFG             |                                                | CPU/DXlatch/ir/dff2/q_reg_3         |                2 |              6 |         3.00 |
-|  clock_BUFG             |                                                |                                     |                4 |              8 |         2.00 |
-|  counter_reg[5]_i_2_n_0 | combook/comEnOut_OBUF                          | RegisterFile/reg31/dff31/CPU_RESETN |                3 |              8 |         2.67 |
-|  vga2/clk25             |                                                | RegisterFile/reg31/dff31/CPU_RESETN |                4 |             10 |         2.50 |
-|  vga2/clk25             | vga2/Display/vPos                              | RegisterFile/reg31/dff31/CPU_RESETN |                4 |             10 |         2.50 |
-| ~clock_BUFG             |                                                |                                     |                9 |             10 |         1.11 |
-|  clk_IBUF_BUFG          |                                                |                                     |                7 |             11 |         1.57 |
-|  clock_BUFG             |                                                | combook/clear                       |                5 |             19 |         3.80 |
-|  clock_BUFG             |                                                | datarec/counter2[0]_i_1__0_n_0      |                5 |             19 |         3.80 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_5[0]               |                                     |               11 |             24 |         2.18 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_7[0]               |                                     |               10 |             24 |         2.40 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_14[0]              |                                     |               10 |             24 |         2.40 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_13[0]              |                                     |                9 |             24 |         2.67 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_9[0]               |                                     |               11 |             24 |         2.18 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_12[0]              |                                     |               11 |             24 |         2.18 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_1[0]               |                                     |                9 |             24 |         2.67 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_6[0]               |                                     |               11 |             24 |         2.18 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_15[0]              |                                     |               10 |             24 |         2.40 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_8[0]               |                                     |               12 |             24 |         2.00 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_2[0]               |                                     |               10 |             24 |         2.40 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_4[0]               |                                     |               12 |             24 |         2.00 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_16[0]              |                                     |               10 |             24 |         2.40 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_3[0]               |                                     |                8 |             24 |         3.00 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_10[0]              |                                     |               10 |             24 |         2.40 |
-|  clock_BUFG             | CPU/XMobLatch/ir/dff5/q_reg_11[0]              |                                     |                9 |             24 |         2.67 |
-|  clock_BUFG             | combook/counter3[31]_i_2_n_0                   | flip22/counter3[0]                  |                8 |             31 |         3.88 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_1                       | RegisterFile/reg31/dff31/CPU_RESETN |               29 |             32 |         1.10 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_16                      | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_18                      | RegisterFile/reg31/dff31/CPU_RESETN |               18 |             32 |         1.78 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_19                      | RegisterFile/reg31/dff31/CPU_RESETN |               22 |             32 |         1.45 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_2                       | RegisterFile/reg31/dff31/CPU_RESETN |               30 |             32 |         1.07 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_20                      | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_17                      | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_22                      | RegisterFile/reg31/dff31/CPU_RESETN |               13 |             32 |         2.46 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable                         | RegisterFile/reg31/dff31/CPU_RESETN |               12 |             32 |         2.67 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_21                      | RegisterFile/reg31/dff31/CPU_RESETN |                8 |             32 |         4.00 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_4                       | RegisterFile/reg31/dff31/CPU_RESETN |                7 |             32 |         4.57 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_5                       | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_9                       | RegisterFile/reg31/dff31/CPU_RESETN |               17 |             32 |         1.88 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_26                      | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_28                      | RegisterFile/reg31/dff31/CPU_RESETN |                8 |             32 |         4.00 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_8                       | RegisterFile/reg31/dff31/CPU_RESETN |               15 |             32 |         2.13 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_24                      | RegisterFile/reg31/dff31/CPU_RESETN |               22 |             32 |         1.45 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_27                      | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_3                       | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_25                      | RegisterFile/reg31/dff31/CPU_RESETN |               15 |             32 |         2.13 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_7                       | RegisterFile/reg31/dff31/CPU_RESETN |               11 |             32 |         2.91 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_6                       | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_23                      | RegisterFile/reg31/dff31/CPU_RESETN |                7 |             32 |         4.57 |
-|  clock_BUFG             | CPU/MW_IR/dff24/seenRDY_reg[1][0]              |                                     |               10 |             32 |         3.20 |
-|  clock_BUFG             | CPU/MW_IR/dff30/E[0]                           |                                     |                7 |             32 |         4.57 |
-|  clock_BUFG             | CPU/MW_IR/dff30/E[0]                           | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_0                       | RegisterFile/reg31/dff31/CPU_RESETN |               11 |             32 |         2.91 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_10                      | RegisterFile/reg31/dff31/CPU_RESETN |                8 |             32 |         4.00 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_12                      | RegisterFile/reg31/dff31/CPU_RESETN |               11 |             32 |         2.91 |
-| ~clock_BUFG             | CPU/FDlatch/ir/dff4/enable                     | RegisterFile/reg31/dff31/CPU_RESETN |               13 |             32 |         2.46 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_11                      | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_13                      | RegisterFile/reg31/dff31/CPU_RESETN |               16 |             32 |         2.00 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_14                      | RegisterFile/reg31/dff31/CPU_RESETN |               17 |             32 |         1.88 |
-|  counter_reg[5]_i_2_n_0 | combook/shiftreg[31]_i_1_n_0                   | RegisterFile/reg31/dff31/CPU_RESETN |                5 |             32 |         6.40 |
-|  clock_BUFG             | CPU/MW_IR/dff30/enable_15                      | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
-|  counter_reg[5]_i_3_n_0 | datarec/counter[5]_i_1__0_n_0                  | RegisterFile/reg31/dff31/CPU_RESETN |                8 |             38 |         4.75 |
-| ~clock_BUFG             | CPU/mult/divide/counte/tff5/dff/divready       |                                     |               35 |             63 |         1.80 |
-| ~clock_BUFG             | CPU/mult/multiply/counter/tff4/dff/q_reg_inv_0 |                                     |               44 |             63 |         1.43 |
-| ~clock_BUFG             | CPU/DXlatch/ir/dff5/inmultA1                   |                                     |               34 |             64 |         1.88 |
-| ~clock_BUFG             |                                                | RegisterFile/reg31/dff31/CPU_RESETN |               29 |             64 |         2.21 |
-| ~clock_BUFG             | CPU/mult/multiply/counter/tff4/dff/irEN0       | RegisterFile/reg31/dff31/CPU_RESETN |               31 |             92 |         2.97 |
-| ~clock_BUFG             | CPU/staller/pcEN0                              | RegisterFile/reg31/dff31/CPU_RESETN |               32 |             96 |         3.00 |
-| ~clock_BUFG             | CPU/mult/multiply/counter/tff4/dff/irEN1       | RegisterFile/reg31/dff31/CPU_RESETN |               80 |            188 |         2.35 |
-+-------------------------+------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
++----------------+------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                  Enable Signal                 |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  clock_0       |                                                | RegisterFile/reg31/dff31/CPU_RESETN |                1 |              1 |         1.00 |
+|  clock_1       |                                                | RegisterFile/reg31/dff31/CPU_RESETN |                1 |              1 |         1.00 |
+| ~clock_BUFG    |                                                | CPU/DXlatch/ir/dff5/clock_reg       |                1 |              5 |         5.00 |
+| ~clock_BUFG    |                                                | CPU/DXlatch/ir/dff31/q_reg_4        |                2 |              6 |         3.00 |
+|  clock_0       | combook/comEnOut_OBUF                          | RegisterFile/reg31/dff31/CPU_RESETN |                2 |              7 |         3.50 |
+|  clock_BUFG    |                                                |                                     |                4 |              8 |         2.00 |
+|  vga2/clk25    |                                                | RegisterFile/reg31/dff31/CPU_RESETN |                4 |             10 |         2.50 |
+|  vga2/clk25    | vga2/Display/vPos                              | RegisterFile/reg31/dff31/CPU_RESETN |                5 |             10 |         2.00 |
+| ~clock_BUFG    |                                                |                                     |                9 |             10 |         1.11 |
+|  clk_IBUF_BUFG |                                                |                                     |                5 |             11 |         2.20 |
+|  clock_BUFG    |                                                | combook/clear                       |                5 |             19 |         3.80 |
+|  clock_BUFG    |                                                | datarec/clear                       |                5 |             19 |         3.80 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_1[0]               |                                     |                7 |             24 |         3.43 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_14[0]              |                                     |                4 |             24 |         6.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_12[0]              |                                     |                6 |             24 |         4.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_3[0]               |                                     |                8 |             24 |         3.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_10[0]              |                                     |                8 |             24 |         3.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_6[0]               |                                     |                6 |             24 |         4.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_8[0]               |                                     |                9 |             24 |         2.67 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_9[0]               |                                     |                6 |             24 |         4.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_13[0]              |                                     |                6 |             24 |         4.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_5[0]               |                                     |                7 |             24 |         3.43 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_11[0]              |                                     |                7 |             24 |         3.43 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_4[0]               |                                     |                8 |             24 |         3.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_2[0]               |                                     |                6 |             24 |         4.00 |
+|  clock_BUFG    | CPU/XMobLatch/ir/dff5/q_reg_7[0]               |                                     |                7 |             24 |         3.43 |
+|  clock_BUFG    | combook/counter3[31]_i_2_n_0                   | flip22/counter3[0]                  |                8 |             31 |         3.88 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_10                      | RegisterFile/reg31/dff31/CPU_RESETN |               22 |             32 |         1.45 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_22                      | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_24                      | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_26                      | RegisterFile/reg31/dff31/CPU_RESETN |               28 |             32 |         1.14 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_11                      | RegisterFile/reg31/dff31/CPU_RESETN |               19 |             32 |         1.68 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_14                      | RegisterFile/reg31/dff31/CPU_RESETN |               20 |             32 |         1.60 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_27                      | RegisterFile/reg31/dff31/CPU_RESETN |                6 |             32 |         5.33 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_19                      | RegisterFile/reg31/dff31/CPU_RESETN |               16 |             32 |         2.00 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_25                      | RegisterFile/reg31/dff31/CPU_RESETN |               29 |             32 |         1.10 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_0                       | RegisterFile/reg31/dff31/CPU_RESETN |               12 |             32 |         2.67 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_1                       | RegisterFile/reg31/dff31/CPU_RESETN |                7 |             32 |         4.57 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_18                      | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_23                      | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_15                      | RegisterFile/reg31/dff31/CPU_RESETN |               14 |             32 |         2.29 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_20                      | RegisterFile/reg31/dff31/CPU_RESETN |               16 |             32 |         2.00 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_21                      | RegisterFile/reg31/dff31/CPU_RESETN |                7 |             32 |         4.57 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_3                       | RegisterFile/reg31/dff31/CPU_RESETN |                7 |             32 |         4.57 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_7                       | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_6                       | RegisterFile/reg31/dff31/CPU_RESETN |                6 |             32 |         5.33 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_9                       | RegisterFile/reg31/dff31/CPU_RESETN |                6 |             32 |         5.33 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_28                      | RegisterFile/reg31/dff31/CPU_RESETN |               11 |             32 |         2.91 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_4                       | RegisterFile/reg31/dff31/CPU_RESETN |               17 |             32 |         1.88 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_8                       | RegisterFile/reg31/dff31/CPU_RESETN |               10 |             32 |         3.20 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_5                       | RegisterFile/reg31/dff31/CPU_RESETN |               27 |             32 |         1.19 |
+|  clock_BUFG    | CPU/MW_IR/dff30/E[0]                           |                                     |               10 |             32 |         3.20 |
+|  clock_BUFG    | CPU/MW_IR/dff30/q_reg_14[0]                    |                                     |                9 |             32 |         3.56 |
+|  clock_BUFG    | CPU/MW_IR/dff30/q_reg_14[0]                    | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_12                      | RegisterFile/reg31/dff31/CPU_RESETN |               11 |             32 |         2.91 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_13                      | RegisterFile/reg31/dff31/CPU_RESETN |                6 |             32 |         5.33 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable                         | RegisterFile/reg31/dff31/CPU_RESETN |                9 |             32 |         3.56 |
+| ~clock_BUFG    | CPU/mult/multiply/boothprod/dff64/enable       | RegisterFile/reg31/dff31/CPU_RESETN |               15 |             32 |         2.13 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_16                      | RegisterFile/reg31/dff31/CPU_RESETN |               11 |             32 |         2.91 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_17                      | RegisterFile/reg31/dff31/CPU_RESETN |                7 |             32 |         4.57 |
+|  clock_0       | combook/shiftreg[31]_i_1_n_0                   | RegisterFile/reg31/dff31/CPU_RESETN |                5 |             32 |         6.40 |
+|  clock_BUFG    | CPU/MW_IR/dff30/enable_2                       | RegisterFile/reg31/dff31/CPU_RESETN |               11 |             32 |         2.91 |
+|  clock_1       | datarec/counter[5]_i_1__0_n_0                  | RegisterFile/reg31/dff31/CPU_RESETN |                8 |             38 |         4.75 |
+| ~clock_BUFG    | CPU/mult/multiply/counter/tff4/dff/q_reg_inv_0 |                                     |               42 |             63 |         1.50 |
+| ~clock_BUFG    | CPU/mult/divide/counte/tff5/dff/divready       |                                     |               36 |             63 |         1.75 |
+| ~clock_BUFG    |                                                | RegisterFile/reg31/dff31/CPU_RESETN |               29 |             64 |         2.21 |
+| ~clock_BUFG    | CPU/DXlatch/ir/dff5/inmultA1                   |                                     |               27 |             64 |         2.37 |
+| ~clock_BUFG    | CPU/DXlatch/ir/dff27/q_reg_1                   | RegisterFile/reg31/dff31/CPU_RESETN |               43 |             96 |         2.23 |
+| ~clock_BUFG    | CPU/staller/pcEN0                              | RegisterFile/reg31/dff31/CPU_RESETN |               36 |             96 |         2.67 |
+| ~clock_BUFG    | CPU/DXlatch/ir/dff27/irEN1                     | RegisterFile/reg31/dff31/CPU_RESETN |               81 |            192 |         2.37 |
++----------------+------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
 
 

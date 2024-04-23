@@ -104,7 +104,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/lab6_kit-20240401T193000Z-001/lab6_kit/VGATimingGenerator.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/and_32.v
-  C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/bitmath.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla32.v
   C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/multdiv/clockcount.v
