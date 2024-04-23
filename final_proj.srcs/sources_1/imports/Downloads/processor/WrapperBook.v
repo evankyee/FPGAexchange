@@ -243,7 +243,7 @@ module WrapperBook (
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
-    assign LED = SW[0] ? buyB : SW[1] ? sellB: sellA;
+    assign LED = SW[0] ? buyB : sellA;
 
 
 //    always @(posedge clock) begin

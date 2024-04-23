@@ -17,7 +17,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11672
+INFO: [Synth 8-7075] Helper process launched with PID 12468
 WARNING: [Synth 8-2292] literal value truncated to fit in 12 bits [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:296]
 WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:70]
 WARNING: [Synth 8-6901] identifier 'colorAddr' is used before its declaration [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:70]
@@ -161,7 +161,7 @@ WARNING: [Synth 8-992] sellH is already implicitly declared earlier [C:/Users/ea
 WARNING: [Synth 8-992] regAReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:210]
 WARNING: [Synth 8-992] regBReal is already implicitly declared earlier [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:210]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.172 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.250 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'WrapperBook' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 INFO: [Synth 8-6157] synthesizing module 'VGAControllerBook' [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/VGAControllerBook.v:2]
@@ -282,18 +282,18 @@ INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/eal63/Desktop/FPGAexcha
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (48#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/RAM.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'WrapperBook' (49#1) [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1407.957 ; gain = 78.785
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1408.699 ; gain = 79.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1407.957 ; gain = 78.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1408.699 ; gain = 79.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1407.957 ; gain = 78.785
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1408.699 ; gain = 79.449
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.344 . Memory (MB): peak = 1407.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.346 . Memory (MB): peak = 1408.699 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -319,29 +319,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/WrapperBook_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1514.121 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1515.246 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1514.121 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1515.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1514.121 ; gain = 184.949
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1515.246 ; gain = 185.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1514.121 ; gain = 184.949
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1515.246 ; gain = 185.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1514.121 ; gain = 184.949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1515.246 ; gain = 185.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1514.121 ; gain = 184.949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1515.246 ; gain = 185.996
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'CPU/EXpt1' (dffe_ref) to 'CPU/except'
 ---------------------------------------------------------------------------------
@@ -378,7 +378,7 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit        Muxes := 243   
 	   4 Input   32 Bit        Muxes := 1     
 	   2 Input   27 Bit        Muxes := 2     
-	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 2     
 	   2 Input   10 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
@@ -416,7 +416,7 @@ DSP Report: operator address is absorbed into DSP address.
 DSP Report: Generating DSP address, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator address is absorbed into DSP address.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1528.910 ; gain = 199.738
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1534.379 ; gain = 205.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -459,7 +459,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1528.910 ; gain = 199.738
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1534.379 ; gain = 205.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -519,7 +519,7 @@ Start Timing Optimization
       : CPU/mainalu/overflow
       : CPU/mainalu/i_0/overflow
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1580.918 ; gain = 251.746
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 1578.254 ; gain = 249.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -679,9 +679,9 @@ Found timing loop:
      6: i_2118/O (LUT6)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
      7: i_2118/I5 (LUT6)
-     8: i_4637/O (LUT2)
+     8: i_4631/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-     9: i_4637/I1 (LUT2)
+     9: i_4631/I1 (LUT2)
     10: i_2120/O (LUT2)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/alu.v:70]
     11: i_2120/I1 (LUT2)
@@ -730,9 +730,9 @@ Found timing loop:
      8: \CPU/mult/divide/Apick/i_2719 /O (LUT3)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/mux_2.v:5]
      9: \CPU/mult/divide/Apick/i_2719 /I0 (LUT3)
-    10: i_4755/O (LUT3)
+    10: i_4749/O (LUT3)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/WrapperBook.v:27]
-    11: i_4755/I2 (LUT3)
+    11: i_4749/I2 (LUT3)
     12: i_2755/O (LUT4)
       [C:/Users/eal63/Desktop/FPGAexchange/final_proj.srcs/sources_1/imports/Downloads/processor/integratedparts/alu-main/cla.v:18]
     13: i_2755/I3 (LUT4)
@@ -892,7 +892,7 @@ INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_1 (implemen
 INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 1629.395 ; gain = 300.223
+Finished Technology Mapping : Time (s): cpu = 00:01:13 ; elapsed = 00:01:15 . Memory (MB): peak = 1626.363 ; gain = 297.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -910,13 +910,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1643.137 ; gain = 313.965
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1641.023 ; gain = 311.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1643.137 ; gain = 313.965
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1641.023 ; gain = 311.773
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_10__37/O'
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through q_i_4__111/O'
@@ -956,25 +956,25 @@ WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path 
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1643.137 ; gain = 313.965
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1641.023 ; gain = 311.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1643.137 ; gain = 313.965
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1641.023 ; gain = 311.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1643.223 ; gain = 314.051
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1641.086 ; gain = 311.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1643.223 ; gain = 314.051
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1641.086 ; gain = 311.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -994,41 +994,41 @@ Report Cell Usage:
 |2     |CARRY4   |    21|
 |3     |DSP48E1  |     4|
 |7     |LUT1     |    15|
-|8     |LUT2     |   468|
-|9     |LUT3     |   410|
-|10    |LUT4     |   505|
-|11    |LUT5     |   705|
-|12    |LUT6     |  1970|
-|13    |MUXF7    |    12|
+|8     |LUT2     |   466|
+|9     |LUT3     |   427|
+|10    |LUT4     |   504|
+|11    |LUT5     |   679|
+|12    |LUT6     |  1981|
+|13    |MUXF7    |    11|
 |14    |RAMB36E1 |    34|
 |36    |FDCE     |  1580|
 |37    |FDPE     |     2|
 |38    |FDRE     |   684|
-|39    |IBUF     |     6|
+|39    |IBUF     |     5|
 |40    |OBUF     |    32|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1643.223 ; gain = 314.051
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1641.086 ; gain = 311.836
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 43 critical warnings and 34 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 1643.223 ; gain = 207.887
-Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1643.223 ; gain = 314.051
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:15 . Memory (MB): peak = 1641.086 ; gain = 205.289
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1641.086 ; gain = 311.836
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1656.797 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 71 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1654.395 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1660.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1656.105 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: f4c40c39
+Synth Design complete, checksum: 1908f4b4
 INFO: [Common 17-83] Releasing license: Synthesis
 141 Infos, 184 Warnings, 48 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1660.672 ; gain = 331.500
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:24 . Memory (MB): peak = 1656.105 ; gain = 326.855
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/eal63/Desktop/FPGAexchange/final_proj.runs/synth_1/WrapperBook.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file WrapperBook_utilization_synth.rpt -pb WrapperBook_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 23 01:34:46 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 23 01:54:19 2024...
