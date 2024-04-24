@@ -19,49 +19,276 @@
 #we have pointers to our lists in dmem
 
 ##
-#TAIL_A_BUY
-#TAIL_A_SELL
-#HEAD_A_BUY
-#HEAD_A_SELL
+#MEM ORGANIZATION
+#0 1 BUY HEAD
+#1 2 BUY HEAD
+#2 3 BUY HEAD
+#3 4 BUY HEAD
+#4 5 BUY HEAD
+#5 6 BUY HEAD
+#6 7 BUY HEAD
+#7 8 BUY HEAD
 
-#TAIL_B_BUY
-#TAIL_B_SELL
-#HEAD_B_BUY
-#HEAD_B_SELL
+#8 1 SELL HEAD
+#9 2 SELL HEAD
+#10 3 SELL HEAD
+#11 4 SELL HEAD
+#12 5 SELL HEAD
+#13 6 SELL HEAD
+#14 7 SELL HEAD
+#15 8 SELL HEAD
 
-#TAIL_C_BUY
-#TAIL_C_SELL
-#HEAD_C_BUY
-#HEAD_C_SELL
+#16 1 BUY TAIL
+#17 2 BUY TAIL
+#18 3 BUY TAIL
+#19 4 BUY TAIL
+#20 5 BUY TAIL
+#21 6 BUY TAIL
+#22 7 BUY TAIL
+#23 8 BUY TAIL
 
-#TAIL_D_BUY
-#TAIL_D_SELL
-#HEAD_D_BUY
-#HEAD_D_SELL
+#24 1 SELL TAIL
+#25 2 SELL TAIL
+#26 3 SELL TAIL
+#27 4 SELL TAIL
+#28 5 SELL TAIL
+#29 6 SELL TAIL
+#30 7 SELL TAIL
+#31 8 SELL TAIL
 
-#TAIL_E_BUY
-#TAIL_E_SELL
-#HEAD_E_BUY
-#HEAD_E_SELL
+#32 1 Head Buy Val
+#33 2 Head Buy Val
+#34 3 Head Buy Val
+#35 4 Head Buy Val
+#36 5 Head Buy Val
+#37 6 Head Buy Val
+#38 7 Head Buy Val
+#39 8 Head Buy Val
 
-#TAIL_F_BUY
-#TAIL_F_SELL
-#HEAD_F_BUY
-#HEAD_F_SELL
+#40 1 Head Sell Val
+#41 2 Head Sell Val
+#42 3 Head Sell Val
+#43 4 Head Sell Val
+#44 5 Head Sell Val
+#45 6 Head Sell Val
+#46 7 Head Sell Val
+#47 8 Head Sell Val
 
-#TAIL_G_BUY
-#TAIL_G_SELL
-#HEAD_G_BUY
-#HEAD_G_SELL
+# BUY A MEM ALLOC
+# SELL A MEM ALLOC
+# BUY B MEM ALLOC
+# SELL B MEM ALLOC
+# ...continues
 
-#TAIL_H_BUY
-#TAIL_H_SELL
-#HEAD_H_BUY
-#HEAD_H_SELL
 
 main:
-    addi $r28, $r0, 24 #first spot for A buy
-    addi $r27, $r28, 124 #first spot for A sell (100 orders)
+    addi $r28, $r0, 48 #first spot for A buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 148 #first spot for A sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 0
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
+
+    addi $r28, $r0, 248 #first spot for b buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 348 #first spot for b sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 1
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
+
+    addi $r28, $r0, 448 #first spot for c buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 548 #first spot for c sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 2
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
+
+    addi $r28, $r0, 648 #first spot for d buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 748 #first spot for d sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 3
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
+
+    addi $r28, $r0, 848 #first spot for e buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 948 #first spot for e sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 4
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
+
+    addi $r28, $r0, 1048 #first spot for f buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 1148 #first spot for f sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 5
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
+
+    addi $r28, $r0, 1248 #first spot for g buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 1348 #first spot for g sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 6
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
+
+    addi $r28, $r0, 1448 #first spot for h buy
+    nop
+    nop
+    nop
+    addi $r27, $r0, 1548 #first spot for h sell (100 orders)
+    nop
+    nop
+    nop
+    addi $r16, $r0, 7
+    nop
+    nop
+    nop
+    sw $r27, 24($r16) #SELL TAIL
+    nop
+    nop
+    nop
+    sw $r28, 16($r16) #BUY TAIL
+    nop
+    nop
+    nop
+    sw $r27, 8($r16) #SELL head
+    nop
+    nop
+    nop
+    sw $r28, 0($r16) #BUY head
     loop1:
         bne $r20, $r0, newdata #check if new data in 29
         nop
@@ -71,15 +298,27 @@ main:
 
 newdata: #we have (32bits:DATA 32bits:PointertoNext)
     #first check if can execute trade
+
+    ##8 securities
+
     addi $r29, $r20, 0 #putting IO reg into 29
     and $r20, $r20, $r0 #clearing IO reg
+    
+    #looking at the security
+    sll $r16, $r29, 1
+    sra $r16, $r16, 29 #r16 holds our security!!
+
+    lw $r25, 0($r16) #BUY HEAD
+    lw $r26, 8($r16) #SELL HEAD
+    lw $r28, 16($r16) #BUY TAIL
+    lw $r27, 24($r16) #SELL TAIL
+
 
     sra $r3, $r29, 31 #need to integrate rll isn
     bne $r3, $r0, newBUY
 
-    #looking at the security
-    sll $r16, $r29, 1
-    sra $r16, $r16, 29 #r16 holds our security!!
+   
+    
     #WE CAN USE THIS SECURITY TO ACCESS POINTERS!!
     
     #TO DO: ADD POINTERS IN DMEM THAT POINT TO LISTS OF BUY AND SELL! WOULD HAVE TO UPDATE OUR OPEN REG28 AND OPEN R27 each time we get new data
@@ -87,6 +326,10 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     newSELL: #want to check if overlap from new trade!
     lw $r4, 0($r25) #highest buy Trade Order is in r4
     #examining prices
+    nop
+    nop
+    nop
+    sra $r22, $r4, 24 #top 8 bits in r22
     sll $r5, $r4, 8
     sll $r6, $r29, 8
     sra $r5, $r5, 20 #isolating price of HB
@@ -116,6 +359,19 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     
     add $r24, $r4, $r0 #SENDING REMAINING VOL TO OUTPUT
 
+    #IO FOR USER INFO EXECUTION
+    and $r21, $r21, $r0
+    nop
+    nop
+    nop
+    add $r21, $r0, $r22
+    and $r22, $r22, $r0
+    add $r22, $r29, $r0
+    sra $r22, $r22, 24
+    sll $r22, $r22, 24
+    add $r21, $r21, $r22
+    add $r19, $r21, $r0
+
     bne $r7, $r0 nosalematch
     lw $r25, 1($r25) #head=head.next!! (gets rid of top order perfect match)
     
@@ -134,6 +390,17 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     sra $r4, $r4, 12 #setting vol of HB to zero
     sll $r4, $r4, 12
     add $r24, $r4, $r0 #SENDING EMPTY VOL TO OUTPUT
+    and $r21, $r21, $r0
+    nop
+    nop
+    nop
+    add $r21, $r0, $r22
+    and $r22, $r22, $r0
+    add $r22, $r29, $r0
+    sra $r22, $r22, 24
+    sll $r22, $r22, 24
+    add $r21, $r21, $r22
+    add $r19, $r21, $r0
     lw $r25, 1($r25) #head=head.next address
     sra $r29, $r29, 12 #setting vol of new sale to zero
     sll $r29, $r29, 12
@@ -142,6 +409,366 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
 
 
     doneWithData:
+    sw $r25, 0($r16) #BUY HEAD
+    sw $r26, 8($r16) #SELL HEAD
+    sw $r28, 16($r16) #BUY TAIL
+    sw $r27, 24($r16) #SELL TAIL
+    #SAVING THE VALUES OF HEAD TO MEM
+    lw $r4, 0($r25)
+    nop
+    nop
+    nop
+    lw $r5, 0($r26)
+    nop
+    nop
+    nop
+    #BCD PRICE
+    and $r8, $r8, $r0
+    nop
+    nop
+    nop
+    sll $r8, $r4, 8
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS PRICE OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    and $r12, $r12, $r0
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 4
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 8
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+
+    #BCD VOL FIXED
+    and $r8, $r8, $r0
+    sll $r8, $r4, 20
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS vol OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+
+    sll $r9, $r9, 12
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    sll $r9, $r9, 16
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 20
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+    sw $r12, 32($r16) #saving buy stuff
+    nop
+    nop
+    nop
+
+    #BCD PRICE
+    and $r8, $r8, $r0
+    sll $r8, $r5, 8
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS PRICE OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    and $r12, $r12, $r0
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    sll $r9, $r9, 4
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 8
+    add $r12, $r12, $r8 
+
+    #BCD VOL FIXED
+    and $r8, $r8, $r0
+    sll $r8, $r5, 20
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS vol OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    and $r10, $r10, $r0
+    addi $r10, $r0, 100
+
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 12
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 16
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 20
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+
+    sw $r12, 40($r16)
+    and $r25, $r25, $r0
+    and $r26, $r26, $r0
+    and $r27, $r27, $r0
+    and $r28, $r28, $r0
+ 
     and $r29, $r29, $r0 #clearing I/O reg!! also clearing all other regs used
     and $r4, $r4, $r0
     and $r5, $r5, $r0
@@ -153,6 +780,10 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
 
     newBUY:
     lw $r4, 0($r26) #top sale in r4
+    nop
+    nop
+    nop
+    sra $r22, $r4, 24 #top 8 bits in r22
     sll $r5, $r4, 8
     sll $r6, $r29, 8
     sra $r5, $r5, 20 #isolating price of HS
@@ -183,6 +814,19 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
 
     add $r23, $r4, $r0 #SENDING REMAINING VOL TO OUTPUT
 
+    #IO FOR USER INFO EXECUTION
+    and $r21, $r21, $r0
+    nop
+    nop
+    nop
+    add $r21, $r0, $r22
+    and $r22, $r22, $r0
+    add $r22, $r29, $r0
+    sra $r22, $r22, 24
+    sll $r22, $r22, 24
+    add $r21, $r21, $r22
+    add $r19, $r21, $r0
+
     bne $r7, $r0, nobuymatch
     lw $r26, 1($r26) #head=head.next!! (gets rid of top order perfect match)
     
@@ -197,6 +841,17 @@ newdata: #we have (32bits:DATA 32bits:PointertoNext)
     sra $r4, $r4, 12 #setting vol of HS to zero
     sll $r4, $r4, 12
     add $r23, $r4, $r0 #SENDING EMPTY VOL TO OUTPUT
+    and $r21, $r21, $r0
+    nop
+    nop
+    nop
+    add $r21, $r0, $r22
+    and $r22, $r22, $r0
+    add $r22, $r29, $r0
+    sra $r22, $r22, 24
+    sll $r22, $r22, 24
+    add $r21, $r21, $r22
+    add $r19, $r21, $r0
     lw $r26, 1($r26) #head=head.next address
     sra $r29, $r29, 12 #setting vol of new sale to zero
     sll $r29, $r29, 12
@@ -238,48 +893,495 @@ sortSell: #new order in reg29 (maybe after already executing trades from overflo
     #else we want to move to next!
    
     sortsellloop:
+    nop
+    nop
+    nop
     lw $r12, 1($r13) #what is currently prev.next (our temp)
     #prev=r13
     #temp=r12
     #curr=r27
+    nop
+    nop
+    nop
     bne $r12, $r27, NOTLASTSELL #if these are equal, then we are at end of list so we dont need to do anything!
-    lw $r11, 0($r12) #prev.next order is in 
-    
+    nop
+    nop
+    nop
     #if we are here, then prev.next data is empty
     lw $r27, 1($r27)
+    nop
+    nop
+    nop
     j donesortSell
 
-    NOTLASTSELL:
+    NOTLASTSELL: #MAYBE FUCXKED UP
+    nop
+    nop
+    nop
+    lw $r11, 0($r12) #prev.next order is in 
+    nop
+    nop
+    nop
     sll $r11, $r11, 8
+    nop
+    nop
+    nop
     sra $r11, $r11, 20
-    blt $r6, $r11, insertCurr #check if curr.price < prev.next.price
+    nop
+    nop
+    nop
+    blt $r6, $r11, insertCurrSell #check if curr.price < prev.next.price
 
     add $r13, $r12, $r0 #prev = prev.next
     j sortsellloop
 
 
-    insertCurr: #if true, lets do some pointer math
+    insertCurrSell: #if true, lets do some pointer math
+    nop
+    nop
+    nop
     lw $r15, 1($r27) 
+    nop
+    nop
+    nop
     sw $r12, 1($r27)
+    nop
+    nop
+    nop
+    add $r18, $r26, $r0
+    nop
+    nop
+    nop
+    sellinsertend:
+    #we need to iterate from head until we get to node that points to r27
+    lw $r17, 1($r18)
+    nop
+    nop
+    nop
+    bne $r17, $r27, insertseclastsell
+    sw $r15, 1($r18)
+    nop
+    nop
+    nop
     sw $r27, 1($r13)
+    nop
+    nop
+    nop
     add $r27, $r15, $r0 #restoring our next open data line
+    nop
+    nop
+    nop
     j donesortSell
+
+    insertseclastsell:
+    add $r18, $r17, $r0
+    j sellinsertend
+
+
+    
 
 
     
     NewDatLTLowAsk:
     #add $r12, $r26, $r0 #temp assignment of current head
     lw $r15, 1($r27)
+    add $r18, $r26, $r0
+    nop
+    nop
+    nop
+    sellnewheadloop:
+    #we need to iterate from head until we get to node that points to r27
+    lw $r17, 1($r18)
+    nop
+    nop
+    nop
+    bne $r17, $r27, secondtolastnodesell
+
+    sw $r15, 1($r18)
+    nop
+    nop
+    nop
     add $r26, $r27, $r0 #make new head register 
+    nop
+    nop
+    nop
     sw $r13, 1($r26) #making our head.next = temp
     add $r27, $r15, $r0 #restoring our next open data line
     j donesortSell
+
+    secondtolastnodesell:
+    add $r18, $r17, $r0
+    j sellnewheadloop
+
+    
+    
     
     
 
 
     donesortSell:
     #8,9,10,11,12,13,15
+    sw $r25, 0($r16) #BUY HEAD
+    sw $r26, 8($r16) #SELL HEAD
+    sw $r28, 16($r16) #BUY TAIL
+    sw $r27, 24($r16) #SELL TAIL
+    #SAVING HEADS VALS TO MEM ADDR
+    lw $r4, 0($r25)
+    nop
+    nop
+    nop
+    lw $r5, 0($r26)
+    nop
+    nop
+    nop
+    #BCD PRICE
+    and $r8, $r8, $r0
+    sll $r8, $r4, 8
+    sra $r8, $r8, 20 #R8 HAS PRICE OF BUY
+
+    and $r9, $r9, $r0
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    and $r12, $r12, $r0
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    sll $r9, $r9, 4
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 8
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+    #BCD VOL FIXED
+    and $r8, $r8, $r0
+    sll $r8, $r4, 20
+    sra $r8, $r8, 20 #R8 HAS vol OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 12
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 16
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 20
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+    sw $r12, 32($r16) #saving buy stuff
+    nop
+    nop
+    nop
+
+    #BCD PRICE
+    and $r8, $r8, $r0
+    sll $r8, $r5, 8
+    sra $r8, $r8, 20 #R8 HAS PRICE OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+
+    and $r12, $r12, $r0
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 4
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 8
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+    #BCD VOL FIXED
+    and $r8, $r8, $r0
+    nop
+    nop
+    nop
+    sll $r8, $r5, 20
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS vol OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 12
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 16
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 20
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+
+    sw $r12, 40($r16)
+    and $r25, $r25, $r0
+    and $r26, $r26, $r0
+    and $r27, $r27, $r0
+    and $r28, $r28, $r0
+
     and $r8, $r8, $r0
     and $r9, $r9, $r0
     and $r10, $r10, $r0
@@ -324,48 +1426,529 @@ sortBuy: #new order in reg29 (maybe after already executing trades from overflow
    
     add $r13, $r25, $r0 #putting current head as prev for sorting if we do
     ##NOW WE HAVE TO CHECK IF EXCLUSIVELY GREATER WITH EQUAL AND LT
-    
+
     blt $r11, $r6 NewDatGTLowAsk #if true, then we want new dat in front of current!!!!!!
     #else we want to move to next!
    
     sortbuyloop:
+    nop
+    nop
+    nop
     lw $r12, 1($r13) #what is currently prev.next (our temp)
     #prev=r13
     #temp=r12
     #curr=r28
+    nop
+    nop
+    nop
     bne $r12, $r28, NOTLASTBUY #if these are equal, then we are at end of list so we dont need to do anything!
-    lw $r11, 0($r12) #prev.next order is in 
-   
+    nop
+    nop
+    nop
     #if we are here, then prev.next data is empty
     lw $r28, 1($r28)
+    nop
+    nop
+    nop
     j donesortBuy
 
     NOTLASTBUY:
+    nop
+    nop
+    nop
+    lw $r11, 0($r12) #prev.next order is in 
+    nop
+    nop
+    nop
     sll $r11, $r11, 8
+    nop
+    nop
+    nop
     sra $r11, $r11, 20
-    blt $r11, $r6 insertCurr #check if curr.price > prev.next.price
-
+    nop
+    nop
+    nop
+    blt $r11, $r6 insertCurrbuy #check if curr.price > prev.next.price
+    nop
+    nop
+    nop
     add $r13, $r12, $r0 #prev = prev.next
     j sortbuyloop
 
 
-    insertCurr: #if true, lets do some pointer math
+    insertCurrbuy: #if true, lets do some pointer math
+    nop
+    nop
+    nop
     lw $r15, 1($r28) 
+    nop
+    nop
+    nop
     sw $r12, 1($r28)
+    nop
+    nop
+    nop
+    add $r18, $r25, $r0
+    nop
+    nop
+    nop
+    buyinsertsecloop:
+    #we need to iterate from head until we get to node that points to r27
+    lw $r17, 1($r18)
+    nop
+    nop
+    nop
+    bne $r17, $r28, plsbuycmon
+    sw $r15, 1($r18)
+    nop
+    nop
+    nop
     sw $r28, 1($r13)
+    nop
+    nop
+    nop
     add $r28, $r15, $r0 #restoring our next open data line
     j donesortBuy
+
+    plsbuycmon:
+    add $r18, $r17, $r0
+    j buyinsertsecloop
+
+
+    
     
     NewDatGTLowAsk:
     #add $r12, $r26, $r0 #temp assignment of current head
     lw $r15, 1($r28)
+    add $r18, $r25, $r0
+    nop
+    nop
+    nop
+    buynewheadloop:
+    #we need to iterate from head until we get to node that points to r27
+    lw $r17, 1($r18)
+    nop
+    nop
+    nop
+    bne $r17, $r28, secondtolastnodebuy
+
+    sw $r15, 1($r18)
+    nop
+    nop
+    nop
     add $r25, $r28, $r0 #make new head register 
+    nop
+    nop
+    nop
     sw $r13, 1($r25) #making our head.next = temp
     add $r28, $r15, $r0 #restoring our next open data line
     j donesortBuy
+
+
+    secondtolastnodebuy:
+    add $r18, $r17, $r0
+    j buynewheadloop
+
+    
+   
     
     donesortBuy:
     #8,9,10,11,12,13,15
+    sw $r25, 0($r16) #BUY HEAD
+    sw $r26, 8($r16) #SELL HEAD
+    sw $r28, 16($r16) #BUY TAIL
+    sw $r27, 24($r16) #SELL TAIL
+
+    #SAVING HEADS VALS TO MEM ADDR
+    lw $r4, 0($r25) #headval 
+    nop
+    nop
+    nop
+    lw $r5, 0($r26) #sell val
+    nop
+    nop
+    nop
+
+    #BCD PRICE
+    and $r8, $r8, $r0
+    nop
+    nop
+    nop
+    sll $r8, $r4, 8
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS PRICE OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    and $r12, $r12, $r0
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 4
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 8
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+    #BCD VOL FIXED
+    and $r8, $r8, $r0
+    nop
+    nop
+    nop
+    sll $r8, $r4, 20
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS vol OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 12
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 16
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 20
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+    sw $r12, 32($r16) #saving buy stuff
+    nop
+    nop
+    nop
+
+    #BCD PRICE
+    and $r8, $r8, $r0
+    nop
+    nop
+    nop
+    sll $r8, $r5, 8
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS PRICE OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    and $r12, $r12, $r0
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 4
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    sll $r8, $r8, 8
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+
+    #BCD VOL FIXED
+    and $r8, $r8, $r0
+    nop
+    nop
+    nop
+    sll $r8, $r5, 20
+    nop
+    nop
+    nop
+    sra $r8, $r8, 20 #R8 HAS vol OF BUY
+    nop
+    nop
+    nop
+    and $r9, $r9, $r0
+    nop
+    nop
+    nop
+    and $r10, $r10, $r0
+    nop
+    nop
+    nop
+    addi $r10, $r0, 100
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10 #getting hundreds digit and putting into r9
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting hundreds place so we have 10 and one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 12
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+    nop
+    nop
+    nop
+    addi $r10, $r0, 10
+    nop
+    nop
+    nop
+    div $r9, $r8, $r10
+    nop
+    nop
+    nop
+    and $r11, $r11, $r0
+    nop
+    nop
+    nop
+    add $r11, $r9, $r0
+    nop
+    nop
+    nop
+    mul $r11, $r11, $r10
+    nop
+    nop
+    nop
+    sub $r8, $r8, $r11 #subtracting tens place so we have one left
+    nop
+    nop
+    nop
+    sll $r9, $r9, 16
+    nop
+    nop
+    nop
+    add $r12, $r12, $r9 #r12 has hundred bits
+
+    sll $r8, $r8, 20
+    nop
+    nop
+    nop
+    add $r12, $r12, $r8 
+    nop
+    nop
+    nop
+
+    sw $r12, 40($r16)
+    and $r25, $r25, $r0
+    and $r26, $r26, $r0
+    and $r27, $r27, $r0
+    and $r28, $r28, $r0
+
     and $r8, $r8, $r0
     and $r9, $r9, $r0
     and $r10, $r10, $r0
@@ -387,3 +1970,5 @@ sortBuy: #new order in reg29 (maybe after already executing trades from overflow
    # add $r28, $r2, $r0 #updating our next free space in memory line
    # #pointer to new data in r27
    # j newsort
+
+   #VolpriceOpriceTpriceH
